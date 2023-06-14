@@ -1,0 +1,622 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "username": "Admin",
+      "password": "aA@1234567",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "0878-532-644",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "password": "aA@1234567",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "010-692-6593 x09125",
+      "role": "customer"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "password": "aA@1234567",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "suite": "Suite 847",
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157",
+        "geo": {
+          "lat": "-68.6102",
+          "lng": "-47.0653"
+        }
+      },
+      "phone": "1-463-123-4447",
+      "role": "customer"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "password": "aA@1234567",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "suite": "Apt. 692",
+        "city": "South Elvis",
+        "zipcode": "53919-4257",
+        "geo": {
+          "lat": "29.4572",
+          "lng": "-164.2990"
+        }
+      },
+      "phone": "493-170-9623 x156",
+      "role": "customer"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "password": "aA@1234567",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "suite": "Suite 351",
+        "city": "Roscoeview",
+        "zipcode": "33263",
+        "geo": {
+          "lat": "-31.8129",
+          "lng": "62.5342"
+        }
+      },
+      "phone": "(254)954-1289",
+      "role": "customer"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Smart phone",
+      "fieldName": "smartphones"
+    },
+    {
+      "id": 2,
+      "name": "Tablet",
+      "fieldName": "tablets"
+    },
+    {
+      "id": 3,
+      "name": "Laptop",
+      "fieldName": "laptops"
+    },
+    {
+      "id": 4,
+      "name": "Smart watch",
+      "fieldName": "smartWatches"
+    }
+  ],
+  "smartphones": [
+    {
+      "id": 1,
+      "brand": "Apple",
+      "model": "iPhone 13 Pro Max",
+      "display": "6.7-inch Super Retina XDR display with ProMotion technology",
+      "processor": "A15 Bionic chip with 6-core CPU, 5-core GPU",
+      "storage": [
+        {
+          "size": "128GB",
+          "price": "$1,099.00"
+        },
+        {
+          "size": "256GB",
+          "price": "$1,199.00"
+        },
+        {
+          "size": "512GB",
+          "price": "$1,399.00"
+        },
+        {
+          "size": "1TB",
+          "price": "$1,599.00"
+        }
+      ],
+      "ram": "8GB",
+      "battery_life": "Up to 28 hours of talk time (with 5G)",
+      "rear_camera": [
+        "12MP Wide Camera",
+        "12MP Ultra Wide Camera",
+        "12MP Telephoto Camera"
+      ],
+      "front_camera": "12MP TrueDepth front camera with Portrait mode, Night mode, Deep Fusion, and HDR Dolby Vision recording",
+      "color": [
+        {
+          "colorName": "Graphite",
+          "images": "../images/phone/1.jpg"
+        },
+        {
+          "colorName": "Silver",
+          "images": "../images/phone/2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Samsung",
+      "model": "Galaxy S21 Ultra 5G",
+      "display": "6.8\" Quad HD+ Dynamic AMOLED 2X Infinity-O Display (3200x1440), 515ppi, HDR10+ certified, Adaptive refresh rate up to 120Hz",
+      "processor": "Snapdragon 888 or Exynos 2100 depending on region",
+      "storage": [
+        {
+          "size": "128GB",
+          "price": "$1,199.99"
+        },
+        {
+          "size": "256GB",
+          "price": "$1,249.99"
+        },
+        {
+          "size": "512GB",
+          "price": "$1,379.99"
+        }
+      ],
+      "ram": "12GB or 16GB depending on storage configuration.",
+      "battery_life": "5000mAh (typical) battery capacity.",
+      "rear_camera": [
+        "108MP Wide Camera",
+        "12MP Ultra Wide Camera",
+        "10MP Telephoto Camera",
+        "10MP Periscope Telephoto Camera"
+      ],
+      "front_camera": "40MP Selfie Camera",
+      "color": [
+        {
+          "colorName": "Phantom Black",
+          "images": "../images/phone/3.jpg"
+        },
+        {
+          "colorName": "Phantom Silver",
+          "images": "../images/phone/4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "Xiaomi",
+      "model": "Xiaomi Mi 11 Ultra",
+      "display": "6.81\" AMOLED display with WQHD+ resolution and 120Hz refresh rate.",
+      "processor": "Qualcomm Snapdragon 888.",
+      "storage": [
+        {
+          "size": "256GB",
+          "price": "$1,199.99"
+        }
+      ],
+      "ram": "12GB",
+      "battery_life": "5000mAh battery capacity.",
+      "rear_camera": [
+        "50 MP Main Camera Sensor",
+        "48 MP Ultra-Wide Camera Sensor",
+        "48 MP Telephoto Camera Sensor "
+      ],
+      "front_camera": "20 MP Selfie Camera Sensor",
+      "color": [
+        {
+          "colorName": "Ceramic White",
+          "images": "../images/phone/5.jpg"
+        },
+        {
+          "colorName": "Ceramic Black",
+          "images": "../images/phone/6.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "Google",
+      "model": "Pixel 6 Pro",
+      "display": "6.7-inch QHD+ (3120 x 1440) OLED display with 120Hz refresh rate",
+      "processor": "Google Tensor chip with 2.8GHz octa-core processor",
+      "storage": [
+        {
+          "size": "128GB",
+          "price": "$899.00"
+        },
+        {
+          "size": "256GB",
+          "price": "$999.00"
+        }
+      ],
+      "ram": "8GB",
+      "battery_life": "5000mAh battery capacity.",
+      "rear_camera": [
+        "50MP Wide Camera",
+        "12MP Ultra-Wide Camera",
+        "48MP Telephoto Camera"
+      ],
+      "front_camera": "11MP Selfie Camera",
+      "color": [
+        {
+          "id": "Stormy Black",
+          "images": "../images/phone/7.jpg"
+        },
+        {
+          "id": "Cloudy White",
+          "images": "../images/phone/8.jpg"
+        }
+      ]
+    }
+  ],
+  "tablets": [
+    {
+      "id": 1,
+      "productName": "iPad Pro",
+      "brand": "Apple",
+      "screenSize": "12.9 inches",
+      "camera": "12 MP + 10 MP",
+      "batteryCapacity": "9720 mAh",
+      "processor": "Apple A13 Bionic",
+      "ram": "16GB",
+      "storage": [
+        {
+          "size": "256GB",
+          "price": "$1899.00"
+        },
+        {
+          "size": "512GB",
+          "price": "$1999.00"
+        }
+      ],
+      "color": [
+        {
+          "id": "silver",
+          "images": "../images/tablet/9.jpg"
+        },
+        {
+          "id": "space gray",
+          "images": "../images/tablet/10.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "productName": "Mi Pad 5",
+      "brand": "Xiaomi",
+      "screenSize": "11.0 inches",
+      "camera": "13 MP",
+      "batteryCapacity": "8720 mAh",
+      "processor": "Qualcomm Snapdragon 860",
+      "ram": "6GB",
+      "storage": [
+        {
+          "size": "128GB",
+          "price": "$350.00"
+        },
+        {
+          "size": "256GB",
+          "price": "$400.00"
+        }
+      ],
+      "color": [
+        {
+          "id": "cosmic gray",
+          "images": "../images/tablet/11.jpg"
+        },
+        {
+          "id": "pearl white",
+          "images": "../images/tablet/12.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "productName": "Galaxy Tab S7+",
+      "brand": "Samsung",
+      "images": "",
+      "screenSize": "12.4 inches",
+      "camera": "13 MP + 5 MP",
+      "batteryCapacity": "10,090mAh",
+      "processor": "Qualcomm Snapdragon 865+",
+      "ram": "8GB",
+      "storage": [
+        {
+          "size": [
+            "128GB"
+          ],
+          "price": "$849.99"
+        },
+        {
+          "size": [
+            "256GB"
+          ],
+          "price": "$929.99"
+        }
+      ],
+      "color": [
+        {
+          "id": "Mystic Black",
+          "images": "../images/tablet/13.jpg"
+        },
+        {
+          "id": "Mystic Bronze",
+          "images": "../images/tablet/14.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "productName": "Galaxy Tab S7 FE",
+      "brand": "Samsung",
+      "images": "",
+      "screenSize": "12.4 inches",
+      "camera": "8 MP + 5 MP",
+      "batteryCapacity": "10,090mAh",
+      "processor": "Qualcomm Snapdragon 750G",
+      "ram": "8GB",
+      "storage": [
+        {
+          "size": "64GB",
+          "price": "$529.99"
+        },
+        {
+          "size": "128GB",
+          "price": "$629.99"
+        }
+      ],
+      "color": [
+        {
+          "id": "Mystic Black",
+          "images": "../images/tablet/15.jpg"
+        },
+        {
+          "id": "Mystic Silver",
+          "images": "../images/tablet/16.jpg"
+        }
+      ]
+    }
+  ],
+  "laptops": [
+    {
+      "id": 1,
+      "brand": "Dell",
+      "model": "XPS 13",
+      "processor": "Intel Core i7-1165G7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "13.4-inch FHD+ (1920 x 1200) InfinityEdge Non-Touch Anti-Glare 500-Nit Display",
+      "graphics": "Intel Iris Xe Graphics",
+      "price": "$1,299.99",
+      "color": "Platinum Silver with Black Carbon Fiber Palmrest",
+      "images": "../images/laptop/17.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "HP",
+      "model": "Spectre x360",
+      "processor": "Intel Core i7-1165G7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": "13.3-inch FHD (1920 x 1080) IPS BrightView micro-edge WLED-backlit multitouch-enabled edge-to-edge glass with anti-reflection Corning Gorilla Glass NBT, 400 nits, 100% sRGB",
+      "graphics": "Intel Iris Xe Graphics",
+      "price": "$1,399.99",
+      "color": "Nightfall Black with Copper Luxe Accents",
+      "images": "../images/laptop/18.jpg"
+    },
+    {
+      "id": 3,
+      "brand": "Apple",
+      "model": "MacBook Pro M1",
+      "processor": "Apple M1 chip with 8-core CPU and 8-core GPU",
+      "ram": "8GB or 16GB unified memory",
+      "storage": "256GB, 512GB, 1TB, or 2TB SSD",
+      "display": "13.3-inch (diagonal) LED-backlit display with IPS technology; 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors",
+      "graphics": "Apple M1 chip with 8-core GPU",
+      "price": "$1,299.00",
+      "color": "Silver",
+      "images": "../images/laptop/19.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Lenovo",
+      "model": "ThinkPad X1 Carbon Gen 9",
+      "processor": "11th Generation Intel® Core™ i5-1135G7 Processor with vPro™ (2.40 GHz, up to 4.20 GHz with Turbo Boost, 4 Cores, 8 Threads, 8 MB Cache)",
+      "ram": "16 GB LPDDR4x 4266MHz (Soldered)",
+      "storage": "512 GB PCIe SSD",
+      "display": "14.0 FHD+ (1920 x 1200) IPS, anti-glare with Dolby Vision™ HDR400, Low blue light",
+      "graphics": "Integrated Intel® Iris® Xe Graphics",
+      "price": "$1,599.00",
+      "color": "Black",
+      "images": "../images/laptop/20.jpg"
+    }
+  ],
+  "smartWatches": [
+    {
+      "id": 1,
+      "Brand": "Apple",
+      "Model Name": "Apple Watch Series 8",
+      "Style": "41mm S/M - fits 130 - 180mm wrists",
+      "Color": "Midnight Aluminium Case w Midnight Sport Band",
+      "ScreenSize": "41 Millimeters",
+      "BatteryLife": "Up to 40 hours",
+      "Special Feature": [
+        "Activity Tracker",
+        "Heart Rate Monitor",
+        "Sleep Monitor",
+        "Blood Oxygen"
+      ],
+      "Shape": "Square",
+      "Compatible Devices": [
+        "iPhone"
+      ],
+      "Image": "../images/watch/21.jpg"
+    },
+    {
+      "id": 2,
+      "Brand": "Samsung",
+      "Model Name": "Galaxy Watch 4",
+      "Style": "44mm - fits 140-240mm wrists",
+      "Color": "Phantom Black",
+      "ScreenSize": "1.4 inches",
+      "BatteryLife": "Up to 40 hours",
+      "Special Feature": [
+        "Activity Tracker",
+        "Heart Rate Monitor",
+        "Sleep Monitor",
+        "Blood Pressure Monitor"
+      ],
+      "Shape": "Round",
+      "Compatible Devices": [
+        "Android",
+        "iOS"
+      ],
+      "Image": "../images/watch/22.jpg"
+    },
+    {
+      "id": 3,
+      "Brand": "Fitbit",
+      "Model Name": "Sense 2",
+      "Style": "One size - fits 140-220mm wrists",
+      "Color": "Carbon/Graphite Stainless Steel",
+      "ScreenSize": "41 Millimeters",
+      "BatteryLife": "Up to 40 hours",
+      "Special Feature": [
+        "Activity Tracker",
+        "Heart Rate Monitor",
+        "Sleep Monitor",
+        "Stress Management"
+      ],
+      "Shape": "Square",
+      "Compatible Devices": [
+        "Android",
+        "iOS"
+      ],
+      "Image": "../images/watch/23.jpg"
+    },
+    {
+      "id": 4,
+      "Brand": "Garmin",
+      "Model Name": "Venu 2S",
+      "Style": "One size - fits 140-220mm wrists",
+      "Color": "Carbon/Graphite Stainless Steel",
+      "ScreenSize": "41 Millimeters",
+      "BatteryLife": "Up to 40 hours",
+      "Special Feature": [
+        "Activity Tracker",
+        "Heart Rate Monitor",
+        "Sleep Monitor",
+        "Blood Oxygen Saturation Monitor"
+      ],
+      "Shape": "Round",
+      "Compatible Devices": [
+        "Android",
+        "iOS"
+      ],
+      "Image": "../images/watch/24.jpg"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "The Best Smartphones of 2023",
+      "body": "Smartphones are an essential part of our lives. They help us stay connected with our loved ones and keep us entertained. In this blog post, we will take a look at the best smartphones of 2023. From the latest iPhone to the newest Samsung Galaxy, we have got you covered.",
+      "image": "../images/blog/1.jpg"
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "title": "The Best Tablets for Work and Play",
+      "body": "Tablets are great for both work and play. They are portable, lightweight, and easy to use. In this blog post, we will take a look at the best tablets for work and play. From the iPad Pro to the Microsoft Surface Pro, we have got you covered.",
+      "image": "../images/blog/9.jpg"
+    },
+    {
+      "id": 3,
+      "categoryId": 3,
+      "title": "The Best Laptops for Students",
+      "body": "Laptops are an essential tool for students. They help them stay organized, take notes, and complete assignments. In this blog post, we will take a look at the best laptops for students. From the MacBook Air to the Dell XPS 13, we have got you covered.",
+      "image": "../images/blog/17.jpg"
+    },
+    {
+      "id": 4,
+      "categoryId": 4,
+      "title": "The Best Smartwatches for Fitness Enthusiasts",
+      "body": "Smartwatches are great for fitness enthusiasts. They help you track your workouts, monitor your heart rate, and keep you motivated. In this blog post, we will take a look at the best smartwatches for fitness enthusiasts. From the Apple Watch Series 8 to the Samsung Galaxy Watch Active 4, we have got you covered.",
+      "image": "../images/blog/24.jpg"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "title": "The Future of Smartphones",
+      "body": "Smartphones have come a long way since their inception. In this blog post, we will take a look at the future of smartphones. From foldable screens to holographic displays, the future of smartphones is exciting.",
+      "image": "../images/blog/2.jpg"
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "title": "The Best Tablets for Kids",
+      "body": "Tablets are great for kids. They are portable, lightweight, and easy to use. In this blog post, we will take a look at the best tablets for kids. From the Amazon Fire HD Kids Edition to the Samsung Galaxy Tab A Kids Edition, we have got you covered.",
+      "image": "../images/blog/10.jpg"
+    }
+  ],
+  "wishLists": [
+    {
+      "id": 1,
+      "category": "smartphones",
+      "ProductId": 1
+    },
+    {
+      "id": 2,
+      "category": "tablets",
+      "ProductId": 3
+    },
+    {
+      "id": 3,
+      "category": "laptops",
+      "ProductId": 2
+    },
+    {
+      "id": 4,
+      "category": "smartWatches",
+      "ProductId": 4
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Ervin Howell",
+      "email": "Shanna@melissa.tv",
+      "phone": "010-692-6593",
+      "comment": "Please don't fail"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "rating": 4,
+      "comment": "really good product"
+    }
+  ]
+}

@@ -15,8 +15,7 @@ const SingleProduct = () => {
     width: 594,
     height: 600,
     zoomWidth: 600,
-
-    img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg",
+    img: "../images/blog/24.jpg",
   };
 
   const [orderedProduct, setorderedProduct] = useState(true);
@@ -45,7 +44,7 @@ const SingleProduct = () => {
             <div className="other-product-images d-flex flex-wrap gap-15">
               <div>
                 <img
-                  src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg"
+                  src="%PUBLIC_URL%/images/phone/1.jpg"
                   className="img-fluid"
                   alt=""
                 />
