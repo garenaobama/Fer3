@@ -99,524 +99,733 @@
   "categories": [
     {
       "id": 1,
-      "name": "Smart phone",
-      "fieldName": "smartphones"
+      "name": "Smart phone"
     },
     {
       "id": 2,
-      "name": "Tablet",
-      "fieldName": "tablets"
+      "name": "Tablet"
     },
     {
       "id": 3,
-      "name": "Laptop",
-      "fieldName": "laptops"
+      "name": "Laptop"
     },
     {
       "id": 4,
-      "name": "Smart watch",
-      "fieldName": "smartWatches"
+      "name": "Smart watch"
     }
   ],
-  "smartphones": [
+  "products": [
     {
       "id": 1,
+      "name": "iPhone 13 Pro Max",
+      "price": "1,099.99",
+      "categoryId": 1,
       "brand": "Apple",
-      "model": "iPhone 13 Pro Max",
-      "display": "6.7-inch Super Retina XDR display with ProMotion technology",
-      "processor": "A15 Bionic chip with 6-core CPU, 5-core GPU",
-      "storage": [
-        {
-          "size": "128GB",
-          "price": "$1,099.00"
-        },
-        {
-          "size": "256GB",
-          "price": "$1,199.00"
-        },
-        {
-          "size": "512GB",
-          "price": "$1,399.00"
-        },
-        {
-          "size": "1TB",
-          "price": "$1,599.00"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 6.7-inch Super Retina XDR display with ProMotion technology",
+        "Processor: A15 Bionic chip with 6-core CPU, 5-core GPU",
+        "RAM: 8GB",
+        "Storage: 512GB",
+        "Rear camera: 12MP Wide Camera + 12MP Ultra Wide Camera + 12MP Telephoto Camera",
+        "Front camera: 12MP TrueDepth front camera with Portrait mode, Night mode, Deep Fusion, and HDR Dolby Vision recording",
+        "Battery life: 6000mAh (typical) battery capacity."
       ],
-      "ram": "8GB",
-      "battery_life": "Up to 28 hours of talk time (with 5G)",
-      "rear_camera": [
-        "12MP Wide Camera",
-        "12MP Ultra Wide Camera",
-        "12MP Telephoto Camera"
-      ],
-      "front_camera": "12MP TrueDepth front camera with Portrait mode, Night mode, Deep Fusion, and HDR Dolby Vision recording",
+      "describe": "The iPhone 13 Pro Max is the latest addition to Apple's iPhone lineup. It is the largest and most advanced iPhone ever created by Apple. The phone features a stunning 6.68-inch OLED display with a resolution of 2778 x 1284 pixels at 458 PPI. The display is protected by Ceramic Shield, which is tougher than any smartphone glass.\n\nThe iPhone 13 Pro Max is powered by the A15 Bionic chip, which is the fastest chip ever in a smartphone. The chip features a 6-core CPU and a 5-core GPU, which delivers up to 50% faster graphics performance than any other smartphone.\n\nThe phone features an all-new Ultra Wide camera with autofocus which enables macro photography natively on iPhone, a new Wide camera, and a new Telephoto camera with increased 3x optical zoom. The camera system also features Night mode and Deep Fusion technology, which allows you to take stunning photos even in low light conditions.\n\nThe iPhone 13 Pro Max is available in five colors: Alpine Green, Silver, Gold, Graphite, and Sierra Blue. The phone is also available in three storage options: 128GB, 256GB, and 512GB.\n\nThe phone runs on iOS 15, which is the latest version of Apple's mobile operating system. iOS 15 introduces new features such as Focus mode, Live Text, and FaceTime enhancements. The phone also features MagSafe technology for faster wireless charging and better alignment.\n\nThe iPhone 13 Pro Max is water-resistant with an IP68 rating. It can withstand being submerged in up to six meters of water for up to thirty minutes. The phone also features Face ID for secure authentication and Apple Pay for contactless payments.\n\nIn conclusion, the iPhone 13 Pro Max is a powerful and advanced smartphone that offers an incredible user experience. With its stunning display, powerful A15 Bionic chip, and advanced camera system, it is the perfect phone for anyone who wants the best of the best.",
       "color": [
-        {
-          "colorName": "Graphite",
-          "images": "../images/phone/1.jpg"
-        },
-        {
-          "colorName": "Silver",
-          "images": "../images/phone/2.jpg"
-        }
+        "Space green",
+        "Lumious White"
+      ],
+      "images": [
+        "../images/products/1/1.jpg",
+        "../images/products/1/2.jpg",
+        "../images/products/1/3.jpg",
+        "../images/products/1/4.jpg"
       ]
     },
     {
       "id": 2,
+      "name": "Galaxy S21 Ultra 5G",
+      "price": "1,379.99",
+      "categoryId": 1,
       "brand": "Samsung",
-      "model": "Galaxy S21 Ultra 5G",
-      "display": "6.8\" Quad HD+ Dynamic AMOLED 2X Infinity-O Display (3200x1440), 515ppi, HDR10+ certified, Adaptive refresh rate up to 120Hz",
-      "processor": "Snapdragon 888 or Exynos 2100 depending on region",
-      "storage": [
-        {
-          "size": "128GB",
-          "price": "$1,199.99"
-        },
-        {
-          "size": "256GB",
-          "price": "$1,249.99"
-        },
-        {
-          "size": "512GB",
-          "price": "$1,379.99"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 6.8\" Quad HD+ Dynamic AMOLED 2X Infinity-O Display (3200x1440), 515ppi, HDR10+ certified, Adaptive refresh rate up to 120Hz",
+        "Processor: Snapdragon 888",
+        "RAM: 12GB",
+        "Storage: 512GB",
+        "Rear camera: 108MP Wide Camera + 12MP Ultra Wide Camera + 10MP Telephoto Camera + 10MP Periscope Telephoto Camera",
+        "Front camera: 40MP Selfie Camera",
+        "Battery life: 5000mAh (typical) battery capacity."
       ],
-      "ram": "12GB or 16GB depending on storage configuration.",
-      "battery_life": "5000mAh (typical) battery capacity.",
-      "rear_camera": [
-        "108MP Wide Camera",
-        "12MP Ultra Wide Camera",
-        "10MP Telephoto Camera",
-        "10MP Periscope Telephoto Camera"
-      ],
-      "front_camera": "40MP Selfie Camera",
+      "describe": "The Samsung Galaxy S21 Ultra 5G is a high-end smartphone that comes with a 6.8-inch Dynamic AMOLED 2X display with a resolution of 1440 x 3200 pixels. It is powered by an Exynos 2100 processor and runs on Android 11 with One UI 3.1. The phone has a quad-camera setup at the back with a 108-megapixel primary sensor, a 12-megapixel ultra-wide-angle lens, and two 10-megapixel telephoto lenses. It also has a 40-megapixel front-facing camera for selfies and video calls. Other features include an in-display fingerprint sensor, IP68 dust/water resistance, and support for wireless charging.",
       "color": [
-        {
-          "colorName": "Phantom Black",
-          "images": "../images/phone/3.jpg"
-        },
-        {
-          "colorName": "Phantom Silver",
-          "images": "../images/phone/4.jpg"
-        }
+        "Phantom Black",
+        "Phantom Silver"
+      ],
+      "images": [
+        "../images/products/2/1.jpg",
+        "../images/products/2/2.jpg",
+        "../images/products/2/3.jpg",
+        "../images/products/2/4.jpg"
       ]
     },
     {
       "id": 3,
+      "name": "Xiaomi Mi 11 Ultra",
+      "price": "1,199.99",
+      "categoryId": 1,
       "brand": "Xiaomi",
-      "model": "Xiaomi Mi 11 Ultra",
-      "display": "6.81\" AMOLED display with WQHD+ resolution and 120Hz refresh rate.",
-      "processor": "Qualcomm Snapdragon 888.",
-      "storage": [
-        {
-          "size": "256GB",
-          "price": "$1,199.99"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 6.81\" AMOLED display with WQHD+ resolution and 120Hz refresh rate.",
+        "Processor: Qualcomm Snapdragon 888",
+        "RAM: 12GB",
+        "Storage: 256GB",
+        "Rear camera: 58MP Wide Camera + 48MP Ultra Wide Camera + 48MP Telephoto Camera",
+        "Front camera: 20 MP Selfie Camera Sensor",
+        "Battery life: 5000mAh (typical) battery capacity."
       ],
-      "ram": "12GB",
-      "battery_life": "5000mAh battery capacity.",
-      "rear_camera": [
-        "50 MP Main Camera Sensor",
-        "48 MP Ultra-Wide Camera Sensor",
-        "48 MP Telephoto Camera Sensor "
-      ],
-      "front_camera": "20 MP Selfie Camera Sensor",
+      "describe": "The Xiaomi Mi 11 Ultra is a high-end smartphone that was released on April 2, 2021. It features a 6.81-inch AMOLED display with a resolution of 1440 x 3200 pixels and a refresh rate of 120Hz. The phone is powered by a Qualcomm Snapdragon 888 processor and runs on Android 11 with MIUI 12.5. It has a triple-camera setup at the back with a 50-megapixel primary sensor, a 48-megapixel ultra-wide-angle lens, and a 48-megapixel periscope telephoto lens. It also has a 20-megapixel front-facing camera for selfies and video calls. Other features include an in-display fingerprint sensor, IP68 dust/water resistance, and support for wireless charging. The phone comes with either 256GB or 512GB of internal storage and has no card slot.",
       "color": [
-        {
-          "colorName": "Ceramic White",
-          "images": "../images/phone/5.jpg"
-        },
-        {
-          "colorName": "Ceramic Black",
-          "images": "../images/phone/6.jpg"
-        }
+        "Ceramic White",
+        "Ceramic Black"
+      ],
+      "images": [
+        "../images/products/3/1.jpg",
+        "../images/products/3/2.jpg",
+        "../images/products/3/3.jpg",
+        "../images/products/3/4.jpg"
       ]
     },
     {
       "id": 4,
+      "name": "Pixel 6 Pro",
+      "price": "999.99",
+      "categoryId": 1,
       "brand": "Google",
-      "model": "Pixel 6 Pro",
-      "display": "6.7-inch QHD+ (3120 x 1440) OLED display with 120Hz refresh rate",
-      "processor": "Google Tensor chip with 2.8GHz octa-core processor",
-      "storage": [
-        {
-          "size": "128GB",
-          "price": "$899.00"
-        },
-        {
-          "size": "256GB",
-          "price": "$999.00"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 6.7-inch QHD+ (3120 x 1440) OLED display with 120Hz refresh rate",
+        "Processor: Google Tensor chip with 2.8GHz octa-core processor",
+        "RAM: 8GB",
+        "Storage: 256GB",
+        "Rear camera: 50MP Wide Camera + 12MP Ultra Wide Camera + 48MP Telephoto Camera",
+        "Front camera: 20 MP Selfie Camera Sensor",
+        "Battery life: 5000mAh (typical) battery capacity."
       ],
-      "ram": "8GB",
-      "battery_life": "5000mAh battery capacity.",
-      "rear_camera": [
-        "50MP Wide Camera",
-        "12MP Ultra-Wide Camera",
-        "48MP Telephoto Camera"
-      ],
-      "front_camera": "11MP Selfie Camera",
+      "describe": "The Pixel 6 Pro is a top-tier Android phone with a superb camera, a dynamic 120Hz display, and pure Android software. It has some of the best processing in the business and can deliver excellent photos in challenging conditions. However, it falls behind on brightness and battery life, especially for hardcore gamers. It comes with a Google Tensor chipset and has a big 5003 mAh battery with 30W charging speed. On the back, it features a triple-camera setup with a 50 MP main sensor, Telefoto camera, and Ultra-wide sensor. It has 12 GB RAM and 512 GB storage.",
       "color": [
-        {
-          "id": "Stormy Black",
-          "images": "../images/phone/7.jpg"
-        },
-        {
-          "id": "Cloudy White",
-          "images": "../images/phone/8.jpg"
-        }
-      ]
-    }
-  ],
-  "tablets": [
-    {
-      "id": 1,
-      "productName": "iPad Pro",
-      "brand": "Apple",
-      "screenSize": "12.9 inches",
-      "camera": "12 MP + 10 MP",
-      "batteryCapacity": "9720 mAh",
-      "processor": "Apple A13 Bionic",
-      "ram": "16GB",
-      "storage": [
-        {
-          "size": "256GB",
-          "price": "$1899.00"
-        },
-        {
-          "size": "512GB",
-          "price": "$1999.00"
-        }
+        "Stormy Black",
+        "Cloudy White"
       ],
-      "color": [
-        {
-          "id": "silver",
-          "images": "../images/tablet/9.jpg"
-        },
-        {
-          "id": "space gray",
-          "images": "../images/tablet/10.jpg"
-        }
+      "images": [
+        "../images/products/4/1.jpg",
+        "../images/products/4/2.jpg",
+        "../images/products/4/3.jpg",
+        "../images/products/4/4.jpg"
       ]
     },
     {
-      "id": 2,
-      "productName": "Mi Pad 5",
+      "id": 5,
+      "name": "iPad Pro",
+      "price": "1899.99",
+      "categoryId": 2,
+      "brand": "Apple",
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 12.9 inches QHD+ OLED display with 120Hz refresh rate",
+        "Processor: Apple A13 Bionic",
+        "RAM: 16GB",
+        "Storage: 512GB",
+        "Camera: 12 MP + 10 MP",
+        "Battery life: 9720 mAh battery capacity."
+      ],
+      "describe": "The iPad Pro is Apple's high-end tablet computer with the following features: 1 A M2 chip for fast performance 2 Apple Pencil hover for precise input 3 ProRes video recording for professional quality 4 Bluetooth 5.3 and Wi-Fi 6E connectivity for fast data transfer 5 A Thunderbolt port for connecting external devices 6 A Liquid Retina XDR mini-LED display on the 12.9-inch model for stunning visuals 7 A 11-inch or 12.9-inch LED backlit Multi‑Touch display with ProMotion, wide color, and True Tone technologies 8 Up to 16GB of RAM and 2TB of storage",
+      "color": [
+        "Silver",
+        "Space gray"
+      ],
+      "images": [
+        "../images/products/5/1.jpg",
+        "../images/products/5/2.jpg",
+        "../images/products/5/3.jpg",
+        "../images/products/5/4.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Mi Pad 5",
+      "price": "480.99",
+      "categoryId": 2,
       "brand": "Xiaomi",
-      "screenSize": "11.0 inches",
-      "camera": "13 MP",
-      "batteryCapacity": "8720 mAh",
-      "processor": "Qualcomm Snapdragon 860",
-      "ram": "6GB",
-      "storage": [
-        {
-          "size": "128GB",
-          "price": "$350.00"
-        },
-        {
-          "size": "256GB",
-          "price": "$400.00"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 11 inches WQXGA IPS LCD display with 120Hz refresh rate",
+        "Processor: Qualcomm Snapdragon 860",
+        "RAM: 6GB",
+        "Storage: 256GB",
+        "Camera: 13 MP rear, 8 MP front",
+        "Battery life: 8720 mAh battery capacity with 33W fast-charging support."
       ],
+      "describe": "The Mi Pad 5 is Xiaomi's high-end tablet computer with the following features: 1 A Qualcomm Snapdragon 860 processor with Adreno 640 GPU for fast performance 2 Android 11 with MIUI 12.5 custom skin out of the box 3 An 11-inch WQXGA display with a 16:10 aspect ratio, 120Hz refresh rate, and 240Hz sampling rate for stunning visuals 4 A single 13MP snapper on the back that can record 4K videos and an 8MP snapper on the front for selfies and video chats 5 Up to 6GB RAM and either 128GB or 256GB storage for ample space for your files and apps.",
       "color": [
-        {
-          "id": "cosmic gray",
-          "images": "../images/tablet/11.jpg"
-        },
-        {
-          "id": "pearl white",
-          "images": "../images/tablet/12.jpg"
-        }
+        "Cosmic Gray",
+        "Pearl White",
+        "Green"
+      ],
+      "images": [
+        "../images/products/6/1.jpg",
+        "../images/products/6/2.jpg",
+        "../images/products/6/3.jpg",
+        "../images/products/6/4.jpg"
       ]
     },
     {
-      "id": 3,
-      "productName": "Galaxy Tab S7+",
+      "id": 7,
+      "name": "Galaxy Tab S7+",
+      "price": "900.99",
+      "categoryId": 2,
       "brand": "Samsung",
-      "images": "",
-      "screenSize": "12.4 inches",
-      "camera": "13 MP + 5 MP",
-      "batteryCapacity": "10,090mAh",
-      "processor": "Qualcomm Snapdragon 865+",
-      "ram": "8GB",
-      "storage": [
-        {
-          "size": [
-            "128GB"
-          ],
-          "price": "$849.99"
-        },
-        {
-          "size": [
-            "256GB"
-          ],
-          "price": "$929.99"
-        }
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 12.4 inches Super AMOLED display with 120Hz refresh rate and HDR10+ support",
+        "Processor: Qualcomm Snapdragon 865+",
+        "RAM: 6GB or 8GB",
+        "Storage: 512GB, expandable up to 1TB via micro SD card",
+        "Camera: 13 MP + 5 MP rear, 8 MP front",
+        "Battery life: 10090 mAh battery capacity with 45W wired charging support."
       ],
+      "describe": "The Galaxy Tab S7+ is Samsung's high-end tablet computer with the following features: 1 A Qualcomm Snapdragon 865+ processor with Adreno 650 GPU for fast performance 2 Android 10 with One UI 2.5 custom skin out of the box 3 A 12.4-inch Super AMOLED display with a 120Hz refresh rate and a resolution of 2800 x 1752 pixels for stunning visuals 4 A dual-camera setup on the back that includes a 13MP primary sensor and a 5MP ultra-wide sensor, and an 8MP snapper on the front for selfies and video chats 5 Up to 8GB RAM and either 128GB or 256GB storage for ample space for your files and apps.",
       "color": [
-        {
-          "id": "Mystic Black",
-          "images": "../images/tablet/13.jpg"
-        },
-        {
-          "id": "Mystic Bronze",
-          "images": "../images/tablet/14.jpg"
-        }
+        "Mystic Black",
+        "Mystic Bronze",
+        "Mystic Silver"
+      ],
+      "images": [
+        "../images/products/7/1.jpg",
+        "../images/products/7/2.jpg",
+        "../images/products/7/3.jpg",
+        "../images/products/7/4.jpg"
       ]
     },
     {
-      "id": 4,
-      "productName": "Galaxy Tab S7 FE",
-      "brand": "Samsung",
-      "images": "",
-      "screenSize": "12.4 inches",
-      "camera": "8 MP + 5 MP",
-      "batteryCapacity": "10,090mAh",
-      "processor": "Qualcomm Snapdragon 750G",
-      "ram": "8GB",
-      "storage": [
-        {
-          "size": "64GB",
-          "price": "$529.99"
-        },
-        {
-          "size": "128GB",
-          "price": "$629.99"
-        }
-      ],
-      "color": [
-        {
-          "id": "Mystic Black",
-          "images": "../images/tablet/15.jpg"
-        },
-        {
-          "id": "Mystic Silver",
-          "images": "../images/tablet/16.jpg"
-        }
-      ]
-    }
-  ],
-  "laptops": [
-    {
-      "id": 1,
-      "brand": "Dell",
-      "model": "XPS 13",
-      "processor": "Intel Core i7-1165G7",
-      "ram": "16GB",
-      "storage": "512GB SSD",
-      "display": "13.4-inch FHD+ (1920 x 1200) InfinityEdge Non-Touch Anti-Glare 500-Nit Display",
-      "graphics": "Intel Iris Xe Graphics",
-      "price": "$1,299.99",
-      "color": "Platinum Silver with Black Carbon Fiber Palmrest",
-      "images": "../images/laptop/17.jpg"
-    },
-    {
-      "id": 2,
-      "brand": "HP",
-      "model": "Spectre x360",
-      "processor": "Intel Core i7-1165G7",
-      "ram": "16GB",
-      "storage": "512GB SSD",
-      "display": "13.3-inch FHD (1920 x 1080) IPS BrightView micro-edge WLED-backlit multitouch-enabled edge-to-edge glass with anti-reflection Corning Gorilla Glass NBT, 400 nits, 100% sRGB",
-      "graphics": "Intel Iris Xe Graphics",
-      "price": "$1,399.99",
-      "color": "Nightfall Black with Copper Luxe Accents",
-      "images": "../images/laptop/18.jpg"
-    },
-    {
-      "id": 3,
+      "id": 8,
+      "name": "iPad Air (2022)",
+      "price": "449.99",
+      "categoryId": 2,
       "brand": "Apple",
-      "model": "MacBook Pro M1",
-      "processor": "Apple M1 chip with 8-core CPU and 8-core GPU",
-      "ram": "8GB or 16GB unified memory",
-      "storage": "256GB, 512GB, 1TB, or 2TB SSD",
-      "display": "13.3-inch (diagonal) LED-backlit display with IPS technology; 2560-by-1600 native resolution at 227 pixels per inch with support for millions of colors",
-      "graphics": "Apple M1 chip with 8-core GPU",
-      "price": "$1,299.00",
-      "color": "Silver",
-      "images": "../images/laptop/19.jpg"
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 10.9 inches Liquid Retina display with True Tone support",
+        "Processor: A14 Bionic chip with Neural Engine",
+        "RAM: Not specified by Apple",
+        "Storage: 256GB",
+        "Camera: 12 MP rear, 12 MP landscape front with Center Stage feature",
+        "Battery life: Up to 10 hours of video playback with USB-C charging support."
+      ],
+      "describe": "The iPad Air (2022) is the 5th generation model of the iPad Air series, and it was announced by Apple on March 8, 2022. It features the M1 chip, 5G, a new front camera with Center Stage, and a 10.9-inch Liquid Retina display. It comes in five colors and has Touch ID in the side power button.",
+      "color": [
+        "Silver",
+        "Pink",
+        "Blue"
+      ],
+      "images": [
+        "../images/products/8/1.jpg",
+        "../images/products/8/2.jpg",
+        "../images/products/8/3.jpg",
+        "../images/products/8/4.jpg"
+      ]
     },
     {
-      "id": 4,
+      "id": 9,
+      "name": "Dell XPS 13",
+      "price": "649.99",
+      "categoryId": 3,
+      "brand": "Dell",
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 13.4-inch FHD+ (1920 x 1200) InfinityEdge Non-Touch Anti-Glare 500-Nit Display",
+        "Processor: Intel Core i7-1165G7",
+        "RAM: 16GB",
+        "Storage: 512GB SSD",
+        "Graphic: Intel Iris Xe Graphics",
+        "Battery life: Up to 10 hours of video playback with USB-C charging support."
+      ],
+      "describe": "The Dell XPS 13 is a sleek and reliable laptop with a 13.4-inch touch-screen display and an 11th Gen Intel core processor. It has a super-slim bezel thanks to the InfinityEdge design and a super-tiny webcam on top of the screen. It comes in different colors, including silver, black, white, and frost, and has a high-quality aluminum and carbon-fiber or composite-fiber build. It is lightweight and easy to carry, weighing under 3 pounds and measuring 0.55 inches thin.",
+      "color": [
+        "Platinum Silver with Black Carbon Fiber Palmrest"
+      ],
+      "images": [
+        "../images/products/9/1.jpg",
+        "../images/products/9/2.jpg",
+        "../images/products/9/3.jpg",
+        "../images/products/9/4.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "HP Spectre x360 16",
+      "price": "1499.99",
+      "categoryId": 3,
+      "brand": "HP",
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 16-inch WQXGA IPS LCD display with 120Hz refresh rate and HDR support",
+        "Processor: Intel Core i7-13700H",
+        "RAM: 16GB DDR4-3200MHz",
+        "Storage: 512GB PCIe NVMe SSD",
+        "Graphic: Intel Iris Xe Graphics",
+        "Battery life: Up to 17 hours of video playback with USB-C charging support."
+      ],
+      "describe": "The HP Spectre x360 16 is a high-performance laptop that's perfect for both work and play. It features a stunning 16-inch display with a resolution of 2560 x 1600 pixels and an aspect ratio of 16:10. The laptop is powered by an Intel Core i7 processor and comes with up to 32 GB of DDR4-3200 SDRAM and up to 1 TB of SSD storage. It also has an NVIDIA GeForce RTX 3050 Ti graphics card for smooth and seamless gaming. The laptop runs on Windows 10 Home or Windows 11 Home and has a battery life of up to 12 hours and 15 minutes. It's available in two colors: Poseidon Blue with Pale Brass accents and Dark Ash Silver with Copper Luxe accents.",
+      "color": [
+        "Nightfall Black with Copper Luxe Accents"
+      ],
+      "images": [
+        "../images/products/10/1.jpg",
+        "../images/products/10/2.jpg",
+        "../images/products/10/3.jpg",
+        "../images/products/10/4.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "MacBook Pro M1",
+      "price": "1299.99",
+      "categoryId": 3,
+      "brand": "Apple",
+      "year": 2020,
+      "status": 1,
+      "detail": [
+        "Display: 13.3-inch Retina display with True Tone support",
+        "Processor: Apple M1 chip with 8-core CPU and 8-core GPU",
+        "RAM: 8GB unified memory",
+        "Storage: 256GB SSD",
+        "Graphic: Apple M1 integrated graphics",
+        "Battery life: Up to 20 hours of video playback with USB-C charging support."
+      ],
+      "describe": "The MacBook Pro M1 is a powerful laptop that's perfect for both personal and professional use. It features a 13.3-inch Retina display with True Tone technology and a resolution of 2560 x 1600 pixels. The laptop is powered by Apple's M1 chip and comes with up to 16 GB of unified memory and up to 2 TB of SSD storage. It also has an 8-core GPU for smooth and seamless graphics performance. The laptop runs on macOS Big Sur and has a battery life of up to 17 hours. It's available in two colors: Silver and Space Gray.",
+      "color": [
+        "Silver",
+        "Space Gray"
+      ],
+      "images": [
+        "../images/products/11/1.jpg",
+        "../images/products/11/2.jpg",
+        "../images/products/11/3.jpg",
+        "../images/products/11/4.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Lenovo ThinkPad X1 Carbon Gen 9",
+      "price": "1599.99",
+      "categoryId": 3,
       "brand": "Lenovo",
-      "model": "ThinkPad X1 Carbon Gen 9",
-      "processor": "11th Generation Intel® Core™ i5-1135G7 Processor with vPro™ (2.40 GHz, up to 4.20 GHz with Turbo Boost, 4 Cores, 8 Threads, 8 MB Cache)",
-      "ram": "16 GB LPDDR4x 4266MHz (Soldered)",
-      "storage": "512 GB PCIe SSD",
-      "display": "14.0 FHD+ (1920 x 1200) IPS, anti-glare with Dolby Vision™ HDR400, Low blue light",
-      "graphics": "Integrated Intel® Iris® Xe Graphics",
-      "price": "$1,599.00",
-      "color": "Black",
-      "images": "../images/laptop/20.jpg"
-    }
-  ],
-  "smartWatches": [
-    {
-      "id": 1,
-      "Brand": "Apple",
-      "Model Name": "Apple Watch Series 8",
-      "Style": "41mm S/M - fits 130 - 180mm wrists",
-      "Color": "Midnight Aluminium Case w Midnight Sport Band",
-      "ScreenSize": "41 Millimeters",
-      "BatteryLife": "Up to 40 hours",
-      "Special Feature": [
-        "Activity Tracker",
-        "Heart Rate Monitor",
-        "Sleep Monitor",
-        "Blood Oxygen"
+      "year": 2021,
+      "status": 1,
+      "detail": [
+        "Display: 14-inch WUXGA IPS LCD display with Dolby Vision support",
+        "Processor: Intel Core i7-1165G7",
+        "RAM: 16GB LPDDR4x-4266MHz",
+        "Storage: 512GB PCIe NVMe SSD",
+        "Graphic: Intel Iris Xe Graphics",
+        "Battery life: Up to 16.7 hours of video playback with USB-C charging support."
       ],
-      "Shape": "Square",
-      "Compatible Devices": [
-        "iPhone"
+      "describe": "The Lenovo ThinkPad X1 Carbon Gen 9 is a high-performance laptop that's perfect for business use. It features a 14-inch display with a resolution of 1920 x 1080 pixels or 2560 x 1440 pixels. The laptop is powered by an Intel Core i5 or i7 processor and comes with up to 16 GB of LPDDR4x memory and up to 2 TB of PCIe SSD storage. It also has an Intel Iris Xe graphics card for smooth and seamless graphics performance. The laptop runs on Windows 10 Pro or Windows 11 Pro and has a battery life of up to 16 hours. It's available in two colors: Black and Silver.",
+      "color": [
+        "Black"
       ],
-      "Image": "../images/watch/21.jpg"
+      "images": [
+        "../images/products/12/1.jpg",
+        "../images/products/12/2.jpg",
+        "../images/products/12/3.jpg",
+        "../images/products/12/4.jpg"
+      ]
     },
     {
-      "id": 2,
-      "Brand": "Samsung",
-      "Model Name": "Galaxy Watch 4",
-      "Style": "44mm - fits 140-240mm wrists",
-      "Color": "Phantom Black",
-      "ScreenSize": "1.4 inches",
-      "BatteryLife": "Up to 40 hours",
-      "Special Feature": [
-        "Activity Tracker",
-        "Heart Rate Monitor",
-        "Sleep Monitor",
-        "Blood Pressure Monitor"
+      "id": 13,
+      "name": "Samsung Galaxy Watch 5",
+      "price": "259.99",
+      "categoryId": 4,
+      "brand": "Samsung",
+      "year": 2021,
+      "status": 1,
+      "detail": [
+        "Display: 1.4-inch Super AMOLED display with 360 x 360 resolution and Gorilla Glass DX+ protection",
+        "Processor: Exynos 9110 dual-core 1.15GHz",
+        "RAM: 1.5GB",
+        "Storage: 8GB",
+        "Battery life: Up to 3 days with wireless charging support"
       ],
-      "Shape": "Round",
-      "Compatible Devices": [
-        "Android",
-        "iOS"
+      "describe": "The Samsung Galaxy Watch 5 is a smartwatch that's perfect for fitness enthusiasts. It features a 1.4-inch Super AMOLED display with a resolution of 360 x 360 pixels. The watch is powered by an Exynos 9110 processor and comes with 1.5 GB of RAM and 4 GB of internal storage. It also has a heart rate monitor, GPS, and NFC for contactless payments. The watch runs on Tizen-based Wearable OS 5.5 and has a battery life of up to 4 days. It's available in two sizes: 40 mm and 44 mm.",
+      "color": [
+        "Black",
+        "Silver",
+        "Bronze"
       ],
-      "Image": "../images/watch/22.jpg"
+      "images": [
+        "../images/products/13/1.jpg",
+        "../images/products/13/2.jpg",
+        "../images/products/13/3.jpg",
+        "../images/products/13/4.jpg"
+      ]
     },
     {
-      "id": 3,
-      "Brand": "Fitbit",
-      "Model Name": "Sense 2",
-      "Style": "One size - fits 140-220mm wrists",
-      "Color": "Carbon/Graphite Stainless Steel",
-      "ScreenSize": "41 Millimeters",
-      "BatteryLife": "Up to 40 hours",
-      "Special Feature": [
-        "Activity Tracker",
-        "Heart Rate Monitor",
-        "Sleep Monitor",
-        "Stress Management"
+      "id": 14,
+      "name": "Fitbit Sense 2",
+      "price": "269.95",
+      "categoryId": 4,
+      "brand": "Fitbit",
+      "year": 2021,
+      "status": 1,
+      "detail": [
+        "Display: 1.58-inch AMOLED display with 336 x 336 resolution and Corning Gorilla Glass 3 protection",
+        "Processor: Not specified by Fitbit",
+        "RAM: Not specified by Fitbit",
+        "Storage: Not specified by Fitbit",
+        "Battery life: Up to 6 days with magnetic charging support"
       ],
-      "Shape": "Square",
-      "Compatible Devices": [
-        "Android",
-        "iOS"
+      "describe": "The Fitbit Sense is a smartwatch that's perfect for fitness enthusiasts. It features a 1.58-inch AMOLED display with a resolution of 336 x 336 pixels. The watch is powered by an ECG app and comes with 6+ day battery life. It also has a heart rate monitor, GPS, and NFC for contactless payments. The watch runs on Fitbit OS and has a battery life of up to 6 days. It's available in two colors: Carbon/Graphite Stainless Steel and Lunar White/Soft Gold Stainless Steel.",
+      "color": [
+        "Carbon",
+        "Graphite Stainless Steel",
+        "Lunar White",
+        "Soft Gold Stainless Steel"
       ],
-      "Image": "../images/watch/23.jpg"
+      "images": [
+        "../images/products/14/1.jpg",
+        "../images/products/14/2.jpg",
+        "../images/products/14/3.jpg",
+        "../images/products/14/4.jpg"
+      ]
     },
     {
-      "id": 4,
-      "Brand": "Garmin",
-      "Model Name": "Venu 2S",
-      "Style": "One size - fits 140-220mm wrists",
-      "Color": "Carbon/Graphite Stainless Steel",
-      "ScreenSize": "41 Millimeters",
-      "BatteryLife": "Up to 40 hours",
-      "Special Feature": [
-        "Activity Tracker",
-        "Heart Rate Monitor",
-        "Sleep Monitor",
-        "Blood Oxygen Saturation Monitor"
+      "id": 15,
+      "name": "Garmin Venu Sq 2",
+      "price": "249.99",
+      "categoryId": 4,
+      "brand": "Garmin",
+      "year": 2021,
+      "status": 1,
+      "detail": [
+        "Display: 1.3-inch LCD display with 240 x 240 resolution and Corning Gorilla Glass 3 protection",
+        "Processor: Not specified by Garmin",
+        "RAM: Not specified by Garmin",
+        "Storage: Not specified by Garmin",
+        "Battery life: Up to 6 days in smartwatch mode, up to 14 hours in GPS mode with solar charging support"
       ],
-      "Shape": "Round",
-      "Compatible Devices": [
-        "Android",
-        "iOS"
+      "describe": "The Garmin Venu Sq 2 is a smartwatch that's perfect for fitness enthusiasts. It features a 1.3-inch LCD display with a resolution of 240 x 240 pixels. The watch is powered by an AMOLED display and comes with up to 6 days of battery life. It also has a heart rate monitor, GPS, and NFC for contactless payments. The watch runs on Garmin OS and has a battery life of up to 6 days. It's available in two sizes: 40 mm and 45 mm.",
+      "color": [
+        "Black",
+        "WhiteLight",
+        "Gold",
+        "Rose Gold"
       ],
-      "Image": "../images/watch/24.jpg"
+      "images": [
+        "../images/products/15/1.jpg",
+        "../images/products/15/2.jpg",
+        "../images/products/15/3.jpg",
+        "../images/products/15/4.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Google Pixel Watch",
+      "price": "299.99",
+      "categoryId": 4,
+      "brand": "Google",
+      "year": 2022,
+      "status": 1,
+      "detail": [
+        "Display: 1.5-inch OLED display with circular design and touch bezel",
+        "Processor: Qualcomm Snapdragon Wear™ 4100+",
+        "RAM: Not specified by Google",
+        "Storage: Not specified by Google",
+        "Battery life: Up to 2 days with wireless charging support"
+      ],
+      "describe": "The Google Pixel Watch is a smartwatch that runs on Google Wear OS. It features a 1.2-inch AMOLED display with a resolution of 450 x 450 pixels. The watch is powered by an Exynos 9110 processor and comes with 2 GB of RAM and 32 GB of storage. It also has a battery life of up to 24 hours and supports Fitbit health and fitness, always-on display, Google Maps, Google Wallet, Google Assistant, messages and notifications, YouTube Music, NFC, emergency SOS, international emergency calling, interchangeable band design, and fall detection (up to 32 g-forces).",
+      "color": [
+        "Black",
+        "Silver",
+        "Rose Gold"
+      ],
+      "images": [
+        "../images/products/16/1.jpg",
+        "../images/products/16/2.jpg",
+        "../images/products/16/3.jpg",
+        "../images/products/16/4.jpg"
+      ]
     }
   ],
   "blogs": [
     {
       "id": 1,
       "categoryId": 1,
-      "title": "The Best Smartphones of 2023",
-      "body": "Smartphones are an essential part of our lives. They help us stay connected with our loved ones and keep us entertained. In this blog post, we will take a look at the best smartphones of 2023. From the latest iPhone to the newest Samsung Galaxy, we have got you covered.",
-      "image": "../images/blog/1.jpg"
+      "title": "iPhone 13 Pro Max: The Ultimate Smartphone",
+      "body": "The iPhone 13 Pro Max is the latest addition to Apple's iPhone lineup. It is the largest and most advanced iPhone ever created by Apple. The phone features a stunning 6.68-inch OLED display with a resolution of 2778 x 1284 pixels at 458 PPI. The display is protected by Ceramic Shield, which is tougher than any smartphone glass.\n\nThe iPhone 13 Pro Max is powered by the A15 Bionic chip, which is the fastest chip ever in a smartphone. The chip features a 6-core CPU and a 5-core GPU, which delivers up to 50% faster graphics performance than any other smartphone.\n\nThe phone features an all-new Ultra Wide camera with autofocus which enables macro photography natively on iPhone, a new Wide camera, and a new Telephoto camera with increased 3x optical zoom. The camera system also features Night mode and Deep Fusion technology, which allows you to take stunning photos even in low light conditions.\n\nThe iPhone 13 Pro Max is available in five colors: Alpine Green, Silver, Gold, Graphite, and Sierra Blue. The phone is also available in three storage options: 128GB, 256GB, and 512GB.\n\nThe phone runs on iOS 15, which is the latest version of Apple's mobile operating system. iOS 15 introduces new features such as Focus mode, Live Text, and FaceTime enhancements. The phone also features MagSafe technology for faster wireless charging and better alignment.\n\nThe iPhone 13 Pro Max is water-resistant with an IP68 rating. It can withstand being submerged in up to six meters of water for up to thirty minutes. The phone also features Face ID for secure authentication and Apple Pay for contactless payments.\n\nIn conclusion, the iPhone 13 Pro Max is a powerful and advanced smartphone that offers an incredible user experience. With its stunning display, powerful A15 Bionic chip, and advanced camera system, it is the perfect phone for anyone who wants the best of the best.",
+      "image": "../images/blogs/1.jpg"
     },
     {
       "id": 2,
       "categoryId": 2,
       "title": "The Best Tablets for Work and Play",
       "body": "Tablets are great for both work and play. They are portable, lightweight, and easy to use. In this blog post, we will take a look at the best tablets for work and play. From the iPad Pro to the Microsoft Surface Pro, we have got you covered.",
-      "image": "../images/blog/9.jpg"
+      "image": "../images/blogs/9.jpg"
     },
     {
       "id": 3,
       "categoryId": 3,
       "title": "The Best Laptops for Students",
       "body": "Laptops are an essential tool for students. They help them stay organized, take notes, and complete assignments. In this blog post, we will take a look at the best laptops for students. From the MacBook Air to the Dell XPS 13, we have got you covered.",
-      "image": "../images/blog/17.jpg"
+      "image": "../images/blogs/17.jpg"
     },
     {
       "id": 4,
       "categoryId": 4,
       "title": "The Best Smartwatches for Fitness Enthusiasts",
       "body": "Smartwatches are great for fitness enthusiasts. They help you track your workouts, monitor your heart rate, and keep you motivated. In this blog post, we will take a look at the best smartwatches for fitness enthusiasts. From the Apple Watch Series 8 to the Samsung Galaxy Watch Active 4, we have got you covered.",
-      "image": "../images/blog/24.jpg"
+      "image": "../images/blogs/24.jpg"
     },
     {
       "id": 5,
       "categoryId": 1,
       "title": "The Future of Smartphones",
       "body": "Smartphones have come a long way since their inception. In this blog post, we will take a look at the future of smartphones. From foldable screens to holographic displays, the future of smartphones is exciting.",
-      "image": "../images/blog/2.jpg"
+      "image": "../images/blogs/2.jpg"
     },
     {
       "id": 6,
       "categoryId": 2,
       "title": "The Best Tablets for Kids",
       "body": "Tablets are great for kids. They are portable, lightweight, and easy to use. In this blog post, we will take a look at the best tablets for kids. From the Amazon Fire HD Kids Edition to the Samsung Galaxy Tab A Kids Edition, we have got you covered.",
-      "image": "../images/blog/10.jpg"
+      "image": "../images/blogs/10.jpg"
     }
   ],
   "wishLists": [
     {
       "id": 1,
-      "category": "smartphones",
-      "ProductId": 1
+      "userId": 1,
+      "productId": 1
     },
     {
       "id": 2,
-      "category": "tablets",
-      "ProductId": 3
+      "userId": 1,
+      "productId": 3
     },
     {
       "id": 3,
-      "category": "laptops",
-      "ProductId": 2
+      "userId": 2,
+      "productId": 2
     },
     {
       "id": 4,
-      "category": "smartWatches",
-      "ProductId": 4
+      "userId": 2,
+      "productId": 4
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "productId": 13
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "productId": 15
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "productId": 12
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "productId": 14
     }
   ],
   "contacts": [
     {
       "id": 1,
       "name": "Ervin Howell",
-      "email": "Shanna@melissa.tv",
+      "email": "Ervin@melissa.xiaomi",
       "phone": "010-692-6593",
-      "comment": "Please don't fail"
+      "comment": "We are Xiaomi, we contact you for our new product promotion."
+    },
+    {
+      "id": 2,
+      "name": "Sarah Seran",
+      "email": "Sarah@melissa.google",
+      "phone": "010-692-6593",
+      "comment": "I want to buy Dell XPS 2050, do you have it or perharp you can buy it for me ?"
+    },
+    {
+      "id": 3,
+      "name": "Sophi Naviato",
+      "email": "Sophi@melissa.tomica",
+      "phone": "010-692-6593",
+      "comment": "I want to collaborate"
+    },
+    {
+      "id": 4,
+      "name": "Levi Arkerman",
+      "email": "Levi@melissa.google",
+      "phone": "010-692-6593",
+      "comment": "We are Google, we contact you for our new product promotion."
     }
   ],
   "feedbacks": [
     {
       "id": 1,
       "userId": 1,
+      "productId": 2,
       "rating": 4,
       "comment": "really good product"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "productId": 1,
+      "rating": 5,
+      "comment": "I can never see a more adorable product like this !"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "productId": 3,
+      "rating": 3,
+      "comment": "It getting hot even when I'm surfing facebook"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "productId": 4,
+      "rating": 5,
+      "comment": "really good product"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "productId": 5,
+      "rating": 4,
+      "comment": "Well it's the best product"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "productId": 6,
+      "rating": 4,
+      "comment": "Good tablet"
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "productId": 7,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 8,
+      "userId": 5,
+      "productId": 8,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 9,
+      "userId": 4,
+      "productId": 9,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 10,
+      "userId": 5,
+      "productId": 10,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 11,
+      "userId": 5,
+      "productId": 11,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 12,
+      "userId": 4,
+      "productId": 12,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 13,
+      "userId": 3,
+      "productId": 13,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 14,
+      "userId": 2,
+      "productId": 14,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 15,
+      "userId": 1,
+      "productId": 15,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 16,
+      "userId": 2,
+      "productId": 16,
+      "rating": 4,
+      "comment": "really good product"
+    },
+    {
+      "id": 17,
+      "userId": 3,
+      "productId": 1,
+      "rating": 4,
+      "comment": "Can wait to see how new verson of this product look like"
+    },
+    {
+      "id": 18,
+      "userId": 4,
+      "productId": 1,
+      "rating": 4,
+      "comment": "Let buy it. Worth every cent"
+    },
+    {
+      "id": 19,
+      "userId": 5,
+      "productId": 2,
+      "rating": 4,
+      "comment": "Let buy it. Worth every cent"
+    },
+    {
+      "id": 20,
+      "userId": 3,
+      "productId": 3,
+      "rating": 4,
+      "comment": "Let buy it. Worth every cent"
     }
   ]
 }
