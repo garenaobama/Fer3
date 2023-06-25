@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "Sincere@april.biz",
       "name": "Admin",
-      "password": "aA@1234567",
+      "password": "123",
       "email": "Sincere@april.biz",
       "address": {
         "street": "Kulas Light",
@@ -16,10 +16,10 @@
         }
       },
       "phone": "0878-532-644",
-      "role": "admin"
+      "role": "Admin"
     },
     {
-      "id": 2,
+      "id": "Shanna@melissa.tv",
       "name": "Ervin Howell",
       "password": "aA@1234567",
       "email": "Shanna@melissa.tv",
@@ -34,12 +34,12 @@
         }
       },
       "phone": "010-692-6593 x09125",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 3,
+      "id": "Nathan@yesenia.net",
       "name": "Clementine Bauch",
-      "password": "aA@1234567",
+      "password": "123",
       "email": "Nathan@yesenia.net",
       "address": {
         "street": "Douglas Extension",
@@ -52,10 +52,10 @@
         }
       },
       "phone": "1-463-123-4447",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 4,
+      "id": "Julianne.OConner@kory.org",
       "name": "Patricia Lebsack",
       "password": "aA@1234567",
       "email": "Julianne.OConner@kory.org",
@@ -70,10 +70,10 @@
         }
       },
       "phone": "493-170-9623 x156",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 5,
+      "id": "Lucio_Hettinger@annie.ca",
       "name": "Chelsey Dietrich",
       "password": "aA@1234567",
       "email": "Lucio_Hettinger@annie.ca",
@@ -88,7 +88,7 @@
         }
       },
       "phone": "(254)954-1289",
-      "role": "customer"
+      "role": "Customer"
     }
   ],
   "categories": [
