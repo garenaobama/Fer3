@@ -3,7 +3,6 @@
     {
       "id": 1,
       "name": "Admin",
-      "username": "Admin",
       "password": "aA@1234567",
       "email": "Sincere@april.biz",
       "address": {
@@ -22,7 +21,6 @@
     {
       "id": 2,
       "name": "Ervin Howell",
-      "username": "Antonette",
       "password": "aA@1234567",
       "email": "Shanna@melissa.tv",
       "address": {
@@ -41,7 +39,6 @@
     {
       "id": 3,
       "name": "Clementine Bauch",
-      "username": "Samantha",
       "password": "aA@1234567",
       "email": "Nathan@yesenia.net",
       "address": {
@@ -60,7 +57,6 @@
     {
       "id": 4,
       "name": "Patricia Lebsack",
-      "username": "Karianne",
       "password": "aA@1234567",
       "email": "Julianne.OConner@kory.org",
       "address": {
@@ -79,7 +75,6 @@
     {
       "id": 5,
       "name": "Chelsey Dietrich",
-      "username": "Kamren",
       "password": "aA@1234567",
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
