@@ -541,8 +541,8 @@ footer .input-group-text {
 .auth-card {
   padding: 20px;
   background-color: white;
-  width: 500px;
   margin: 30px auto;
+  max-width: 500px;
   border-radius: 10px;
 }
 .auth-card h3 {
