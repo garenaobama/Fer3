@@ -8,7 +8,6 @@ import view from "../images/view.svg";
 const ProductItem = (products) => {
   return (
     <>
-      <div>
         <Link className="product-card position-relative" to={"/product/"+ products.id}>
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
@@ -21,7 +20,7 @@ const ProductItem = (products) => {
             )}
           </div>
           <div className="product-details">
-            <h6 className="brand">{products.brand}</h6>
+            <h6 className="brand">{products.brandName}</h6>
             <h5 className="product-title">
               {products.name}
             </h5>
@@ -48,7 +47,6 @@ const ProductItem = (products) => {
             </div>
           </div>
         </Link>
-      </div>
     </>
   );
 };

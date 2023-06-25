@@ -44,7 +44,7 @@ const SingleProduct = () => {
     const [label, value] = input.split(': ');
     return (
       <>
-        <td style={{fontWeight:"bold"}}>{label}</td>
+        <td style={{ fontWeight: "bold" }}>{label}</td>
         <td>{value}</td>
       </>
     );
@@ -137,13 +137,11 @@ const SingleProduct = () => {
                   <div className="">
                     <input
                       type="number"
-                      name=""
                       min={1}
                       max={10}
                       value={1}
                       className="form-control"
                       style={{ width: "70px" }}
-                      id=""
                     />
                   </div>
                 </div>
@@ -281,13 +279,15 @@ const SingleProduct = () => {
             <div className="modal-body py-0">
               <div className="d-flex align-items-center">
                 <div className="flex-grow-1 w-50">
-
+                  {images && images.length > 0 && (
+                    <img src={mainImage} alt="product" style={{ width: "95%" }} />
+                  )}
                 </div>
                 <div className="d-flex flex-column flex-grow-1 w-50">
-                  <h6 className="mb-3">Apple Watch</h6>
-                  <p className="mb-1">Quantity: asgfd</p>
-                  <p className="mb-1">Color: asgfd</p>
-                  <p className="mb-1">Size: asgfd</p>
+                  <h6 className="mb-3">{products.name}</h6>
+                  <p className="mb-1">quantity: {1}</p>
+                  <p className="mb-1">Color: { }</p>
+                  <p className="mb-1">Size: { }</p>
                 </div>
               </div>
             </div>
