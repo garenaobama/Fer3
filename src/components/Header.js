@@ -1,12 +1,23 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
 import wishlist from "../images/wishlist.svg";
 import user from "../images/user.svg";
 import cart from "../images/cart.svg";
 import menu from "../images/menu.svg";
+import { useAuthentication } from "../util/use-authentication";
+import { toast } from "react-toastify";
 const Header = () => {
+  const { isLogged } = useAuthentication();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('data')
+    toast.success("Successfully logged out!")
+    navigate('/login')
+  }
+  
   return (
     <>
       <header className="header-top-strip py-3">
@@ -51,7 +62,7 @@ const Header = () => {
               </div>
             </div>
             <div className="col-5">
-              <div className="header-upper-links d-flex align-items-center justify-content-between">
+              <div className="header-upper-links d-flex align-items-center justify-content-around">
                 <div>
                   <Link
                     to="/compare-product"
@@ -63,7 +74,8 @@ const Header = () => {
                     </p>
                   </Link>
                 </div>
-                <div>
+                { isLogged && (
+                  <div>
                   <Link
                     to="/wishlist"
                     className="d-flex align-items-center gap-10 text-white"
@@ -74,7 +86,9 @@ const Header = () => {
                     </p>
                   </Link>
                 </div>
-                <div>
+                )}
+                { !isLogged && (
+                  <div>
                   <Link
                     to="/login"
                     className="d-flex align-items-center gap-10 text-white"
@@ -85,7 +99,23 @@ const Header = () => {
                     </p>
                   </Link>
                 </div>
-                <div>
+                )}
+                { isLogged && (
+                  <div>
+                  <a
+                    href="#"
+                    onClick={() => handleLogout()}
+                    className="d-flex align-items-center gap-10 text-white"
+                  >
+                    <img src={user} alt="user" />
+                    <p className="mb-0">
+                      Log out
+                    </p>
+                  </a>
+                </div>
+                )}
+                {isLogged && (
+                  <div>
                   <Link
                     to="/cart"
                     className="d-flex align-items-center gap-10 text-white"
@@ -97,6 +127,7 @@ const Header = () => {
                     </div>
                   </Link>
                 </div>
+                )}
               </div>
             </div>
           </div>

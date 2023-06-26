@@ -21,10 +21,13 @@ import TermAndContions from "./pages/TermAndContions";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import { ToastContainer } from "react-toastify";
+import { AppRouter } from "./routes/router";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <ToastContainer theme='colored' position='top-center'></ToastContainer>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -48,7 +51,8 @@ function App() {
             <Route path="term-conditions" element={<TermAndContions />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <AppRouter />
     </>
   );
 }

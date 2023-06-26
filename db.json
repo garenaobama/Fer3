@@ -1,10 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "Sincere@april.biz",
       "name": "Admin",
-      "username": "Admin",
-      "password": "aA@1234567",
+      "password": "123",
       "email": "Sincere@april.biz",
       "address": {
         "street": "Kulas Light",
@@ -17,12 +16,11 @@
         }
       },
       "phone": "0878-532-644",
-      "role": "admin"
+      "role": "Admin"
     },
     {
-      "id": 2,
+      "id": "Shanna@melissa.tv",
       "name": "Ervin Howell",
-      "username": "Antonette",
       "password": "aA@1234567",
       "email": "Shanna@melissa.tv",
       "address": {
@@ -36,13 +34,12 @@
         }
       },
       "phone": "010-692-6593 x09125",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 3,
+      "id": "Nathan@yesenia.net",
       "name": "Clementine Bauch",
-      "username": "Samantha",
-      "password": "aA@1234567",
+      "password": "123",
       "email": "Nathan@yesenia.net",
       "address": {
         "street": "Douglas Extension",
@@ -55,12 +52,11 @@
         }
       },
       "phone": "1-463-123-4447",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 4,
+      "id": "Julianne.OConner@kory.org",
       "name": "Patricia Lebsack",
-      "username": "Karianne",
       "password": "aA@1234567",
       "email": "Julianne.OConner@kory.org",
       "address": {
@@ -74,12 +70,11 @@
         }
       },
       "phone": "493-170-9623 x156",
-      "role": "customer"
+      "role": "Customer"
     },
     {
-      "id": 5,
+      "id": "Lucio_Hettinger@annie.ca",
       "name": "Chelsey Dietrich",
-      "username": "Kamren",
       "password": "aA@1234567",
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
@@ -156,9 +151,10 @@
     {
       "id": 1,
       "name": "iPhone 13 Pro Max",
-      "price": "1,099.99",
+      "price": "1099.99",
       "categoryId": 1,
-      "brand": "Apple",
+      "brand": 1,
+      "feartured" : false,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -185,9 +181,10 @@
     {
       "id": 2,
       "name": "Galaxy S21 Ultra 5G",
-      "price": "1,379.99",
+      "price": "1379.99",
       "categoryId": 1,
-      "brand": "Samsung",
+      "brand": 3,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -214,9 +211,10 @@
     {
       "id": 3,
       "name": "Xiaomi Mi 11 Ultra",
-      "price": "1,199.99",
+      "price": "1199.99",
       "categoryId": 1,
-      "brand": "Xiaomi",
+      "brand": 4,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -245,8 +243,9 @@
       "name": "Pixel 6 Pro",
       "price": "999.99",
       "categoryId": 1,
-      "brand": "Google",
-      "year": 2022,
+      "brand": 2,
+      "feartured" : true,
+      "year": 2020,
       "status": 1,
       "detail": [
         "Display: 6.7-inch QHD+ (3120 x 1440) OLED display with 120Hz refresh rate",
@@ -274,8 +273,9 @@
       "name": "iPad Pro",
       "price": "1899.99",
       "categoryId": 2,
-      "brand": "Apple",
-      "year": 2022,
+      "brand": 1,
+      "feartured" : true,
+      "year": 2021,
       "status": 1,
       "detail": [
         "Display: 12.9 inches QHD+ OLED display with 120Hz refresh rate",
@@ -302,7 +302,8 @@
       "name": "Mi Pad 5",
       "price": "480.99",
       "categoryId": 2,
-      "brand": "Xiaomi",
+      "brand": 4,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -331,8 +332,9 @@
       "name": "Galaxy Tab S7+",
       "price": "900.99",
       "categoryId": 2,
-      "brand": "Samsung",
-      "year": 2022,
+      "brand": 3,
+      "feartured" : true,
+      "year": 2023,
       "status": 1,
       "detail": [
         "Display: 12.4 inches Super AMOLED display with 120Hz refresh rate and HDR10+ support",
@@ -360,7 +362,8 @@
       "name": "iPad Air (2022)",
       "price": "449.99",
       "categoryId": 2,
-      "brand": "Apple",
+      "brand": 1,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -389,7 +392,8 @@
       "name": "Dell XPS 13",
       "price": "649.99",
       "categoryId": 3,
-      "brand": "Dell",
+      "brand": 5,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -416,7 +420,8 @@
       "name": "HP Spectre x360 16",
       "price": "1499.99",
       "categoryId": 3,
-      "brand": "HP",
+      "brand": 6,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -443,7 +448,8 @@
       "name": "MacBook Pro M1",
       "price": "1299.99",
       "categoryId": 3,
-      "brand": "Apple",
+      "brand": 1,
+      "feartured" : true,
       "year": 2020,
       "status": 1,
       "detail": [
@@ -471,7 +477,8 @@
       "name": "Lenovo ThinkPad X1 Carbon Gen 9",
       "price": "1599.99",
       "categoryId": 3,
-      "brand": "Lenovo",
+      "brand": 7,
+      "feartured" : true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -498,7 +505,8 @@
       "name": "Samsung Galaxy Watch 5",
       "price": "259.99",
       "categoryId": 4,
-      "brand": "Samsung",
+      "brand": 3,
+      "feartured" : true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -526,7 +534,8 @@
       "name": "Fitbit Sense 2",
       "price": "269.95",
       "categoryId": 4,
-      "brand": "Fitbit",
+      "brand": 8,
+      "feartured" : true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -555,7 +564,8 @@
       "name": "Garmin Venu Sq 2",
       "price": "249.99",
       "categoryId": 4,
-      "brand": "Garmin",
+      "brand": 9,
+      "feartured" : true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -584,7 +594,8 @@
       "name": "Google Pixel Watch",
       "price": "299.99",
       "categoryId": 4,
-      "brand": "Google",
+      "brand": 2,
+      "feartured" : true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -606,6 +617,53 @@
         "../images/products/16/3.jpg",
         "../images/products/16/4.jpg"
       ]
+    }
+  ],
+  "brands":[
+    {
+      "id": 1,
+      "name": "Apple",
+      "logo": ""
+    },
+    {
+      "id": 2,
+      "name": "Google",
+      "logo": ""
+    },
+    {
+      "id": 3,
+      "name": "Samsung",
+      "logo": ""
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi",
+      "logo": ""
+    },
+    {
+      "id": 5,
+      "name": "Dell",
+      "logo": ""
+    },
+    {
+      "id": 6,
+      "name": "HP",
+      "logo": ""
+    },
+    {
+      "id": 7,
+      "name": "Lenovo",
+      "logo": ""
+    },
+    {
+      "id": 8,
+      "name": "Fibit",
+      "logo": ""
+    },
+    {
+      "id": 9,
+      "name": "Garmin",
+      "logo": ""
     }
   ],
   "blogs": [

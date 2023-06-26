@@ -1,17 +1,19 @@
 import React from "react";
 
-const CustomInput = (props) => {
-  const { type, name, placeholder, classname } = props;
+const CustomInput = React.forwardRef(({ type, name, placeholder, className, errMes, ...rest }, ref) => {
   return (
     <div>
       <input
+        ref={ref}
         type={type}
         name={name}
         placeholder={placeholder}
-        className={`form-control ${classname}`}
+        className={`form-control ${className ? className : ''}`}
+        {...rest}
       />
+      <span className="text-danger mt-2">{errMes ? errMes: ""}</span>
     </div>
   );
-};
+});
 
 export default CustomInput;

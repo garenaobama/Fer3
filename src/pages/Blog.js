@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import BlogCard from "../components/BlogCard";
 import Container from "../components/Container";
+import { useParams } from "react-router-dom";
 
 const Blog = () => {
+  
+
   return (
     <>
       <Meta title={"Blogs"} />
