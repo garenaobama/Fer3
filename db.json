@@ -94,6 +94,44 @@
       },
       "phone": "(254)954-1289",
       "role": "customer"
+    },
+    {
+      "name": "Hai Ta Duc",
+      "email": "monhai770@gmail.com",
+      "phone": "0981638843",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "Duc Hai1",
+      "email": "taduchai2k2@gmail.com",
+      "phone": "0981638843",
+      "password": "gokukap6",
+      "id": 7
+    },
+    {
+      "id": "abc@gmail.com",
+      "name": "Duc Hai12112",
+      "email": "abc@gmail.com",
+      "phone": "0981638845",
+      "password": "123456789",
+      "role": "Customer"
+    },
+    {
+      "id": "abcd@gmail.com",
+      "name": "Duc Hai121121111",
+      "email": "abcd@gmail.com",
+      "phone": "0974894947",
+      "password": "123456789",
+      "role": "Customer"
+    },
+    {
+      "id": "taduchai7707@gmail.com",
+      "name": "Hai Ta Duc22222222222",
+      "email": "taduchai7707@gmail.com",
+      "phone": "0981638843",
+      "password": "gokukap6",
+      "role": "Customer"
     }
   ],
   "categories": [
@@ -684,6 +722,34 @@
       "email": "Levi@melissa.google",
       "phone": "010-692-6593",
       "comment": "We are Google, we contact you for our new product promotion."
+    },
+    {
+      "id": 1687650353497,
+      "name": "Hai Ta Duc",
+      "email": "monhai770@gmail.com",
+      "phone": "0981638843",
+      "comment": "I want to buy Dell XPS 2050"
+    },
+    {
+      "id": 1687664695946,
+      "name": "Ta Duc Hai 1",
+      "email": "kibreaking@gmail.com",
+      "phone": "0981638841",
+      "comment": "Can wait to see how new verson of this product look like"
+    },
+    {
+      "name": "Nguyen Van A",
+      "email": "abcd@gmail.com",
+      "phone": "0981638844",
+      "comment": "sadjasvd asdhvkhasd á dkashvdjgcas",
+      "id": 1687664695947
+    },
+    {
+      "name": "Hai Ta Duc1234",
+      "email": "abcdef@gmail.com",
+      "phone": "0981638843",
+      "comment": "I want to buy Dell XPS 2050, do you have it or perharp you can buy it for me ?",
+      "id": 1687664695948
     }
   ],
   "feedbacks": [
