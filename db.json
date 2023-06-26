@@ -95,14 +95,14 @@
       "email": "monhai770@gmail.com",
       "phone": "0981638843",
       "password": "",
-      "id": 6
+      "id": "monhai770@gmail.com"
     },
     {
       "name": "Duc Hai1",
       "email": "taduchai2k2@gmail.com",
       "phone": "0981638843",
       "password": "gokukap6",
-      "id": 7
+      "id": "taduchai2k2@gmail.com"
     },
     {
       "id": "abc@gmail.com",
@@ -152,9 +152,10 @@
       "id": 1,
       "name": "iPhone 13 Pro Max",
       "price": "1099.99",
+      "originalPrice": "900.25",
       "categoryId": 1,
       "brand": 1,
-      "feartured" : false,
+      "feartured": false,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -182,9 +183,10 @@
       "id": 2,
       "name": "Galaxy S21 Ultra 5G",
       "price": "1379.99",
+      "originalPrice": "1275.25",
       "categoryId": 1,
       "brand": 3,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -212,9 +214,10 @@
       "id": 3,
       "name": "Xiaomi Mi 11 Ultra",
       "price": "1199.99",
+      "originalPrice": "1100.25",
       "categoryId": 1,
       "brand": 4,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -242,9 +245,10 @@
       "id": 4,
       "name": "Pixel 6 Pro",
       "price": "999.99",
+      "originalPrice": "900.25",
       "categoryId": 1,
       "brand": 2,
-      "feartured" : true,
+      "feartured": true,
       "year": 2020,
       "status": 1,
       "detail": [
@@ -272,9 +276,10 @@
       "id": 5,
       "name": "iPad Pro",
       "price": "1899.99",
+      "originalPrice": "1825.25",
       "categoryId": 2,
       "brand": 1,
-      "feartured" : true,
+      "feartured": true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -301,9 +306,10 @@
       "id": 6,
       "name": "Mi Pad 5",
       "price": "480.99",
+      "originalPrice": "450",
       "categoryId": 2,
       "brand": 4,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -331,9 +337,10 @@
       "id": 7,
       "name": "Galaxy Tab S7+",
       "price": "900.99",
+      "originalPrice": "850",
       "categoryId": 2,
       "brand": 3,
-      "feartured" : true,
+      "feartured": true,
       "year": 2023,
       "status": 1,
       "detail": [
@@ -361,9 +368,10 @@
       "id": 8,
       "name": "iPad Air (2022)",
       "price": "449.99",
+      "originalPrice": "420.25",
       "categoryId": 2,
       "brand": 1,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -391,9 +399,10 @@
       "id": 9,
       "name": "Dell XPS 13",
       "price": "649.99",
+      "originalPrice": "620.25",
       "categoryId": 3,
       "brand": 5,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -419,9 +428,10 @@
       "id": 10,
       "name": "HP Spectre x360 16",
       "price": "1499.99",
+      "originalPrice": "1450.25",
       "categoryId": 3,
       "brand": 6,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -447,9 +457,10 @@
       "id": 11,
       "name": "MacBook Pro M1",
       "price": "1299.99",
+      "originalPrice": "1250.25",
       "categoryId": 3,
       "brand": 1,
-      "feartured" : true,
+      "feartured": true,
       "year": 2020,
       "status": 1,
       "detail": [
@@ -476,9 +487,10 @@
       "id": 12,
       "name": "Lenovo ThinkPad X1 Carbon Gen 9",
       "price": "1599.99",
+      "originalPrice": "1540.25",
       "categoryId": 3,
       "brand": 7,
-      "feartured" : true,
+      "feartured": true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -504,9 +516,10 @@
       "id": 13,
       "name": "Samsung Galaxy Watch 5",
       "price": "259.99",
+      "originalPrice": "250",
       "categoryId": 4,
       "brand": 3,
-      "feartured" : true,
+      "feartured": true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -533,9 +546,10 @@
       "id": 14,
       "name": "Fitbit Sense 2",
       "price": "269.95",
+      "originalPrice": "250",
       "categoryId": 4,
       "brand": 8,
-      "feartured" : true,
+      "feartured": true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -563,9 +577,10 @@
       "id": 15,
       "name": "Garmin Venu Sq 2",
       "price": "249.99",
+      "originalPrice": "230",
       "categoryId": 4,
       "brand": 9,
-      "feartured" : true,
+      "feartured": true,
       "year": 2021,
       "status": 1,
       "detail": [
@@ -593,9 +608,10 @@
       "id": 16,
       "name": "Google Pixel Watch",
       "price": "299.99",
+      "originalPrice": "270.5",
       "categoryId": 4,
       "brand": 2,
-      "feartured" : true,
+      "feartured": true,
       "year": 2022,
       "status": 1,
       "detail": [
@@ -619,7 +635,7 @@
       ]
     }
   ],
-  "brands":[
+  "brands": [
     {
       "id": 1,
       "name": "Apple",
@@ -950,6 +966,74 @@
       "productId": 3,
       "rating": 4,
       "comment": "Let buy it. Worth every cent"
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "userId": "monhai770@gmail.com",
+      "phone": "010-692-6593 x09125",
+      "address": "Ha Noi",
+      "productList": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "unitPrice": "1099.99",
+          "originalPrice": "900.25"
+        },
+        {
+          "productId": 2,
+          "quantity": 1,
+          "unitPrice": "1325.25",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2425.24",
+      "statusId": 1
+    },
+    {
+      "id": 2,
+      "userId": "monhai770@gmail.com",
+      "phone": "010-692-6593 x09125",
+      "address": "Ha Noi",
+      "productList": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "unitPrice": "1099.99",
+          "originalPrice": "900.25"
+        },
+        {
+          "productId": 2,
+          "quantity": 1,
+          "unitPrice": "1325.25",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2425.24",
+      "statusId": 2
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "pending"
+    },
+    {
+      "id": 2,
+      "name": "preparing"
+    },
+    {
+      "id": 3,
+      "name": "shipping"
+    },
+    {
+      "id": 4,
+      "name": "successful"
+    },
+    {
+      "id": 5,
+      "name": "failed"
     }
   ]
 }
