@@ -5,11 +5,11 @@ import Container from "../components/Container";
 import ProductItem from "../components/ProductItem";
 
 const OurStore = () => {
-  const [productList, setProductList] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [brands, setBrands] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [productList, setProductList] = useState([]); // productList that unchange
+  const [products, setProducts] = useState([]); //productlist that use for display
+  const [categories, setCategories] = useState([]); //category
+  const [brands, setBrands] = useState([]); //brands
+  const [isLoading, setIsLoading] = useState(false); //loading effect
   const [filterObject, setFilterObject] = useState({  // properties for filter 
     category: 0,
     year: 0,
