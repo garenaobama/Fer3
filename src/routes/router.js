@@ -3,12 +3,12 @@ import { ProtectedRoute } from './protected-route';
 import { AuthorizationRoute } from './authorization-route';
 import { publicRoutes } from './public.route';
 import { authRoutes } from './auth.route';
+import adminRoutes from './admin.route';
 import Error403Page from '../pages/error403.page';
 import Error404Page from '../pages/error404.page';
 import ErrorPage from '../pages/errorPage';
 import { customerRoutes } from './customer-route';
 import Layout from '../components/Layout';
-
 const allRoutes = createBrowserRouter([
   {
     path: '/admin',
@@ -29,6 +29,7 @@ const allRoutes = createBrowserRouter([
   customerRoutes(),
   publicRoutes(),
   authRoutes(),
+  adminRoutes(),
   { path: '/unauthorize', element: <Error403Page /> },
   { path: '*', element: <Error404Page /> },
 ]);
