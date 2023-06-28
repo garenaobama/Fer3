@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 
 const Cart = () => {
+  const user = JSON.parse(sessionStorage.getItem("data"));
+  console.log(user.name);
+
   return (
     <>
       <Meta title={"Cart"} />

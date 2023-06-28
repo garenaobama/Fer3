@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
-
+import Swal from "sweetalert2";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -15,6 +15,8 @@ const SingleProduct = () => {
   const [relatedProducts, setRelatedProduct] = useState([]);
   const [mainImage, setMainImage] = useState([]);
   const { color } = products;
+  const [recentColor, setRecentColor] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   const { detail } = products;
   const { images } = products;
 
@@ -30,9 +32,11 @@ const SingleProduct = () => {
     }, [id]
   );
 
+  //pre initial , this is for setting the default value for some states
   useEffect(
     () => {
-      setMainImage(images ? images[0] : "/dsa");
+      setMainImage(images ? images[0] : "not chosen");
+      setRecentColor(color ? color[0] : "not chosen")
     }, [images]
   );
 
@@ -62,9 +66,40 @@ const SingleProduct = () => {
     }, []
   );
 
-  const [orderedProduct, setorderedProduct] = useState(true);
-
   const closeModal = () => { };
+
+  //wish list:
+
+  //session cart :
+  const [cart, setCart] = useState([]);
+
+  //when cart changes, update session cart
+  useEffect(
+    () => {
+      if(sessionStorage.getItem("cart")) { //if there is cart before
+        const cartlist = [
+          JSON.parse(sessionStorage.getItem("cart")),
+          cart
+        ]
+        sessionStorage.setItem("cart", JSON.stringify(cartlist));
+      }
+      else sessionStorage.setItem("cart", JSON.stringify(cart));
+      console.log(JSON.parse(sessionStorage.getItem("cart")));
+    },[cart]
+  )
+  
+  const addToCart = () => {
+    
+    setCart(
+      // cart,
+      {
+        productId: [products.id],
+        color: [recentColor],
+        quantity: [quantity],
+      }
+    )
+    //sessionStorage.setItem("cart", JSON.stringify(cart));
+  }
   return (
     <>
       <Meta title={"Product Name"} />
@@ -126,7 +161,7 @@ const SingleProduct = () => {
                 <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
                   {color && color.length > 0 && color.map((cl, index) =>
                     <div key={cl}>
-                      <input onChange={(e) => setMainImage(images[e.target.value])} value={index} type="radio" className="btn-check" name="btnradio" id={"btnradio" + index} autoComplete="off" />
+                      <input onChange={(e) => { setMainImage(images[e.target.value]); setRecentColor(color[index]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} checked={index == 0} autoComplete="off" />
                       <label className="btn btn-outline-primary" htmlFor={"btnradio" + index}>{cl}</label>
                     </div>
                   )}
@@ -136,10 +171,11 @@ const SingleProduct = () => {
                   <h3 className="product-heading">Quantity :</h3>
                   <div className="">
                     <input
+                      onChange={(e) => setQuantity(e.target.value)}
                       type="number"
                       min={1}
+                      placeholder="1"
                       max={10}
-                      value={1}
                       className="form-control"
                       style={{ width: "70px" }}
                     />
@@ -152,6 +188,7 @@ const SingleProduct = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop"
                     type="button"
+                    onClick={() => addToCart()} 
                   >
                     Add to Cart
                   </button>
@@ -267,7 +304,7 @@ const SingleProduct = () => {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered ">
-          <div className="modal-content">
+          <div className="modal-content p-3">
             <div className="modal-header py-0 border-0">
               <button
                 type="button"
@@ -285,30 +322,21 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex flex-column flex-grow-1 w-50">
                   <h6 className="mb-3">{products.name}</h6>
-                  <p className="mb-1">quantity: {1}</p>
-                  <p className="mb-1">Color: { }</p>
-                  <p className="mb-1">Size: { }</p>
+                  <p className="mb-1">Color: {recentColor}</p>
+                  <p className="mb-1">Quantity: {quantity}</p>
+                  <p className="mb-1">Price: ${parseFloat(products.price) * quantity}</p>
                 </div>
               </div>
             </div>
             <div className="modal-footer border-0 py-0 justify-content-center gap-30">
               <button type="button" className="button" data-bs-dismiss="modal">
-                View My Cart
+                View my cart
               </button>
-              <button type="button" className="button signup">
-                Checkout
+              <button data-bs-dismiss="modal" type="button" className="button signup">
+                <Link className="text-light" to="/product">
+                  Continue To Shopping
+                </Link>
               </button>
-            </div>
-            <div className="d-flex justify-content-center py-3">
-              <Link
-                className="text-dark"
-                to="/product"
-                onClick={() => {
-                  closeModal();
-                }}
-              >
-                Continue To Shopping
-              </Link>
             </div>
           </div>
         </div>
