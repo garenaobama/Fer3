@@ -4,6 +4,7 @@ import Customer from "../admin/pages/Customer";
 import Home from "../pages/Home";
 import Feedback from "../admin/pages/Feedback";
 import Dashboard from "../admin/pages/DashBoard";
+import Contact from "../admin/pages/Contact";
 
 export default function adminRoutes() {
     return {
@@ -18,6 +19,7 @@ export default function adminRoutes() {
             { path: '/admin/customer', element: <Customer /> },
             { path: '/admin/feedback', element: <Feedback /> },
             { path: '/admin/dashboard', element: <Dashboard /> },
+            { path: '/admin/contact', element: <Contact /> },
         ]
     };
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Col, Table } from 'react-bootstrap'
-export default function Customer(){
+
+export default function Feedback(){
     const [feedbacks, setFeedbacks] = useState([]);
 
     useEffect(
