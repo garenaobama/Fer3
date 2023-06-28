@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import BreadCrumb from '../components/BreadCrumb';
 import Meta from '../components/Meta';
@@ -7,6 +7,7 @@ import CustomInput from '../components/CustomInput';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
+import { hashCode } from '../util/hashPassword';
 
 const loginSchema = yup.object({
     email: yup
@@ -31,7 +32,7 @@ const Login = () => {
             login(values.email, values.password);
         },
     });
-
+    
     const login = (email, password) => {
         fetch(`http://localhost:9999/users/${email}`)
             .then((res) => {
@@ -40,9 +41,9 @@ const Login = () => {
             .then((resp) => {
                 console.log(resp);
                 if (Object.keys(resp).length === 0) {
-                    toast.error('Please Enter valid email');
+                    toast.error('Please enter valid email');
                 } else {
-                    if (resp.password === password) {
+                    if (hashCode().verifyCode(password, resp.password)) {
                         toast.success('Successfully logged in');
                         const data = {
                             email: email,
@@ -57,7 +58,7 @@ const Login = () => {
                 }
             })
             .catch((err) => {
-                toast.error('Login failed :' + err.message);
+                toast.error('Login failed: ' + err.message);
             });
     };
 

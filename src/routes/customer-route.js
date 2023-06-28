@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import ErrorPage from '../pages/errorPage';
 import { AuthorizationRoute } from './authorization-route';
 import Cart from '../pages/Cart';

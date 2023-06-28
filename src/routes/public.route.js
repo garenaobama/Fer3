@@ -34,7 +34,7 @@ export function publicRoutes() {
             { path: '/forgot-password', element: <Forgotpassword /> },
             { path: '/signup', element: <Signup /> },
             { path: '/compare-product', element: <CompareProduct /> },
-            { path: '/reset-password', element: <Resetpassword /> },
+            { path: '/reset-password/:token', element: <Resetpassword /> },
             { path: '/privacy-policy', element: <PrivacyPolicy /> },
             { path: '/shipping-policy', element: <ShippingPolicy /> },
             { path: '/term-conditions', element: <TermAndContions /> },
