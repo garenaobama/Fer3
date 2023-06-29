@@ -1153,7 +1153,7 @@
       "name": "David Turner",
       "email": "davidturner@example.com",
       "phone": "555-7416",
-      "status": "New",
+      "status": "Read",
       "comment": "Random comment 30."
     }
   ],

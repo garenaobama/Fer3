@@ -111,7 +111,7 @@ const Dashboard = () => {
   };
   return (
     <div>
-      <h1 className="mt-3 mb-4 title">Dashboard</h1>
+      <h3 className="mt-2">Dashboard</h3>
       <div className="d-flex justify-content-between align-items-center gap-3">
         <div className="d-flex justify-content-between align-items-end flex-grow-1 bg-white p-3 roudned-3">
           <div>

@@ -94,7 +94,7 @@ export default function Contact() {
 
     return (
         <Col lg={12}>
-            <h1 className="mt-5">Contacts List</h1>
+            <h3 className="mt-2">Contacts List</h3>
             <Row className='my-4'>
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

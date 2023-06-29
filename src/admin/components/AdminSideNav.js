@@ -9,6 +9,7 @@ import { BsTelephone } from "react-icons/bs";
 import { BiLogoTelegram } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import Nav from 'react-bootstrap/Nav';
+import Accordion from 'react-bootstrap/Accordion';
 
 export default function AdminSideNav(props) {
     const location = useLocation();
@@ -26,20 +27,67 @@ export default function AdminSideNav(props) {
             </Link>
             <div className='mt-3 mb-3' style={{ width: "100%", height: "2px", background: "#00000038" }}></div>
 
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/dashboard' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}} to={"/admin/dashboard"}><AiOutlineStock size="30px" style={{ marginBottom: 0, marginRight: "10px" }} />Dashboard</Link>
-            
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/order' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}}  to={"/admin/order"}><AiOutlineShopping style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Orders</Link>
-
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/product' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}}  to={"/admin/product"}><AiOutlineShoppingCart style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Products</Link>
-
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/blog' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}}  to={"/admin/blog"}><AiOutlinePicRight style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Blogs</Link>
-
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/contact' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}}  to={"/admin/contact"} ><BsTelephone style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Contacts</Link>
-
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/customer' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}}  to={"/admin/customer"}><BiUser style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Customers</Link>
-
-            <Link className='mb-3 p-2' style={location.pathname === '/admin/feedback' ? {width:"100%", background:"#e0e0e0"} : {width:"100%"}} to={"/admin/feedback"}><BiLogoTelegram style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Feedbacks</Link>
-
+            <Accordion>
+                <Link style={{ width: "100%" }} to={"/admin/dashboard"}>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>
+                            <AiOutlineStock size="30px" style={{ marginBottom: 0, marginRight: "10px" }} />Dashboard
+                        </Accordion.Header>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/order"}>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>
+                            <AiOutlineShopping style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Orders
+                        </Accordion.Header>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/product"}>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header>
+                            <AiOutlineShoppingCart style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Products
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <Link style={{ width: "100%" }} to={"/admin/blog"}> Product list</Link>
+                            <Link style={{ width: "100%" }} to={"/admin/product/add-product"}> Add new product</Link>
+                            <Link style={{ width: "100%" }} to={"/admin/product/add-brand"}> Brand</Link>
+                            <Link style={{ width: "100%" }} to={"/admin/product/category-list"}> Category</Link>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/blog"}>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header>
+                            <AiOutlinePicRight style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Blogs
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <Link style={{ width: "100%" }} to={"/admin/blog"}> Blog list</Link>
+                            <Link style={{ width: "100%" }} to={"/admin/blog/add-blog"}> Blog add new</Link>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/contact"}>
+                    <Accordion.Item eventKey="4">
+                        <Accordion.Header>
+                            <BsTelephone style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Contacts
+                        </Accordion.Header>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/customer"}>
+                    <Accordion.Item eventKey="5">
+                        <Accordion.Header>
+                            <BiUser style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Customers
+                        </Accordion.Header>
+                    </Accordion.Item>
+                </Link>
+                <Link style={{ width: "100%" }} to={"/admin/feedback"}>
+                    <Accordion.Item eventKey="6">
+                        <Accordion.Header>
+                            <BiLogoTelegram style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Feedbacks
+                        </Accordion.Header>
+                    </Accordion.Item>
+                </Link>
+            </Accordion>
         </Nav>
     )
 }

@@ -13,7 +13,7 @@ export default function Feedback(){
     );
     return (
         <Col lg={10}>
-            <h1 className='mt-5'>Feedbacks List</h1>
+            <h3 className="mt-2">Feedbacks List</h3>
             <Table striped bordered hover variant="light">
                 <thead>
                     <tr>

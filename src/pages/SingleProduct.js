@@ -32,11 +32,12 @@ const SingleProduct = () => {
     }, [id]
   );
 
-  //pre initial , this is for setting the default value for some states
+  //pre initial , this is for setting the default value for some color states
   useEffect(
     () => {
       setMainImage(images ? images[0] : "not chosen");
-      setRecentColor(color ? color[0] : "not chosen")
+      setRecentColor(color ? color[0] : "not chosen");
+      if (document.getElementById("btnradio0")) document.getElementById("btnradio0").setAttribute("checked", true);
     }, [images]
   );
 
@@ -66,8 +67,6 @@ const SingleProduct = () => {
     }, []
   );
 
-  const closeModal = () => { };
-
   //wish list:
 
   //session cart :
@@ -76,26 +75,45 @@ const SingleProduct = () => {
   //when cart changes, update session cart
   useEffect(
     () => {
-      if(sessionStorage.getItem("cart")) { //if there is cart before
-        const cartlist = [
-          JSON.parse(sessionStorage.getItem("cart")),
-          cart
+      if (sessionStorage.getItem("cart")) {
+        var sessionCart = [
+          ...JSON.parse(sessionStorage.getItem("cart"))
         ]
-        sessionStorage.setItem("cart", JSON.stringify(cartlist));
+        if (sessionCart.some(item => item.productId == id && item.color == recentColor)) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Failed',
+            text: 'You have already added this item to cart',
+          })
+        }
+        else {
+          if (Object.keys(cart).length != 0) {
+            sessionCart = [
+              ...JSON.parse(sessionStorage.getItem("cart")),
+              cart
+            ]
+            Swal.fire({
+              icon: 'success',
+              title: 'Added',
+              text: 'Added item to cart',
+            })
+          }
+        }
+        sessionStorage.setItem("cart", JSON.stringify(sessionCart));
       }
       else sessionStorage.setItem("cart", JSON.stringify(cart));
       console.log(JSON.parse(sessionStorage.getItem("cart")));
-    },[cart]
+    }, [cart]
   )
-  
+
   const addToCart = () => {
-    
+
     setCart(
       // cart,
       {
-        productId: [products.id],
-        color: [recentColor],
-        quantity: [quantity],
+        productId: Number(id),
+        color: recentColor,
+        quantity: quantity,
       }
     )
     //sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -161,7 +179,7 @@ const SingleProduct = () => {
                 <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
                   {color && color.length > 0 && color.map((cl, index) =>
                     <div key={cl}>
-                      <input onChange={(e) => { setMainImage(images[e.target.value]); setRecentColor(color[index]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} checked={index == 0} autoComplete="off" />
+                      <input onChange={(e) => { setMainImage(images[e.target.value]); setRecentColor(color[index]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} autoComplete="off" />
                       <label className="btn btn-outline-primary" htmlFor={"btnradio" + index}>{cl}</label>
                     </div>
                   )}
@@ -185,10 +203,8 @@ const SingleProduct = () => {
                 <div className="d-flex align-items-center gap-30 mt-5 mb-5">
                   <button
                     className="button border-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
                     type="button"
-                    onClick={() => addToCart()} 
+                    onClick={() => addToCart()}
                   >
                     Add to Cart
                   </button>
@@ -293,54 +309,6 @@ const SingleProduct = () => {
 
         </div>
       </Container>
-
-      <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered ">
-          <div className="modal-content p-3">
-            <div className="modal-header py-0 border-0">
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body py-0">
-              <div className="d-flex align-items-center">
-                <div className="flex-grow-1 w-50">
-                  {images && images.length > 0 && (
-                    <img src={mainImage} alt="product" style={{ width: "95%" }} />
-                  )}
-                </div>
-                <div className="d-flex flex-column flex-grow-1 w-50">
-                  <h6 className="mb-3">{products.name}</h6>
-                  <p className="mb-1">Color: {recentColor}</p>
-                  <p className="mb-1">Quantity: {quantity}</p>
-                  <p className="mb-1">Price: ${parseFloat(products.price) * quantity}</p>
-                </div>
-              </div>
-            </div>
-            <div className="modal-footer border-0 py-0 justify-content-center gap-30">
-              <button type="button" className="button" data-bs-dismiss="modal">
-                View my cart
-              </button>
-              <button data-bs-dismiss="modal" type="button" className="button signup">
-                <Link className="text-light" to="/product">
-                  Continue To Shopping
-                </Link>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
