@@ -19,6 +19,19 @@ const Checkout = () => {
     }, [cart, products]
   )
 
+
+  // useEffect(() => {
+  //   fetch(`https://restcountries.com/v3.1/all?fields=name`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCountryList(data);
+  //       var temp = [...countryList];
+  //       temp.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  //       setCountryList(temp);
+  //     });
+  // }, []);
+
+
   useEffect(() => {
     Promise.all(  //wait for all of the fetch requests to complete before updating the state with the fetched data.
       cart.map((c) => {
@@ -85,7 +98,7 @@ const Checkout = () => {
                 <div className="w-100">
                   <select name="" className="form-control form-select" id="">
                     <option value="" selected disabled>
-                      Select Country
+                      USA
                     </option>
                   </select>
                 </div>
@@ -154,7 +167,7 @@ const Checkout = () => {
           </div>
           <div className="col-5">
             {
-              products.map((p,index) =>
+              products.map((p, index) =>
                 <div className="product border-bottom py-4">
                   <div className="d-flex gap-10 mb-2 align-align-items-center">
                     <div className="w-75 d-flex gap-10">
