@@ -14,6 +14,7 @@ const Header = () => {
 
   const handleLogout = () => {
     sessionStorage.removeItem('data')
+    sessionStorage.removeItem('cart') //remove cart 
     toast.success("Successfully logged out!")
     navigate('/login')
   }

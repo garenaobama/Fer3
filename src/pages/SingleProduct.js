@@ -19,6 +19,7 @@ const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
   const { detail } = products;
   const { images } = products;
+  const [wishlist, setWishList] = useState([]);
 
   useEffect( //fetch product data by id
     () => {
@@ -41,10 +42,6 @@ const SingleProduct = () => {
     }, [images]
   );
 
-  const smallImageStyle = {
-    boxShadow: "0px 2px 7px 0px",
-  };
-
   const formatConfiguration = (input) => { //format configuration text
     const [label, value] = input.split(': ');
     return (
@@ -64,22 +61,77 @@ const SingleProduct = () => {
           setRelatedProduct(result);
         }
         );
+      if (JSON.parse(sessionStorage.getItem("data"))) {
+        const user = JSON.parse(sessionStorage.getItem("data"));
+        fetch(`http://localhost:9999/wishLists/?userId=` + user.email)
+          .then(res => res.json())
+          .then(json => {
+            setWishList(json)
+          }
+          );
+      }
     }, []
   );
 
   //wish list:
-
+  const addToWishList = () => {
+    if (JSON.parse(sessionStorage.getItem("data"))) { //if user is logged in
+      if (wishlist.some(w => w.productId == id)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed',
+          text: 'You have already added this item to wishlist',
+        })
+      } else {
+        fetch('http://localhost:9999/wishLists', { //add new item to json
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            userId: JSON.parse(sessionStorage.getItem("data")).email,
+            productId: id
+          })
+        })
+        wishlist.push({ //update the useState wishlist to prevent duplication
+          productId: id
+        })
+        Swal.fire({
+          icon: 'success',
+          title: 'Added',
+          text: 'Added item to wishlist',
+        })
+      }
+    } else { //not logged in
+      Swal.fire({
+        icon: 'error',
+        title: 'Not logged in',
+        text: 'Log in to save this product along with your account',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancel",
+        confirmButtonText: 'Login'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "/login";
+        }
+      })
+    }
+  }
   //session cart :
   const [cart, setCart] = useState([]);
 
   //when cart changes, update session cart
   useEffect(
     () => {
-      if (sessionStorage.getItem("cart")) {
+      if (sessionStorage.getItem("cart")) { //if cart exist
+        var index = JSON.parse(sessionStorage.getItem("cart")).length;
         var sessionCart = [
           ...JSON.parse(sessionStorage.getItem("cart"))
         ]
-        if (sessionCart.some(item => item.productId == id && item.color == recentColor)) {
+        sessionCart.map((s) => s.id = index--)
+        if (sessionCart.some(item => item.productId == id && item.color == recentColor)) { //if product is duplicate
           Swal.fire({
             icon: 'error',
             title: 'Failed',
@@ -87,10 +139,10 @@ const SingleProduct = () => {
           })
         }
         else {
-          if (Object.keys(cart).length != 0) {
+          if (Object.keys(cart).length != 0) { //if cart(state) is not empty 
             sessionCart = [
-              ...JSON.parse(sessionStorage.getItem("cart")),
-              cart
+              cart, // new item on the top
+              ...sessionCart
             ]
             Swal.fire({
               icon: 'success',
@@ -106,16 +158,33 @@ const SingleProduct = () => {
     }, [cart]
   )
 
-  const addToCart = () => {
-
-    setCart(
-      // cart,
-      {
-        productId: Number(id),
-        color: recentColor,
-        quantity: quantity,
-      }
-    )
+  const addToCart = () => { //cart fearture
+    if (JSON.parse(sessionStorage.getItem("data"))) { //logged in
+      setCart(
+        // cart,
+        {
+          productId: Number(id),
+          color: recentColor,
+          quantity: quantity,
+        }
+      )
+    }
+    else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Not logged in',
+        text: 'Log in to save this product in your cart',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancel",
+        confirmButtonText: 'Login'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "/login";
+        }
+      })
+    }
     //sessionStorage.setItem("cart", JSON.stringify(cart));
   }
   return (
@@ -176,7 +245,7 @@ const SingleProduct = () => {
               </div>
               <div className=" py-3">
                 <h3 className="product-heading pb-2">Color :</h3>
-                <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <div className="btn-group flex-wrap" role="group" aria-label="Basic radio toggle button group">
                   {color && color.length > 0 && color.map((cl, index) =>
                     <div key={cl}>
                       <input onChange={(e) => { setMainImage(images[e.target.value]); setRecentColor(color[index]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} autoComplete="off" />
@@ -212,9 +281,7 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex align-items-center gap-15">
                   <div>
-                    <a href="/">
-                      <AiOutlineHeart className="fs-5 me-2" /> Add to Wishlist
-                    </a>
+                    <button onClick={() => addToWishList()} type="button" class="button" style={{ backgroundColor: "pink", border: 0 }}> <AiOutlineHeart className="m-0" size={25} /> Add to Wishlist</button>
                   </div>
                 </div>
                 <div className="d-flex gap-10 flex-column  my-3">
