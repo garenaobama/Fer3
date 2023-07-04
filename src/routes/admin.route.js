@@ -7,11 +7,14 @@ import Dashboard from "../admin/pages/DashBoard";
 import Contact from "../admin/pages/Contact";
 import Addblog from "../admin/pages/Addblog";
 import Addbrand from "../admin/pages/Addbrand";
-import Addproduct from "../admin/pages/Addproduct"
+import AddProduct from "../admin/pages/AddProduct"
 import Productlist from "../admin/pages/Productlist";
 import Bloglist from "../admin/pages/Bloglist"
 import Categorylist from "../admin/pages/Categorylist";
 import Orders from "../admin/pages/Orders";
+import ProductDetail from "../admin/pages/ProductDetail";
+import EditProduct from "../admin/pages/EditProduct";
+
 export default function adminRoutes() {
     return {
         path: '/',
@@ -30,8 +33,10 @@ export default function adminRoutes() {
 
             //product
             { path: '/admin/product', element: <Productlist /> },
+            { path: '/admin/product/:id', element: <ProductDetail /> },
+            { path: '/admin/product/edit/:id', element: <EditProduct /> },
             { path: '/admin/product/add-brand', element: <Addbrand /> },
-            { path: '/admin/product/add-product', element: <Addproduct /> },
+            { path: '/admin/product/add-product', element: <AddProduct /> },
             { path: '/admin/product/category-list', element: <Categorylist /> },
 
             //blog

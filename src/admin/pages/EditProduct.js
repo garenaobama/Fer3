@@ -4,14 +4,12 @@ import * as yup from 'yup';
 import { Field, FieldArray, Form, Formik, useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import CustomInput from '../../components/CustomInput';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import TextArea from 'antd/es/input/TextArea';
-// import ReactQuill from "react-quill";
-// import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
-// import "react-quill/dist/quill.snow.css";
 import axios from 'axios';
 import MySunEditor from '../components/SunEditor';
+import Swal from "sweetalert2";
 
 const productSchema = yup.object({
   name: yup
@@ -39,16 +37,15 @@ const productSchema = yup.object({
   detail: yup.string().required('This field is required'),
   product: yup.array().of(
     yup.object().shape({
-      color: yup.string().required('This field is required'),
+      color: yup.string(),
       image: yup.mixed()
-        .required('File is required')
         .test('fileType', 'Unsupported file type', (value) => {
           if (!value) return true;
           const supportedTypes = ['image/jpeg', 'image/png', 'image/gif'];
           return supportedTypes.includes(value.type);
         })
     })
-  ).required("Must provide color and image")
+  )
 });
 
 const initialValues = {
@@ -69,19 +66,43 @@ const initialValues = {
   ],
 };
 
-const AddProduct = () => {
+const EditProduct = () => {
     const [brands, setBrands] = useState([]);
+    const [product, setProduct] = useState({});
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const { id } = useParams();
+    
+    useEffect(() => {
+        fetch(`http://localhost:9999/products/${id}`)
+            .then((res) => res.json())
+            .then((json) => {
+                setProduct(json)
+                const { name, price, originalPrice, categoryId, brand, featured, status, detail, describe, color, images } = json
+                formik.setFieldValue('name', name)
+                formik.setFieldValue('price', price)
+                formik.setFieldValue('originalPrice', originalPrice)
+                formik.setFieldValue('categoryId', categoryId)
+                formik.setFieldValue('brand', brand)
+                formik.setFieldValue('featured', featured)
+                formik.setFieldValue('status', status)
+                formik.setFieldValue('detail', detail)
+                formik.setFieldValue('describe', describe)
+            });
+    }, []);
 
     const formik = useFormik({
         initialValues,
         validationSchema: productSchema,
         onSubmit: async (values) => {
           setIsLoading(true);
-          const product = await uploadImage(values.product)
-          saveProduct(values, product)
+          if (values.product[0].color !== '' && values.product[0].image !== '') {
+              const product = await uploadImage(values.product)
+              saveProduct(values, product)
+          } else {
+            saveProduct(values)
+          }
           setIsLoading(false);
         },
     });
@@ -133,6 +154,7 @@ const AddProduct = () => {
         }
       } catch (error) {
         console.log(error)
+        setIsLoading(false);
         toast.error("Failed to upload image: " + error.message)
       }
     }
@@ -150,12 +172,20 @@ const AddProduct = () => {
       }
     };
 
-    const saveProduct = (values, product) => {
+    const saveProduct = (values, p) => {
       const { name, price, originalPrice, categoryId, brand, featured, status, detail, describe } = values
-      const { color, images } = product
+      let c, i
+      if (p) {
+        const { color, images } = p
+        c = [...product.color, ...color]
+        i = [...product.images, ...images]
+      } else {
+        c = [...product.color]
+        i = [...product.images]
+      }
 
-      fetch(`http://localhost:9999/products`, {
-          method: 'POST',
+      fetch(`http://localhost:9999/products/${id}`, {
+          method: 'PATCH',
           body: JSON.stringify({
             name,
             price,
@@ -166,8 +196,8 @@ const AddProduct = () => {
             status,
             detail,
             describe,
-            color,
-            images,
+            color: c,
+            images: i,
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -175,11 +205,59 @@ const AddProduct = () => {
         }
       )
       .then(() => {
-        toast.success('Create product successfully');
+        toast.success('Update product successfully');
         navigate('/admin/product')
       })
-      .catch(() => toast.error('Something went wrong!'))
+      .catch(() => {
+        setIsLoading(false);
+        toast.error('Something went wrong!')
+      })
     }
+
+    const handleDelete = (index) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'This action cannot be undone.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#dc3545',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Delete',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteP(index);
+            }
+        });
+    };
+
+    const deleteP = (index) => {
+        const color = product.color
+        const images = product.images
+        color.splice(index, 1)
+        images.splice(index, 1)
+        fetch(`http://localhost:9999/products/${id}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                color,
+                images
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((res) => {
+                fetch(`http://localhost:9999/products/${id}`)
+                    .then((res) => res.json())
+                    .then((json) => {
+                        setProduct(json)
+                        toast.success("Delete successfully")
+                    });
+            })
+            .catch((error) => {
+                toast.error(error.message);
+            });
+    };
 
     return (
         <Container>
@@ -294,6 +372,38 @@ const AddProduct = () => {
                         {formik.touched.brand && <span className='text-danger'>{formik.errors.brand}</span>}
                       </Col>
                       <Col xs={12} className='mt-3'>
+                        {
+                            product.color?.map((c, index) => (
+                                <Row key={index} className='mb-3'>
+                                    <Col xs={12} lg={6}>
+                                        <label>Color</label>
+                                        <CustomInput
+                                            type="text"
+                                            defaultValue={c}
+                                            disabled
+                                        />
+                                    </Col>
+                                    <Col xs={10} lg={4}>
+                                        <label>Image</label>
+                                        <div className='mt-2'>
+                                            <img
+                                                src={product.images[index]}
+                                                style={{ width: '200px', height: '200px', objectFit: 'cover' }}
+                                            />
+                                        </div>
+                                    </Col>
+                                    <Col xs={2} style={{alignSelf: "center"}}>
+                                        <Button
+                                        type="button"
+                                        className="secondary btn-danger"
+                                        value={index}
+                                        onClick={() => handleDelete(index)}
+                                        >
+                                        X
+                                        </Button>
+                                    </Col>
+                                </Row>
+                        ))}
                         <FieldArray name="product">
                           {({ insert, remove, push }) => (
                             <>
@@ -389,8 +499,16 @@ const AddProduct = () => {
                           Is featured?
                         </Checkbox>
                       </Col>
-                      <Col xs={12} className='my-3'>
+                      <Col xs={12} lg={12} className='my-3'>
                         <label>Description</label>
+                        {/* <TextArea
+                          showCount
+                          style={{ height: 120, marginBottom: 24 }}
+                          placeholder="Description"
+                          onChange={formik.handleChange('describe')}
+                          onBlur={formik.handleBlur('describe')}
+                          value={formik.values?.describe}
+                        /> */}
                         <MySunEditor  
                           id='editor2'
                           name='describe'
@@ -402,13 +520,16 @@ const AddProduct = () => {
                             }
                           }}
                           data={formik.values?.describe}
+                          setContents={product.describe}
                         />
                         {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
                       </Col>
                       <Col xs={12} className='mb-3'>
                         <label>Detail</label>
                         <MySunEditor  
+                          id='editor2'
                           name='detail'
+                          onInit
                           onChange={(content) => {
                             formik.setFieldValue('detail', content); 
                             if (content == '<p><br></p>') {
@@ -416,23 +537,9 @@ const AddProduct = () => {
                             }
                           }}
                           data={formik.values?.detail}
+                          setContents={product.detail}
                         />
                         {formik.touched.detail && <span className='text-danger'>{formik.errors.detail}</span>}
-                        {/* <EditorToolbar toolbarId={'t1'}/> */}
-                        {/* <ReactQuill
-                          theme="snow"
-                          className='bg-white'
-                          onChange={(content) => {
-                            formik.setFieldValue('detail', content); 
-                            if (content == '<p><br></p>') {
-                              formik.setFieldValue('detail', "")
-                            }
-                          }}
-                          data={formik.values?.detail}
-                          placeholder={"Write something awesome..."}
-                          modules={modules('t1')}
-                          formats={formats}
-                        /> */}
                       </Col>
                       <Col xs={12} className='mb-3' style={{textAlign: "right"}}>
                         <Button className="btn-primary mx-2" type='submit'>Submit</Button>
@@ -448,4 +555,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default EditProduct;

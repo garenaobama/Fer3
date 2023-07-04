@@ -42,20 +42,20 @@ export default function AdminSideNav(props) {
                         </Accordion.Header>
                     </Accordion.Item>
                 </Link>
-                <Link style={{ width: "100%" }} to={"/admin/product"}>
+                <div style={{ width: "100%" }} >
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>
                             <AiOutlineShoppingCart style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Products
                         </Accordion.Header>
                         <Accordion.Body>
-                            <Link style={{ width: "100%" }} to={"/admin/blog"}> Product list</Link>
+                            <Link style={{ width: "100%" }} to={"/admin/product"}> Product list</Link>
                             <Link style={{ width: "100%" }} to={"/admin/product/add-product"}> Add new product</Link>
                             <Link style={{ width: "100%" }} to={"/admin/product/add-brand"}> Brand</Link>
                             <Link style={{ width: "100%" }} to={"/admin/product/category-list"}> Category</Link>
                         </Accordion.Body>
                     </Accordion.Item>
-                </Link>
-                <Link style={{ width: "100%" }} to={"/admin/blog"}>
+                </div>
+                <div style={{ width: "100%" }}>
                     <Accordion.Item eventKey="3">
                         <Accordion.Header>
                             <AiOutlinePicRight style={{ marginBottom: 0, marginRight: "10px" }} size="30px" />Blogs
@@ -65,7 +65,7 @@ export default function AdminSideNav(props) {
                             <Link style={{ width: "100%" }} to={"/admin/blog/add-blog"}> Blog add new</Link>
                         </Accordion.Body>
                     </Accordion.Item>
-                </Link>
+                </div>
                 <Link style={{ width: "100%" }} to={"/admin/contact"}>
                     <Accordion.Item eventKey="4">
                         <Accordion.Header>
