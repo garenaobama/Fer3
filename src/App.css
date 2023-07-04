@@ -743,3 +743,15 @@ footer .input-group-text {
   color: var(--color-777777);
 }
 /* Shipping page ends here */
+
+.anticon-down svg, .anticon-search svg {
+  margin: 0;
+}
+
+.editor-table tr{
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: .5rem;
+}
+.editor-table tr td{
+  padding: .5rem .5rem;
+}
