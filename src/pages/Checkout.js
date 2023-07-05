@@ -3,11 +3,33 @@ import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 import Container from "../components/Container";
 import { useState, useEffect } from "react";
-
+const states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 const Checkout = () => {
   const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem("cart")));
   const [products, setProducts] = useState([]);
   const [subTotal, setSubTotal] = useState(0);
+  const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("data")));
+  const [addressObject, setAddressObject] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:9999/users/" + user.email)
+      .then(res => res.json())
+      .then(json => {
+        setAddressObject({
+          state: json.address.state ?? '',
+          city: json.address.city ?? '',
+          detailAddress: json.address.detailAddress ?? '',
+          zipcode: json.address.zipcode ?? ''
+        })
+      })
+  }, []
+  )
+
+  const [order, setOrder] = useState({
+    userId: user.id,
+    phone: user?.phone ?? '',
+    address: addressObject
+  });
 
   useEffect( //handle event when quantity or cart is updated
     () => {
@@ -16,6 +38,7 @@ const Checkout = () => {
         temp += Number(p.price) * cart[index].quantity
       )
       setSubTotal(temp); //update subtotal each time cart changes
+      console.log(addressObject)
     }, [cart, products]
   )
 
@@ -55,7 +78,7 @@ const Checkout = () => {
         <div className="row">
           <div className="col-7">
             <div className="checkout-left-data">
-              <h3 className="website-name">Dev Corner</h3>
+              <h3 className="website-name">Fer3 store</h3>
               <nav
                 style={{ "--bs-breadcrumb-divider": ">" }}
                 aria-label="breadcrumb"
@@ -86,10 +109,6 @@ const Checkout = () => {
                   </li>
                 </ol>
               </nav>
-              <h4 className="title total">Contact Information</h4>
-              <p className="user-details total">
-                Navdeep Dahiya (monud0232@gmail.com)
-              </p>
               <h4 className="mb-3">Shipping Address</h4>
               <form
                 action=""
@@ -105,14 +124,14 @@ const Checkout = () => {
                 <div className="flex-grow-1">
                   <input
                     type="text"
-                    placeholder="First Name"
+                    placeholder="Full Name"
                     className="form-control"
                   />
                 </div>
                 <div className="flex-grow-1">
                   <input
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="Phone"
                     className="form-control"
                   />
                 </div>
@@ -120,13 +139,6 @@ const Checkout = () => {
                   <input
                     type="text"
                     placeholder="Address"
-                    className="form-control"
-                  />
-                </div>
-                <div className="w-100">
-                  <input
-                    type="text"
-                    placeholder="Apartment, Suite ,etc"
                     className="form-control"
                   />
                 </div>
@@ -142,6 +154,7 @@ const Checkout = () => {
                     <option value="" selected disabled>
                       Select State
                     </option>
+                    {states.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
                 <div className="flex-grow-1">
@@ -168,7 +181,7 @@ const Checkout = () => {
           <div className="col-5">
             {
               products.map((p, index) =>
-                <div className="product border-bottom py-4">
+                <div key={index} className="product border-bottom py-4">
                   <div className="d-flex gap-10 mb-2 align-align-items-center">
                     <div className="w-75 d-flex gap-10">
                       <div className="w-25 position-relative">

@@ -6,14 +6,10 @@
       "password": "$2a$10$Dk29FNTkf7C4N0Qt1sDc5eJKYTxBA9/dgfLXFMCAFmVMTL0c917SC",
       "email": "minhlqhe161101@fpt.edu.vn",
       "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
+        "state": "Alizona",
         "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "role": "Customer",
@@ -26,11 +22,10 @@
       "email": "Sincere@april.biz",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "0878-532-644",
       "role": "Admin"
@@ -42,11 +37,10 @@
       "email": "Shanna@melissa1.tv",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "role": "Customer"
@@ -58,11 +52,10 @@
       "email": "Shanna@melissa2.tv",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "role": "Customer"
@@ -74,11 +67,10 @@
       "email": "Shanna@melissa3.tv",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "role": "Customer"
@@ -90,11 +82,10 @@
       "email": "Shanna@melissa4.tv",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "010-692-6593 x09125",
       "role": "Customer"
@@ -106,11 +97,10 @@
       "email": "Nathan@yesenia.net",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "1-463-123-4447",
       "role": "Customer"
@@ -122,11 +112,10 @@
       "email": "Julianne.OConner@kory.org",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "493-170-9623 x156",
       "role": "Customer"
@@ -138,11 +127,10 @@
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "phone": "(254)954-1289",
       "role": "Customer"
@@ -156,11 +144,10 @@
       "role": "Customer",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       }
     },
     {
@@ -172,11 +159,10 @@
       "role": "Customer",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       }
     },
     {
@@ -187,11 +173,10 @@
       "password": "123456789",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "role": "Customer"
     },
@@ -203,11 +188,10 @@
       "password": "123456789",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "role": "Customer"
     },
@@ -219,11 +203,10 @@
       "password": "gokukap6",
       "address": {
         "country": "US",
-        "province": "Wisokyburgh",
-        "district": "Suite 879",
-        "street": "Victor Plains",
-        "zipcode": "90566-7771",
-        "detailAddress": "Sona building room 203"
+        "state": "Alizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
       },
       "role": "Customer"
     }
@@ -1279,6 +1262,7 @@
     {
       "id": 1,
       "userId": "monhai770@gmail.com",
+      "name": "Ta Duc Hai",
       "phone": "010-692-6593 x09125",
       "address": "Ha Noi",
       "productList": [
@@ -1303,6 +1287,7 @@
     {
       "id": 2,
       "userId": "monhai770@gmail.com",
+      "name": "Mohamed Salah",
       "phone": "010-692-6593 x09125",
       "address": "Ha Noi",
       "productList": [
@@ -1327,6 +1312,7 @@
     {
       "id": 3,
       "userId": "monhai770@gmail.com",
+      "name": "Christ Ronaldo",
       "phone": "010-692-6593 x09125",
       "address": "Ha Noi",
       "productList": [
@@ -1351,6 +1337,7 @@
     {
       "id": 4,
       "userId": "monhai770@gmail.com",
+      "name": "Alex Roger",
       "phone": "010-692-6593 x09125",
       "address": "Ha Noi",
       "productList": [
@@ -1375,6 +1362,7 @@
     {
       "id": 5,
       "userId": "monhai770@gmail.com",
+      "name": "Nguyen Van Chien",
       "phone": "010-692-6593 x09125",
       "address": "Ha Noi",
       "productList": [
