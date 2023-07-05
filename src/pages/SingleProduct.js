@@ -42,15 +42,15 @@ const SingleProduct = () => {
     }, [images]
   );
 
-  const formatConfiguration = (input) => { //format configuration text
-    const [label, value] = input.split(': ');
-    return (
-      <>
-        <td style={{ fontWeight: "bold" }}>{label}</td>
-        <td>{value}</td>
-      </>
-    );
-  }
+  // const formatConfiguration = (input) => { //format configuration text
+  //   const [label, value] = input.split(': ');
+  //   return (
+  //     <>
+  //       <td style={{ fontWeight: "bold" }}>{label}</td>
+  //       <td>{value}</td>
+  //     </>
+  //   );
+  // }
 
   useEffect(
     () => {
@@ -215,7 +215,7 @@ const SingleProduct = () => {
                   <h4>Product information</h4>
                   <div className="bg-white p-3">
                     <p>
-                      {products.describe}
+                    <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
                     </p>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ const SingleProduct = () => {
 
             <div className="bg-white p-3">
               <h4 className="pb-3">Configuration of {products.name}</h4>
-              <table className="table">
+              {/* <table className="table">
                 <tbody>
                   {detail && detail.length > 0 && detail.map((dtl) =>
                     <tr key={dtl} className="mb-2" >
@@ -305,7 +305,8 @@ const SingleProduct = () => {
                     </tr>
                   )}
                 </tbody>
-              </table>
+              </table> */}
+              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
             </div>
 
           </div>

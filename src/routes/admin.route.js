@@ -7,7 +7,7 @@ import Dashboard from "../admin/pages/DashBoard";
 import Contact from "../admin/pages/Contact";
 import Addblog from "../admin/pages/Addblog";
 import Addbrand from "../admin/pages/Addbrand";
-import AddProduct from "../admin/pages/AddProduct"
+import AddProduct from "../admin/pages/Addproduct"
 import Productlist from "../admin/pages/Productlist";
 import Bloglist from "../admin/pages/Bloglist"
 import Categorylist from "../admin/pages/Categorylist";

@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const { detail } = products;
   const { images } = products;
 
-  useEffect( 
+  useEffect(
     () => {
       fetch(`http://localhost:9999/products/` + id)
         .then(res => res.json())
@@ -25,7 +25,7 @@ const ProductDetail = () => {
     }, [id]
   );
 
-  useEffect( 
+  useEffect(
     () => {
       fetch(`http://localhost:9999/feedbacks/?productId=` + id)
         .then(res => res.json())
@@ -37,7 +37,7 @@ const ProductDetail = () => {
     }, []
   );
 
-  useEffect( 
+  useEffect(
     () => {
       fetch(`http://localhost:9999/users`)
         .then(res => res.json())
@@ -69,12 +69,12 @@ const ProductDetail = () => {
       </>
     );
   }
- 
+
   return (
     <>
-      <Container class1="main-product-wrapper py-5 home-wrapper-2 mt-2" style={{marginBottom: "15px"}}>
+      <Container class1="main-product-wrapper py-5 home-wrapper-2 mt-2" style={{ marginBottom: "15px" }}>
         <div className="row">
-          <div className="col-12 my-3" style={{textAlign: "right"}}>
+          <div className="col-12 my-3" style={{ textAlign: "right" }}>
             <Button className="btn-primary mx-2"><Link className="text-white" to={'/admin/product/edit/' + id}>Edit</Link></Button>
             <Button className="btn-danger"><Link className="text-white" to={'/admin/product'}>Back to list</Link></Button>
           </div>
@@ -97,9 +97,12 @@ const ProductDetail = () => {
             <Container class1="description-wrapper py-5 home-wrapper-2">
               <div className="row">
                 <div className="col-12">
-                  <h4>Product information</h4>
+                  <h4>Product detailed information</h4>
                   <div className="bg-white p-3">
-                    <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
+                    <div className="bg-white p-3">
+                      <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -113,18 +116,18 @@ const ProductDetail = () => {
                   {products.name}
                 </h2>
                 <Row className="mb-3">
-                    <Col xs={12}>
-                        Status: {products.status === true ? (
-                            <Badge bg="primary"> Active </Badge>
-                        ) : (
-                            <Badge bg="warning"> Inactive </Badge>
-                        )} 
-                        <span style={{marginLeft: "10px"}}>Featured: </span>{products.featured === true ? (
-                            <Badge bg="primary"> Yes</Badge>
-                        ) : (
-                            <Badge bg="warning"> No</Badge>
-                        )}
-                    </Col>
+                  <Col xs={12}>
+                    Status: {products.status === true ? (
+                      <Badge bg="primary"> Active </Badge>
+                    ) : (
+                      <Badge bg="warning"> Inactive </Badge>
+                    )}
+                    <span style={{ marginLeft: "10px" }}>Featured: </span>{products.featured === true ? (
+                      <Badge bg="primary"> Yes</Badge>
+                    ) : (
+                      <Badge bg="warning"> No</Badge>
+                    )}
+                  </Col>
                 </Row>
               </div>
               <div className="border-bottom py-3">
@@ -145,7 +148,7 @@ const ProductDetail = () => {
                 <h3 className="product-heading pb-2">Color :</h3>
                 <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
                   {color && color.length > 0 && color.map((cl, index) =>
-                    <div key={cl} style={{marginRight: '8px'}}>
+                    <div key={cl} style={{ marginRight: '8px' }}>
                       <input onChange={(e) => { setMainImage(images[e.target.value]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} autoComplete="off" />
                       <label className="btn btn-outline-primary" htmlFor={"btnradio" + index}>{cl}</label>
                     </div>
@@ -154,8 +157,9 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            <div className="bg-white p-3">
-              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
+            <div style={{ background: "white" }}>
+              <h3>Product configuration</h3>
+              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
             </div>
 
           </div>
@@ -163,33 +167,33 @@ const ProductDetail = () => {
       </Container>
 
       {feedbacks.length > 0 && (
-        <Container class1="reviews-wrapper home-wrapper-2" style={{margin: "20px 0"}}>
-            <div className="row">
+        <Container class1="reviews-wrapper home-wrapper-2" style={{ margin: "20px 0" }}>
+          <div className="row">
             <div className="col-12">
-                <h3 id="review">Reviews</h3>
-                <div className="review-inner-wrapper">
+              <h3 id="review">Reviews</h3>
+              <div className="review-inner-wrapper">
                 {feedbacks.map((f) => (
-                    <div className="reviews mt-4 review-head">
-                        <div className="review">
-                        <div className="d-flex gap-10 align-items-center">
-                            <h6 className="mb-0">{users.map((u) => u.id == f.userId ? u.name : "")}</h6>
-                            <ReactStars
-                            count={5}
-                            size={24}
-                            value={f.rating}
-                            edit={false}
-                            activeColor="#ffd700"
-                            />
-                        </div>
-                        <p className="mt-3">
-                            {f.comment}
-                        </p>
-                        </div>
+                  <div className="reviews mt-4 review-head">
+                    <div className="review">
+                      <div className="d-flex gap-10 align-items-center">
+                        <h6 className="mb-0">{users.map((u) => u.id == f.userId ? u.name : "")}</h6>
+                        <ReactStars
+                          count={5}
+                          size={24}
+                          value={f.rating}
+                          edit={false}
+                          activeColor="#ffd700"
+                        />
+                      </div>
+                      <p className="mt-3">
+                        {f.comment}
+                      </p>
                     </div>
+                  </div>
                 ))}
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
         </Container>
       )}
     </>

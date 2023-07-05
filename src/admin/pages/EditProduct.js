@@ -500,7 +500,7 @@ const EditProduct = () => {
                         </Checkbox>
                       </Col>
                       <Col xs={12} lg={12} className='my-3'>
-                        <label>Description</label>
+                        <label>Detailed description</label>
                         {/* <TextArea
                           showCount
                           style={{ height: 120, marginBottom: 24 }}
@@ -525,7 +525,7 @@ const EditProduct = () => {
                         {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
                       </Col>
                       <Col xs={12} className='mb-3'>
-                        <label>Detail</label>
+                        <label>Configuration</label>
                         <MySunEditor  
                           id='editor2'
                           name='detail'
