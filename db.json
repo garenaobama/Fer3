@@ -2,11 +2,11 @@
   "users": [
     {
       "id": "minhlqhe161101@fpt.edu.vn",
-      "name": "Ervin Howell",
+      "name": "Ervin Howell fffffffffffffff33333333333",
       "password": "$2a$10$Dk29FNTkf7C4N0Qt1sDc5eJKYTxBA9/dgfLXFMCAFmVMTL0c917SC",
       "email": "minhlqhe161101@fpt.edu.vn",
       "address": {
-        "state": "Alizona",
+        "state": "",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -22,7 +22,7 @@
       "email": "Sincere@april.biz",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "Arizona",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -32,17 +32,17 @@
     },
     {
       "id": "Shanna@melissa1.tv",
-      "name": "Ervin Howell",
-      "password": "aA@1234567",
+      "name": "Shanna Alice",
+      "password": "$2a$10$Dk29FNTkf7C4N0Qt1sDc5eJKYTxBA9/dgfLXFMCAFmVMTL0c917SC",
       "email": "Shanna@melissa1.tv",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
       },
-      "phone": "010-692-6593 x09125",
+      "phone": "0904431642",
       "role": "Customer"
     },
     {
@@ -52,7 +52,7 @@
       "email": "Shanna@melissa2.tv",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -67,7 +67,7 @@
       "email": "Shanna@melissa3.tv",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -82,7 +82,7 @@
       "email": "Shanna@melissa4.tv",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -97,7 +97,7 @@
       "email": "Nathan@yesenia.net",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -112,7 +112,7 @@
       "email": "Julianne.OConner@kory.org",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -127,7 +127,7 @@
       "email": "Lucio_Hettinger@annie.ca",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -144,7 +144,7 @@
       "role": "Customer",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -159,7 +159,7 @@
       "role": "Customer",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -173,7 +173,7 @@
       "password": "123456789",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -188,7 +188,7 @@
       "password": "123456789",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -203,7 +203,7 @@
       "password": "gokukap6",
       "address": {
         "country": "US",
-        "state": "Alizona",
+        "state": "California",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771"
@@ -776,6 +776,11 @@
       "userId": "minhlqhe161101@fpt.edu.vn",
       "productId": "8",
       "id": 4
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "productId": "1",
+      "id": 5
     }
   ],
   "contacts": [
@@ -1260,129 +1265,234 @@
   ],
   "order": [
     {
-      "id": 1,
-      "userId": "monhai770@gmail.com",
-      "name": "Ta Duc Hai",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
-      "address": "Ha Noi",
+      "address": {
+        "state": "Arizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
+      },
       "productList": [
         {
-          "productId": 1,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Space green",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
+          "color": "Ceramic Black",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
         },
         {
-          "productId": 2,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1325.25",
-          "originalPrice": "1275.25"
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
+        },
+        {
+          "productId": 1,
+          "productName": "iPhone 13 Pro Max",
+          "quantity": 1,
+          "color": "Lumious White",
+          "unitPrice": "1099.99",
+          "originalPrice": "900.25"
         }
       ],
-      "totalAmount": "2425.24",
-      "statusId": 1
+      "totalAmount": "3499.97",
+      "date": "2023-07-05T11:25:23.378Z",
+      "statusId": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "userId": "monhai770@gmail.com",
-      "name": "Mohamed Salah",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Phuong Alex Luther",
       "phone": "010-692-6593 x09125",
-      "address": "Ha Noi",
+      "address": {
+        "state": "Arizona",
+        "city": "Mandanae",
+        "detailAddress": "Victor Plains, Decon 333, 204 suite, Mediane street",
+        "zipcode": "6055233"
+      },
       "productList": [
         {
-          "productId": 1,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Space green",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
+          "color": "Ceramic Black",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
         },
         {
-          "productId": 2,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1325.25",
-          "originalPrice": "1275.25"
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
+        },
+        {
+          "productId": 1,
+          "productName": "iPhone 13 Pro Max",
+          "quantity": 1,
+          "color": "Lumious White",
+          "unitPrice": "1099.99",
+          "originalPrice": "900.25"
         }
       ],
-      "totalAmount": "2425.24",
-      "statusId": 2
+      "totalAmount": "3499.97",
+      "date": "2023-07-05T11:25:23.378Z",
+      "statusId": 1,
+      "id": 2
     },
     {
-      "id": 3,
-      "userId": "monhai770@gmail.com",
-      "name": "Christ Ronaldo",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
-      "address": "Ha Noi",
+      "address": {
+        "state": "Arizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
+      },
       "productList": [
         {
-          "productId": 1,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Space green",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
-        },
-        {
-          "productId": 2,
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1325.25",
-          "originalPrice": "1275.25"
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
         }
       ],
-      "totalAmount": "2425.24",
-      "statusId": 3
+      "totalAmount": "1199.99",
+      "date": "2023-07-05T14:51:20.493Z",
+      "statusId": 1,
+      "id": 3
     },
     {
-      "id": 4,
-      "userId": "monhai770@gmail.com",
-      "name": "Alex Roger",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
-      "address": "Ha Noi",
+      "address": {
+        "state": "Arizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
+      },
       "productList": [
         {
-          "productId": 1,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Space green",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
-        },
-        {
-          "productId": 2,
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1325.25",
-          "originalPrice": "1275.25"
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
         }
       ],
-      "totalAmount": "2425.24",
-      "statusId": 4
+      "totalAmount": "1199.99",
+      "date": "2023-07-05T15:06:59.515Z",
+      "statusId": 1,
+      "id": 4
     },
     {
-      "id": 5,
-      "userId": "monhai770@gmail.com",
-      "name": "Nguyen Van Chien",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
-      "address": "Ha Noi",
+      "address": {
+        "country": "US",
+        "state": "Arizona",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771"
+      },
       "productList": [
         {
-          "productId": 1,
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
-          "color": "Space green",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
+        }
+      ],
+      "totalAmount": "1199.99",
+      "date": "2023-07-05T15:06:59.515Z",
+      "statusId": 1,
+      "id": 5
+    },
+    {
+      "userId": "Shanna@melissa1.tv",
+      "name": "Shanna Alice",
+      "phone": "0904431642",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains",
+        "zip": "90566-7771"
+      },
+      "productList": [
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
         },
         {
           "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
           "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1325.25",
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
           "originalPrice": "1275.25"
         }
       ],
-      "totalAmount": "2425.24",
-      "statusId": 5
+      "totalAmount": "2579.98",
+      "date": "2023-07-06T03:07:52.064Z",
+      "statusId": 1,
+      "id": 6
+    },
+    {
+      "userId": "Shanna@melissa1.tv",
+      "name": "Shanna Alice",
+      "phone": "0904431642",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains",
+        "zip": "90566-7771"
+      },
+      "productList": [
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": "1199.99",
+          "originalPrice": "1100.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2579.98",
+      "date": "2023-07-06T03:13:26.212Z",
+      "statusId": 1,
+      "id": 7
     }
   ],
   "status": [

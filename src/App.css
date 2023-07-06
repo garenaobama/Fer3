@@ -46,7 +46,21 @@ a {
 .gap-30 {
   gap: 30px;
 }
-
+.link-user-header-function{
+  padding: 10px;
+}
+.link-user-header-function:hover{
+  background-color: #febd69;
+}
+#function-box-header{
+  display: none;
+}
+#user-button-header:hover #function-box-header{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #67767f
+}
 .button {
   background-color: var(--color-232f3e);
   color: white;

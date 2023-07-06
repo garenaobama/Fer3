@@ -4,13 +4,29 @@ import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
 import wishlist from "../images/wishlist.svg";
 import user from "../images/user.svg";
+import { useState, useEffect } from "react";
 import cart from "../images/cart.svg";
 import menu from "../images/menu.svg";
 import { useAuthentication } from "../util/use-authentication";
 import { toast } from "react-toastify";
+import { BiLogOut } from "react-icons/bi";
+import { BiUser } from "react-icons/bi";
+import { FaMoneyCheckDollar } from "react-icons/fa6";
+
 const Header = () => {
   const { isLogged } = useAuthentication();
   const navigate = useNavigate();
+  const [thisUser, setThisUser] = useState();
+
+  useEffect(() => {
+    if (isLogged) {
+      fetch("http://localhost:9999/users/" + JSON.parse(sessionStorage.getItem("data")).email)
+        .then(res => res.json())
+        .then(json => setThisUser(json))
+    }
+  }, [isLogged]
+  )
+
 
   const handleLogout = () => {
     sessionStorage.removeItem('data')
@@ -18,7 +34,7 @@ const Header = () => {
     toast.success("Successfully logged out!")
     navigate('/login')
   }
-  
+
   return (
     <>
       <header className="header-top-strip py-3">
@@ -75,65 +91,88 @@ const Header = () => {
                     </p>
                   </Link>
                 </div>
-                { isLogged && (
+                {isLogged && (
                   <div>
-                  <Link
-                    to="/wishlist"
-                    className="d-flex align-items-center gap-10 text-white"
-                  >
-                    <img src={wishlist} alt="wishlist" />
-                    <p className="mb-0">
-                      Favourite <br /> wishlist
-                    </p>
-                  </Link>
-                </div>
+                    <Link
+                      to="/wishlist"
+                      className="d-flex align-items-center gap-10 text-white"
+                    >
+                      <img src={wishlist} alt="wishlist" />
+                      <p className="mb-0">
+                        Favourite <br /> wishlist
+                      </p>
+                    </Link>
+                  </div>
                 )}
-                { !isLogged && (
+                {!isLogged && (
                   <div>
-                  <Link
-                    to="/login"
-                    className="d-flex align-items-center gap-10 text-white"
-                  >
-                    <img src={user} alt="user" />
-                    <p className="mb-0">
-                      Log in <br /> My Account
-                    </p>
-                  </Link>
-                </div>
+                    <Link
+                      to="/login"
+                      className="d-flex align-items-center gap-10 text-white"
+                    >
+                      <img src={user} alt="user" />
+                      <p className="mb-0">
+                        Log in <br /> My Account
+                      </p>
+                    </Link>
+                  </div>
                 )}
-                { isLogged && (
-                  <div>
-                  <a
-                    href="#"
-                    onClick={() => handleLogout()}
-                    className="d-flex align-items-center gap-10 text-white"
-                  >
-                    <img src={user} alt="user" />
-                    <p className="mb-0">
-                      Log out
-                    </p>
-                  </a>
-                </div>
+                {isLogged && (
+                  <div id="user-button-header">
+                    <Link to={"/"} className="d-flex align-items-center gap-10 text-white">
+                      <img src={user} alt="user" />
+                      <p style={{
+                        maxWidth: "10ch",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis"
+                      }}
+                        className="mb-0">
+                        {thisUser?.name}
+                      </p>
+                    </Link>
+                    <div id="function-box-header">
+                      <Link
+                        to={"/myProfile"}
+                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
+                      >
+                        <BiUser className="m-0" />My profile
+                      </Link>
+                      <Link
+                        to={"/myOrder"}
+                        onClick={() => handleLogout()}
+                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
+                      >
+                        <FaMoneyCheckDollar className="m-0" />My orders
+                      </Link>
+                      <Link
+                        onClick={() => handleLogout()}
+                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
+                      >
+                        <BiLogOut className="m-0" />Log out
+                      </Link>
+                    </div>
+                  </div>
                 )}
                 {isLogged && (
                   <div>
-                  <Link
-                    to="/cart"
-                    className="d-flex align-items-center gap-10 text-white"
-                  >
-                    <img src={cart} alt="cart" />
-                    <div className="d-flex flex-column gap-10">
-                      <span className="badge bg-white text-dark">0</span>
-                      <p className="mb-0">$ 500</p>
-                    </div>
-                  </Link>
-                </div>
+                    <Link
+                      to="/cart"
+                      className="d-flex align-items-center gap-10 text-white"
+                    >
+                      <img src={cart} alt="cart" />
+                      <div className="d-flex flex-column gap-10">
+                        <span className="badge bg-white text-dark">0</span>
+                        <p className="mb-0">$ 500</p>
+                      </div>
+                    </Link>
+                  </div>
                 )}
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </header >
       <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
