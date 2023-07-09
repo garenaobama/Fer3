@@ -1,20 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BlogCard = () => {
+const BlogCard = ({ blog }) => {
   return (
     <div className="blog-card">
       <div className="card-image">
-        <img src="images/blog-1.jpg" className="img-fluid w-100" alt="blog" />
+        <img src={blog?.image} className="img-fluid w-100" alt="blog" style={{ maxHeight: 200, objectFit: 'contain'}} />
       </div>
       <div className="blog-content">
         <p className="date">1 Dec, 2022</p>
-        <h5 className="title">A beautiful sunday morning renaissance</h5>
-        <p className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quaerat
-          accusamus officia
+        <h5 className="title">{blog?.title}</h5>
+        <p
+          className="desc"
+          style={{
+            maxHeight: 70,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "block",
+          }}
+        >
+          {blog?.body}
         </p>
-        <Link to="/blog/:id" className="button">
+        <Link to={`/blog/${blog?.id}`} className="button">
           Read More
         </Link>
       </div>

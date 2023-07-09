@@ -1,39 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
 import wishlist from "../images/wishlist.svg";
 import user from "../images/user.svg";
-import { useState, useEffect } from "react";
-import cart from "../images/cart.svg";
+import cartImage from "../images/cart.svg";
 import menu from "../images/menu.svg";
 import { useAuthentication } from "../util/use-authentication";
 import { toast } from "react-toastify";
-import { BiLogOut } from "react-icons/bi";
-import { BiUser } from "react-icons/bi";
-import { FaMoneyCheckDollar } from "react-icons/fa6";
-
+import axios from "axios";
 const Header = () => {
   const { isLogged } = useAuthentication();
   const navigate = useNavigate();
-  const [thisUser, setThisUser] = useState();
+  const [categories, setCategories] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    if (isLogged) {
-      fetch("http://localhost:9999/users/" + JSON.parse(sessionStorage.getItem("data")).email)
-        .then(res => res.json())
-        .then(json => setThisUser(json))
-    }
-  }, [isLogged]
-  )
+    axios
+      .get("http://localhost:9999/categories")
+      .then((res) => res.data)
+      .then((data) => {
+        setCategories(data);
+      });
 
+    const cartt = localStorage.getItem("cartProduct");
+
+    if (cartt) {
+      const dataCart = JSON.parse(cartt);
+      setCart(dataCart);
+    }
+  }, []);
 
   const handleLogout = () => {
-    sessionStorage.removeItem('data')
-    sessionStorage.removeItem('cart') //remove cart 
-    toast.success("Successfully logged out!")
-    navigate('/login')
-  }
+    sessionStorage.removeItem("data");
+    toast.success("Successfully logged out!");
+    navigate("/login");
+  };
 
   return (
     <>
@@ -118,40 +120,15 @@ const Header = () => {
                   </div>
                 )}
                 {isLogged && (
-                  <div id="user-button-header">
-                    <Link to={"/"} className="d-flex align-items-center gap-10 text-white">
+                  <div>
+                    <a
+                      href="#"
+                      onClick={() => handleLogout()}
+                      className="d-flex align-items-center gap-10 text-white"
+                    >
                       <img src={user} alt="user" />
-                      <p style={{
-                        maxWidth: "10ch",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis"
-                      }}
-                        className="mb-0">
-                        {thisUser?.name}
-                      </p>
-                    </Link>
-                    <div id="function-box-header">
-                      <Link
-                        to={"/myProfile"}
-                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
-                      >
-                        <BiUser className="m-0" />My profile
-                      </Link>
-                      <Link
-                        to={"/myOrder"}
-                        onClick={() => handleLogout()}
-                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
-                      >
-                        <FaMoneyCheckDollar className="m-0" />My orders
-                      </Link>
-                      <Link
-                        onClick={() => handleLogout()}
-                        className="d-flex align-items-center gap-10 text-white link-user-header-function"
-                      >
-                        <BiLogOut className="m-0" />Log out
-                      </Link>
-                    </div>
+                      <p className="mb-0">Log out</p>
+                    </a>
                   </div>
                 )}
                 {isLogged && (
@@ -160,10 +137,19 @@ const Header = () => {
                       to="/cart"
                       className="d-flex align-items-center gap-10 text-white"
                     >
-                      <img src={cart} alt="cart" />
+                      <img src={cartImage} alt="cart" />
                       <div className="d-flex flex-column gap-10">
-                        <span className="badge bg-white text-dark">0</span>
-                        <p className="mb-0">$ 500</p>
+                        <span className="badge bg-white text-dark">
+                          {cart.length}
+                        </span>
+                        <p className="mb-0">
+                          $
+                          {cart
+                            .reduce((total, p) => {
+                              return total + p?.quantity * p?.price;
+                            }, 0)
+                            ?.toFixed(2)}
+                        </p>
                       </div>
                     </Link>
                   </div>
@@ -172,7 +158,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header >
+      </header>
       <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
@@ -196,21 +182,13 @@ const Header = () => {
                       className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton1"
                     >
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Action
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Another action
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Something else here
-                        </Link>
-                      </li>
+                      {categories.map((c) => (
+                        <li>
+                          <Link className="dropdown-item text-white" to="">
+                            {c.name}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
