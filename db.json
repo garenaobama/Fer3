@@ -1302,7 +1302,7 @@
       ],
       "totalAmount": "3499.97",
       "date": "2023-07-05T11:25:23.378Z",
-      "statusId": 1,
+      "statusId": "4",
       "id": 1
     },
     {
@@ -1343,7 +1343,7 @@
       ],
       "totalAmount": "3499.97",
       "date": "2023-07-05T11:25:23.378Z",
-      "statusId": 1,
+      "statusId": "4",
       "id": 2
     },
     {
@@ -1368,7 +1368,7 @@
       ],
       "totalAmount": "1199.99",
       "date": "2023-07-05T14:51:20.493Z",
-      "statusId": 1,
+      "statusId": "4",
       "id": 3
     },
     {
@@ -1393,7 +1393,7 @@
       ],
       "totalAmount": "1199.99",
       "date": "2023-07-05T15:06:59.515Z",
-      "statusId": 1,
+      "statusId": "5",
       "id": 4
     },
     {
@@ -1419,7 +1419,7 @@
       ],
       "totalAmount": "1199.99",
       "date": "2023-07-05T15:06:59.515Z",
-      "statusId": 1,
+      "statusId": "3",
       "id": 5
     },
     {
@@ -1430,10 +1430,9 @@
         "country": "US",
         "state": "Alabama",
         "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
+        "detailAddress": "Victor Plains fdsafdsaewcdsxzewqerqwewqewqewqdsad dsa",
         "zipcode": "90566-7771",
-        "address": "Victor Plains",
-        "zip": "90566-7771"
+        "address": "Victor Plains"
       },
       "productList": [
         {
@@ -1455,30 +1454,29 @@
       ],
       "totalAmount": "2579.98",
       "date": "2023-07-06T03:07:52.064Z",
-      "statusId": 1,
+      "statusId": "4",
       "id": 6
     },
     {
-      "userId": "Shanna@melissa1.tv",
-      "name": "Shanna Alice",
-      "phone": "0904431642",
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Trinh Van Bo",
+      "phone": "0106926593",
       "address": {
         "country": "US",
         "state": "Alabama",
         "city": "Wisokyburgh",
         "detailAddress": "Victor Plains",
         "zipcode": "90566-7771",
-        "address": "Victor Plains",
-        "zip": "90566-7771"
+        "address": "Victor Plains"
       },
       "productList": [
         {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
           "quantity": 1,
-          "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
         },
         {
           "productId": 2,
@@ -1489,10 +1487,185 @@
           "originalPrice": "1275.25"
         }
       ],
-      "totalAmount": "2579.98",
-      "date": "2023-07-06T03:13:26.212Z",
+      "totalAmount": "2759.98",
+      "date": "2023-07-06T15:56:19.567Z",
       "statusId": 1,
       "id": 7
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ha Ngoc Anh",
+      "phone": "0106926593",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2759.98",
+      "date": "2023-07-06T15:56:19.567Z",
+      "statusId": 1,
+      "id": 8
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Butram Danish",
+      "phone": "0106926593",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2759.98",
+      "date": "2023-07-06T15:56:19.567Z",
+      "statusId": 1,
+      "id": 9
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Kumurochi Ashato",
+      "phone": "0106926593",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2759.98",
+      "date": "2023-06-06T15:56:19.567Z",
+      "statusId": 1,
+      "id": 10
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Kumurochi Ashato",
+      "phone": "0106926593",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2759.98",
+      "date": "2023-06-06T15:56:19.567Z",
+      "statusId": 1,
+      "id": 11
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Daniel Dang",
+      "phone": "0106926593",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Black",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": "1379.99",
+          "originalPrice": "1275.25"
+        }
+      ],
+      "totalAmount": "2759.98",
+      "date": "2023-07-06T15:56:19.567Z",
+      "statusId": 1,
+      "id": 12
     }
   ],
   "status": [

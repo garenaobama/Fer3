@@ -129,7 +129,7 @@ const Checkout = () => {
         address: values.address,
         city: values.city,
         state: values.state,
-        zip: values.zipcode
+        zipcode: values.zipcode
       }
     }
 

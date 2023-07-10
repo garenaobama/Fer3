@@ -140,7 +140,6 @@ const Header = () => {
                       </Link>
                       <Link
                         to={"/myOrder"}
-                        onClick={() => handleLogout()}
                         className="d-flex align-items-center gap-10 text-white link-user-header-function"
                       >
                         <FaMoneyCheckDollar className="m-0" />My orders

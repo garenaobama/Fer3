@@ -55,6 +55,7 @@ export default function Feedback() {
             handleFilter(currentPage);
         }, [currentPage, product, rating]
     )
+    
     return (
         <Col lg={10}>
             <h3 className="mt-2">Feedbacks List</h3>
