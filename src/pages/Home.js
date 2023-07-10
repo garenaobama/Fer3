@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
+import axios from "axios";
 //import { services } from "../utils/Data";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  const [last8Product, setlast8Product] = useState([]);
+  const [last4Blogs, setLast4Blogs] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:9999/products")
+      .then((res) => res.data)
+      .then((data) => {
+        setProducts(data.slice(-4));
+        setlast8Product(data.slice(-8));
+      });
+    axios
+      .get("http://localhost:9999/blogs")
+      .then((res) => res.data)
+      .then((data) => {
+        setLast4Blogs(data.slice(-4));
+      });
+  }, []);
+
   return (
     <>
       <Container class1="home-wrapper-1 py-5">
@@ -29,62 +50,20 @@ const Home = () => {
           </div>
           <div className="col-6">
             <div className="d-flex flex-wrap gap-10 justify-content-between align-items-center">
-              <div className="small-banner position-relative">
-                <img
-                  src="images/catbanner-01.jpg"
-                  className="img-fluid rounded-3"
-                  alt="main banner"
-                />
-                <div className="small-banner-content position-absolute">
-                  <h4>Best Sake</h4>
-                  <h5>iPad S13+ Pro.</h5>
-                  <p>
-                    From $999.00 <br /> or $41.62/mo.
-                  </p>
+              {products.map((p, index) => (
+                <div className="small-banner position-relative">
+                  <img
+                    src="images/catbanner-01.jpg"
+                    className="img-fluid rounded-3"
+                    alt="main banner"
+                  />
+                  <div className="small-banner-content position-absolute">
+                    <h4>{index === 3 ? "Best sake" : "NEW ARRIVAL"}</h4>
+                    <h5>{p.name}</h5>
+                    <p>${p.price}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="small-banner position-relative">
-                <img
-                  src="images/catbanner-02.jpg"
-                  className="img-fluid rounded-3"
-                  alt="main banner"
-                />
-                <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
-                  <p>
-                    From $999.00 <br /> or $41.62/mo.
-                  </p>
-                </div>
-              </div>
-              <div className="small-banner position-relative ">
-                <img
-                  src="images/catbanner-03.jpg"
-                  className="img-fluid rounded-3"
-                  alt="main banner"
-                />
-                <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
-                  <p>
-                    From $999.00 <br /> or $41.62/mo.
-                  </p>
-                </div>
-              </div>
-              <div className="small-banner position-relative ">
-                <img
-                  src="images/catbanner-04.jpg"
-                  className="img-fluid rounded-3"
-                  alt="main banner"
-                />
-                <div className="small-banner-content position-absolute">
-                  <h4>NEW ARRIVAL</h4>
-                  <h5>But IPad Air</h5>
-                  <p>
-                    From $999.00 <br /> or $41.62/mo.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -177,14 +156,13 @@ const Home = () => {
           <div className="col-12">
             <h3 className="section-heading">Featured Collection</h3>
           </div>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {last8Product.map((p) => (
+            <ProductCard product={p} />
+          ))}
         </div>
       </Container>
 
-      <Container class1="famous-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="famous-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-3">
             <div className="famous-card position-relative">
@@ -308,7 +286,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
 
       <Container class1="blog-wrapper py-5 home-wrapper-2">
         <div className="row">
@@ -317,18 +295,11 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
+          {last4Blogs.map((blog) => (
+            <div className="col-3">
+              <BlogCard blog={blog} />
+            </div>
+          ))}
         </div>
       </Container>
     </>
