@@ -606,6 +606,24 @@
         "https://res.cloudinary.com/dck2nnfja/image/upload/v1688447316/products/16/3_sxilri.webp",
         "https://res.cloudinary.com/dck2nnfja/image/upload/v1688447317/products/16/4_o69pxv.webp"
       ]
+    },
+    {
+      "name": "Than Quang phuong",
+      "price": "6666666",
+      "originalPrice": "4321432",
+      "categoryId": 2,
+      "brand": 2,
+      "featured": true,
+      "status": true,
+      "detail": "<p>configure 33333333333333333333</p>",
+      "describe": "<p>detail description21</p>",
+      "color": [
+        "green"
+      ],
+      "images": [
+        "http://res.cloudinary.com/dck2nnfja/image/upload/v1688998631/bi1xlygxu47y88l5qzjh.jpg"
+      ],
+      "id": 17
     }
   ],
   "brands": [

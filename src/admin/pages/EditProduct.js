@@ -511,23 +511,6 @@ const EditProduct = () => {
                         /> */}
                         <MySunEditor  
                           id='editor2'
-                          name='describe'
-                          onInit
-                          onChange={(content) => {
-                            formik.setFieldValue('describe', content); 
-                            if (content == '<p><br></p>') {
-                              formik.setFieldValue('describe', "")
-                            }
-                          }}
-                          data={formik.values?.detail}
-                          setContents={product.detail}
-                        />
-                        {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
-                      </Col>
-                      <Col xs={12} className='mb-3'>
-                        <label>Product detailed description</label>
-                        <MySunEditor  
-                          id='editor2'
                           name='detail'
                           onInit
                           onChange={(content) => {
@@ -536,10 +519,27 @@ const EditProduct = () => {
                               formik.setFieldValue('detail', "")
                             }
                           }}
+                          data={formik.values?.detail}
+                          setContents={product.detail}
+                        />
+                        {formik.touched.detail && <span className='text-danger'>{formik.errors.detail}</span>}
+                      </Col>
+                      <Col xs={12} className='mb-3'>
+                        <label>Product detailed description</label>
+                        <MySunEditor  
+                          id='editor2'
+                          name='describe'
+                          onInit
+                          onChange={(content) => {
+                            formik.setFieldValue('describe', content); 
+                            if (content == '<p><br></p>') {
+                              formik.setFieldValue('describe', "")
+                            }
+                          }}
                           data={formik.values?.describe}
                           setContents={product.describe}
                         />
-                        {formik.touched.detail && <span className='text-danger'>{formik.errors.detail}</span>}
+                        {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
                       </Col>
                       <Col xs={12} className='mb-3' style={{textAlign: "right"}}>
                         <Button className="btn-primary mx-2" type='submit'>Submit</Button>
