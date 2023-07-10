@@ -390,25 +390,11 @@ const AddProduct = () => {
                         </Checkbox>
                       </Col>
                       <Col xs={12} className='my-3'>
-                        <label>Description</label>
+                        <label>Product configuration</label>
                         <MySunEditor  
                           id='editor2'
-                          name='describe'
-                          onInit
-                          onChange={(content) => {
-                            formik.setFieldValue('describe', content); 
-                            if (content == '<p><br></p>') {
-                              formik.setFieldValue('describe', "")
-                            }
-                          }}
-                          data={formik.values?.describe}
-                        />
-                        {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
-                      </Col>
-                      <Col xs={12} className='mb-3'>
-                        <label>Detail</label>
-                        <MySunEditor  
                           name='detail'
+                          onInit
                           onChange={(content) => {
                             formik.setFieldValue('detail', content); 
                             if (content == '<p><br></p>') {
@@ -418,6 +404,20 @@ const AddProduct = () => {
                           data={formik.values?.detail}
                         />
                         {formik.touched.detail && <span className='text-danger'>{formik.errors.detail}</span>}
+                      </Col>
+                      <Col xs={12} className='mb-3'>
+                        <label>Product detailed description</label>
+                        <MySunEditor  
+                          name='describe'
+                          onChange={(content) => {
+                            formik.setFieldValue('describe', content); 
+                            if (content == '<p><br></p>') {
+                              formik.setFieldValue('describe', "")
+                            }
+                          }}
+                          data={formik.values?.describe}
+                        />
+                        {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
                         {/* <EditorToolbar toolbarId={'t1'}/> */}
                         {/* <ReactQuill
                           theme="snow"

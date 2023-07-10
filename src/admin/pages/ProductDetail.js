@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Badge, Button, Col, Container, Row } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import { Link, useParams } from "react-router-dom";
+import '../../admin/admin.css'
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -94,19 +95,12 @@ const ProductDetail = () => {
                 <img src={mainImage} alt="product" style={{ width: "95%" }} />
               )}
             </div>
-            <Container class1="description-wrapper py-5 home-wrapper-2">
-              <div className="row">
-                <div className="col-12">
-                  <h4>Product detailed information</h4>
-                  <div className="bg-white p-3">
-                    <div className="bg-white p-3">
-                      <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
-                    </div>
 
-                  </div>
-                </div>
-              </div>
-            </Container>
+            <h3>Product detailed description</h3>
+            <div style={{ background: "white" }}>
+              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
+            </div>
+
 
           </div>
           <div className="col-5">
@@ -157,9 +151,15 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            <div style={{ background: "white" }}>
-              <h3>Product configuration</h3>
-              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
+            <div className="row pt-3">
+              <div className="col-12">
+                <h4>Product configuration</h4>
+                <div className="bg-white p-3">
+                  <div className="bg-white p-3">
+                    <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>

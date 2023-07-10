@@ -3,70 +3,45 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import Container from "../components/Container";
 import ProductItem from "../components/ProductItem";
+import Paginate from '../admin/components/Paginate';
+import { toast } from 'react-toastify';
 
 const OurStore = () => {
-  const [productList, setProductList] = useState([]); // productList that unchange
   const [products, setProducts] = useState([]); //productlist that use for display
   const [categories, setCategories] = useState([]); //category
   const [brands, setBrands] = useState([]); //brands
   const [isLoading, setIsLoading] = useState(false); //loading effect
-  const [filterObject, setFilterObject] = useState({  // properties for filter 
-    category: 0,
-    year: 0,
-    min: 0,
-    max: 0,
-    brand: 0
-  });
 
-  useEffect(() => {
-    // console.log(filterObject);
-    setProducts(products.filter((product) => {
-      return (
-        (filterObject.category == 0 || product.categoryId == filterObject.category) &&
-        (filterObject.year == 0 || product.year == filterObject.year) &&
-        (filterObject.min == 0 || parseFloat(product.price) >= filterObject.min) &&
-        (filterObject.max == 0 || parseFloat(product.price) <= filterObject.max) &&
-        (filterObject.brand == 0 || product.brand == filterObject.brand)
-      );
-    }));
-    setIsLoading(false); // when finish filtering , display product
-  }, [filterObject]); // filter each time the filter object changes
+  // filtering 
+  const [brand_f, setBrand_f] = useState([]);
+  const [year_f, setYear_f] = useState([]);
+  const [category_f, setCategory_f] = useState([]);
+  const [max_f, setMax_f] = useState('');
+  const [min_f, setMin_f] = useState('')
+  //
 
-  var currentYear = new Date().getFullYear();
-  const years = [currentYear--, currentYear--, currentYear--, currentYear--];
+  //pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
-  // useEffect(
-  //   () => {
-  //     fetch(`http://localhost:9999/products`)
-  //       .then(res => res.json())
-  //       .then(json => {
-  //         setProductList(json);
-  //         setProducts(json);
-  //       });
-  //   }, []
-  // );
-  useEffect(() => {
-    fetch(`http://localhost:9999/products`)
-      .then(res => res.json())
-      .then(json => {
-        // Fetch category names for each product
-        Promise.all(
-          json.map(product =>
-            fetch(`http://localhost:9999/brands/${product.brand}`)
-              .then(res => res.json())
-              .then(b => ({
-                ...product,
-                brandName: b.name
-              }))
-          )
-        )
-        .then(productsWithCategories => {
-          setProductList(productsWithCategories);
-          setProducts(productsWithCategories);
-        });
-      });
-  }, []);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+  //
+
+  //category & brand
   useEffect(
     () => {
       fetch(`http://localhost:9999/categories`)
@@ -82,49 +57,49 @@ const OurStore = () => {
         .then(json => setBrands(json));
     }, []
   );
+  //
 
-  function resetAllButton(name) {
-    var categoryBox = document.getElementsByName(name);
-    for (let i = 0; i < categoryBox.length; i++) {
-      categoryBox[i].checked = false;
+  var currentYear = new Date().getFullYear();
+  const years = [currentYear--, currentYear--, currentYear--, currentYear--];
+
+  const handleFilter = (page) => {
+    var url = `http://localhost:9999/products/?_page=${page}&_limit=12`;
+    if (brand_f.length != 0) {
+      brand_f?.map(b => 
+        url += ('&brand=' + b)
+      )
     }
+    if (category_f.length != 0) {
+      category_f?.map(b => 
+        url += ('&categoryId=' + b)
+      )
+    }
+    if (year_f.length != 0) {
+      year_f?.map(b => 
+        url += ('&year=' + b)
+      )
+    }
+    if(min_f !== ''){
+      url += ('price_gte=' + min_f)
+    }
+    if(max_f !== ''){
+      url += ('price_lte=' + max_f)
+    }
+    fetch(url)
+      .then((res) => {
+        const totalCount = res.headers.get('X-Total-Count');
+        setTotalPages(Math.ceil(totalCount / 10));
+        return res.json();
+      })
+      .then(json => setProducts(json))
+      .catch((err) => toast.error(err));
   }
 
-  function resetButton(name) {
-    var categoryBox = document.getElementsByName(name);
-    for (let i = 0; i < categoryBox.length; i++) {
-      categoryBox[i].checked = false;
-    }
-  }
-
-  function checkButton(id) {
-    var categoryBox = document.getElementById(id);
-    categoryBox.checked = true;
-  }
-
-  const filterProduct = (value, propName, checked, name, id) => {
-    setProducts(productList);
-    setIsLoading(true); // when loading , show the loading scene
-    setFilterObject({
-      ...filterObject,
-      [propName]: value
-    });
-    if (propName === "min" || propName === "max") {
-      setProducts(productList);
-      return;
-    }
-    if (checked) { //filter
-      resetButton(name);
-      checkButton(id);
-    }
-    else {
-      setFilterObject({
-        ...filterObject,
-        [propName]: 0
-      });
-      setProducts(productList);
-    }
-  }
+  useEffect(
+    () => {
+      handleFilter(currentPage);
+    }, [currentPage, year_f, category_f, brand_f]
+  )
 
   const SortProduct = (index) => {
     const newProducts = [...products];
@@ -137,6 +112,39 @@ const OurStore = () => {
     if (index == 6) newProducts.sort((a, b) => b.id - a.id);
     setProducts(newProducts);
   }
+
+  const handleFilterValue = (attr) => {
+    if(attr === "brand"){
+      let box = document.getElementsByName("brand-Filter-Box");
+      let temp =[]
+      for(let i=0 ;i< box.length ;i++){
+        if(box[i].checked == true){
+          temp =[...temp, box[i].value]
+        }
+      }
+      setBrand_f(temp)
+    }
+    if(attr=== "category"){
+      let box = document.getElementsByName("cate-Filter-Box");
+      let temp =[]
+      for(let i=0 ;i< box.length ;i++){
+        if(box[i].checked == true){
+          temp =[...temp, box[i].value]
+        }
+      }
+      setCategory_f(temp)
+    }
+    if(attr === "year"){
+      let box = document.getElementsByName("year-Filter-Box");
+      let temp =[]
+      for(let i=0 ;i< box.length ;i++){
+        if(box[i].checked == true){
+          temp =[...temp, box[i].value]
+        }
+      }
+      setYear_f(temp)
+    }
+  }
   return (
     <>
       <Meta title={"Our Store"} />
@@ -148,9 +156,9 @@ const OurStore = () => {
               {
                 brands.map((b) =>
                   <div key={b.id}>
-                    <input onChange={(e) => {
-                      filterProduct(e.target.value, "brand", e.target.checked, e.target.name, e.target.id)
-                    }}
+                    <input onChange={
+                      () => handleFilterValue("brand")
+                    }
                       name="brand-Filter-Box" type="checkbox" className="btn-check" id={"brandCheck" + b.id} autoComplete="off" value={b.id}
                     />
                     <label style={{ width: "150px" }} className="btn btn-outline-primary" htmlFor={"brandCheck" + b.id}>{b.name}</label>
@@ -170,9 +178,8 @@ const OurStore = () => {
                 {
                   categories.map((c) =>
                     <div key={c.id}>
-                      <input onChange={(e) => {
-                        filterProduct(e.target.value, "category", e.target.checked, e.target.name, e.target.id)
-                      }} name="cate-Filter-Box" type="checkbox" className="btn-check" id={"btncheck" + c.id} autoComplete="off" value={c.id} />
+                      <input onChange={ () => handleFilterValue("category")
+                      } name="cate-Filter-Box" type="checkbox" className="btn-check" id={"btncheck" + c.id} autoComplete="off" value={c.id} />
                       <label style={{ width: "150px" }} className="btn btn-outline-primary" htmlFor={"btncheck" + c.id}>{c.name}</label>
                     </div>
                   )
@@ -189,8 +196,8 @@ const OurStore = () => {
                   {
                     years.map((y) =>
                       <div key={y}>
-                        <input onChange={(e) => filterProduct(e.target.value, "year", e.target.checked, e.target.name, e.target.id
-                        )} name="year-Filter-Box" value={y} type="checkbox" className="btn-check" id={"yearCheck" + y} autoComplete="off" />
+                        <input onChange={() => handleFilterValue("year")
+                        } name="year-Filter-Box" value={y} type="checkbox" className="btn-check" id={"yearCheck" + y} autoComplete="off" />
                         <label style={{ width: "100px" }} className="btn btn-outline-primary" htmlFor={"yearCheck" + y}>{y}</label>
                       </div>
                     )
@@ -201,7 +208,7 @@ const OurStore = () => {
                 <div className="d-flex align-items-center gap-10">
                   <div className="form-floating">
                     <input
-                      onChange={(e) => filterProduct(e.target.value, "min")}
+                      onChange={(e) => setMin_f(e.target.value, "min")}
                       type="email"
                       className="form-control"
                       id="floatingInput"
@@ -211,7 +218,7 @@ const OurStore = () => {
                   </div>
                   <div className="form-floating">
                     <input
-                      onChange={(e) => filterProduct(e.target.value, "max")}
+                      onChange={(e) => setMax_f(e.target.value, "max")}
                       type="email"
                       className="form-control"
                       id="floatingInput1"
@@ -257,7 +264,7 @@ const OurStore = () => {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  products.map(p => ( p.status ?  
+                  products.map(p => (p.status ?
                     <div className="col-3" key={p.id}>
                       <ProductItem {...p}></ProductItem>
                     </div> : ''
@@ -266,6 +273,15 @@ const OurStore = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="pagination mb-3 justify-content-end">
+          <Paginate
+            currentPage={currentPage}
+            totalPages={totalPages}
+            handlePageChange={handlePageChange}
+            handlePrevPage={handlePrevPage}
+            handleNextPage={handleNextPage}
+          />
         </div>
       </Container>
     </>

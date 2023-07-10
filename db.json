@@ -233,8 +233,8 @@
     {
       "id": 1,
       "name": "iPhone 13 Pro Max",
-      "price": "1099.99",
-      "originalPrice": "900.25",
+      "price": 1099.99,
+      "originalPrice": 900.25,
       "categoryId": 1,
       "brand": 1,
       "featured": false,
@@ -259,8 +259,8 @@
     {
       "id": 2,
       "name": "Galaxy S21 Ultra 5G",
-      "price": "1379.99",
-      "originalPrice": "1275.25",
+      "price": 1379.99,
+      "originalPrice": 1275.25,
       "categoryId": 1,
       "brand": 3,
       "featured": true,
@@ -282,8 +282,8 @@
     {
       "id": 3,
       "name": "Xiaomi Mi 11 Ultra",
-      "price": "1199.99",
-      "originalPrice": "1100.25",
+      "price": 1199.99,
+      "originalPrice": 1100.25,
       "categoryId": 1,
       "brand": 4,
       "featured": true,
@@ -305,8 +305,8 @@
     {
       "id": 4,
       "name": "Pixel 6 Pro",
-      "price": "999.99",
-      "originalPrice": "900.25",
+      "price": 999.99,
+      "originalPrice": 900.25,
       "categoryId": 1,
       "brand": 2,
       "featured": true,
@@ -328,8 +328,8 @@
     {
       "id": 5,
       "name": "iPad Pro",
-      "price": "1899.99",
-      "originalPrice": "1825.25",
+      "price": 1899.99,
+      "originalPrice": 1825.25,
       "categoryId": 2,
       "brand": 1,
       "featured": true,
@@ -351,8 +351,8 @@
     {
       "id": 6,
       "name": "Mi Pad 5",
-      "price": "480.99",
-      "originalPrice": "450",
+      "price": 480.99,
+      "originalPrice": 450,
       "categoryId": 2,
       "brand": 4,
       "featured": true,
@@ -375,8 +375,8 @@
     {
       "id": 7,
       "name": "Galaxy Tab S7+",
-      "price": "900.99",
-      "originalPrice": "850",
+      "price": 900.99,
+      "originalPrice": 850,
       "categoryId": 2,
       "brand": 3,
       "featured": true,
@@ -399,8 +399,8 @@
     {
       "id": 8,
       "name": "iPad Air (2022)",
-      "price": "449.99",
-      "originalPrice": "420.25",
+      "price": 449.99,
+      "originalPrice": 420.25,
       "categoryId": 2,
       "brand": 1,
       "featured": true,
@@ -423,8 +423,8 @@
     {
       "id": 9,
       "name": "Dell XPS 13",
-      "price": "649.99",
-      "originalPrice": "620.25",
+      "price": 649.99,
+      "originalPrice": 620.25,
       "categoryId": 3,
       "brand": 5,
       "featured": true,
@@ -445,8 +445,8 @@
     {
       "id": 10,
       "name": "HP Spectre x360 16",
-      "price": "1499.99",
-      "originalPrice": "1450.25",
+      "price": 1499.99,
+      "originalPrice": 1450.25,
       "categoryId": 3,
       "brand": 6,
       "featured": true,
@@ -467,8 +467,8 @@
     {
       "id": 11,
       "name": "MacBook Pro M1",
-      "price": "1299.99",
-      "originalPrice": "1250.25",
+      "price": 1299.99,
+      "originalPrice": 1250.25,
       "categoryId": 3,
       "brand": 1,
       "featured": true,
@@ -490,8 +490,8 @@
     {
       "id": 12,
       "name": "Lenovo ThinkPad X1 Carbon Gen 9",
-      "price": "1599.99",
-      "originalPrice": "1540.25",
+      "price": 1599.99,
+      "originalPrice": 1540.25,
       "categoryId": 3,
       "brand": 7,
       "featured": true,
@@ -512,8 +512,8 @@
     {
       "id": 13,
       "name": "Samsung Galaxy Watch 5",
-      "price": "259.99",
-      "originalPrice": "250",
+      "price": 259.99,
+      "originalPrice": 250,
       "categoryId": 4,
       "brand": 3,
       "featured": true,
@@ -536,8 +536,8 @@
     {
       "id": 14,
       "name": "Fitbit Sense 2",
-      "price": "269.95",
-      "originalPrice": "250",
+      "price": 269.95,
+      "originalPrice": 250,
       "categoryId": 4,
       "brand": 8,
       "featured": true,
@@ -561,8 +561,8 @@
     {
       "id": 15,
       "name": "Garmin Venu Sq 2",
-      "price": "249.99",
-      "originalPrice": "230",
+      "price": 249.99,
+      "originalPrice": 230,
       "categoryId": 4,
       "brand": 9,
       "featured": true,
@@ -586,8 +586,8 @@
     {
       "id": 16,
       "name": "Google Pixel Watch",
-      "price": "299.99",
-      "originalPrice": "270.5",
+      "price": 299.99,
+      "originalPrice": 270.5,
       "categoryId": 4,
       "brand": 2,
       "featured": true,
@@ -700,16 +700,6 @@
     }
   ],
   "wishLists": [
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "productId": "6",
-      "id": 2
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "productId": "4",
-      "id": 3
-    },
     {
       "userId": "minhlqhe161101@fpt.edu.vn",
       "productId": "8",
@@ -1218,24 +1208,24 @@
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic Black",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         },
         {
           "productId": 3,
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         },
         {
           "productId": 1,
           "productName": "iPhone 13 Pro Max",
           "quantity": 1,
           "color": "Lumious White",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
+          "unitPrice": 1099.99,
+          "originalPrice": 900.25
         }
       ],
       "totalAmount": "3499.97",
@@ -1259,24 +1249,24 @@
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic Black",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         },
         {
           "productId": 3,
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         },
         {
           "productId": 1,
           "productName": "iPhone 13 Pro Max",
           "quantity": 1,
           "color": "Lumious White",
-          "unitPrice": "1099.99",
-          "originalPrice": "900.25"
+          "unitPrice": 1099.99,
+          "originalPrice": 900.25
         }
       ],
       "totalAmount": "3499.97",
@@ -1300,8 +1290,8 @@
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         }
       ],
       "totalAmount": "1199.99",
@@ -1325,285 +1315,14 @@
           "productName": "Xiaomi Mi 11 Ultra",
           "quantity": 1,
           "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
         }
       ],
       "totalAmount": "1199.99",
       "date": "2023-07-05T15:06:59.515Z",
-      "statusId": "5",
+      "statusId": "2",
       "id": 4
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Ervin Howell",
-      "phone": "010-692-6593 x09125",
-      "address": {
-        "country": "US",
-        "state": "Arizona",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771"
-      },
-      "productList": [
-        {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
-        }
-      ],
-      "totalAmount": "1199.99",
-      "date": "2023-07-05T15:06:59.515Z",
-      "statusId": "3",
-      "id": 5
-    },
-    {
-      "userId": "Shanna@melissa1.tv",
-      "name": "Shanna Alice",
-      "phone": "0904431642",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains fdsafdsaewcdsxzewqerqwewqewqewqdsad dsa",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic White",
-          "unitPrice": "1199.99",
-          "originalPrice": "1100.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2579.98",
-      "date": "2023-07-06T03:07:52.064Z",
-      "statusId": "4",
-      "id": 6
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Trinh Van Bo",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-07-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 7
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Ha Ngoc Anh",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-07-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 8
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Butram Danish",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-07-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 9
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Kumurochi Ashato",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-06-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 10
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Kumurochi Ashato",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-06-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 11
-    },
-    {
-      "userId": "minhlqhe161101@fpt.edu.vn",
-      "name": "Daniel Dang",
-      "phone": "0106926593",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Black",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        },
-        {
-          "productId": 2,
-          "productName": "Galaxy S21 Ultra 5G",
-          "quantity": 1,
-          "color": "Phantom Silver",
-          "unitPrice": "1379.99",
-          "originalPrice": "1275.25"
-        }
-      ],
-      "totalAmount": "2759.98",
-      "date": "2023-07-06T15:56:19.567Z",
-      "statusId": 1,
-      "id": 12
     }
   ],
   "status": [

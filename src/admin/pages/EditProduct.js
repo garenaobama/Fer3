@@ -500,7 +500,7 @@ const EditProduct = () => {
                         </Checkbox>
                       </Col>
                       <Col xs={12} lg={12} className='my-3'>
-                        <label>Detailed description</label>
+                        <label>Product configuration</label>
                         {/* <TextArea
                           showCount
                           style={{ height: 120, marginBottom: 24 }}
@@ -519,13 +519,13 @@ const EditProduct = () => {
                               formik.setFieldValue('describe', "")
                             }
                           }}
-                          data={formik.values?.describe}
-                          setContents={product.describe}
+                          data={formik.values?.detail}
+                          setContents={product.detail}
                         />
                         {formik.touched.describe && <span className='text-danger'>{formik.errors.describe}</span>}
                       </Col>
                       <Col xs={12} className='mb-3'>
-                        <label>Configuration</label>
+                        <label>Product detailed description</label>
                         <MySunEditor  
                           id='editor2'
                           name='detail'
@@ -536,8 +536,8 @@ const EditProduct = () => {
                               formik.setFieldValue('detail', "")
                             }
                           }}
-                          data={formik.values?.detail}
-                          setContents={product.detail}
+                          data={formik.values?.describe}
+                          setContents={product.describe}
                         />
                         {formik.touched.detail && <span className='text-danger'>{formik.errors.detail}</span>}
                       </Col>
