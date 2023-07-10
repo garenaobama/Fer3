@@ -7,104 +7,186 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
+import Swal from "sweetalert2";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [relatedProducts, setRelatedProduct] = useState([]);
-  const [quantity, setQuantity] = useState(1);
-  const [color, setColor] = useState();
   const [mainImage, setMainImage] = useState([]);
-  const { color: colors } = products;
+  const { color } = products;
+  const [recentColor, setRecentColor] = useState([]);
+  const [quantity, setQuantity] = useState(1);
   const { detail } = products;
   const { images } = products;
+  const [wishlist, setWishList] = useState([]);
 
-  useEffect(
-    //fetch product data by id
+  useEffect( //fetch product data by id
     () => {
       fetch(`http://localhost:9999/products/` + id)
-        .then((res) => res.json())
-        .then((json) => {
-          setProducts(json);
-        });
-    },
-    [id]
+        .then(res => res.json())
+        .then(
+          json => {
+            setProducts(json);
+          }
+        );
+    }, [id]
   );
 
-  useEffect(() => {
-    setMainImage(images ? images[0] : "/dsa");
-  }, [images]);
+  //pre initial , this is for setting the default value for some color states
+  useEffect(
+    () => {
+      setMainImage(images ? images[0] : "not chosen");
+      setRecentColor(color ? color[0] : "not chosen");
+      if (document.getElementById("btnradio0")) document.getElementById("btnradio0").setAttribute("checked", true);
+    }, [images]
+  );
 
-  const smallImageStyle = {
-    boxShadow: "0px 2px 7px 0px",
-  };
+  // const formatConfiguration = (input) => { //format configuration text
+  //   const [label, value] = input.split(': ');
+  //   return (
+  //     <>
+  //       <td style={{ fontWeight: "bold" }}>{label}</td>
+  //       <td>{value}</td>
+  //     </>
+  //   );
+  // }
 
-  const formatConfiguration = (input) => {
-    //format configuration text
-    const [label, value] = input.split(": ");
-    return (
-      <>
-        <td style={{ fontWeight: "bold" }}>{label}</td>
-        <td>{value}</td>
-      </>
-    );
-  };
-
-  useEffect(() => {
-    fetch(`http://localhost:9999/products`)
-      .then((res) => res.json())
-      .then((json) => {
-        const result = json.slice(0, 4);
-        setRelatedProduct(result);
-      });
-  }, []);
-
-  // const [orderedProduct, setorderedProduct] = useState(true);
-
-  const handleAddToCart = () => {
-    if (!color || (quantity && quantity <= 0 && quantity > 10)) {
-      return alert("Please choose color");
-    }
-
-    const cart = localStorage.getItem("cartProduct");
-
-    const item = {
-      id: products.id,
-      name: products.name,
-      image: products.images[0],
-      price: products.price,
-      quantity,
-      color,
-    };
-
-    if (cart) {
-      const dataStore = JSON.parse(cart);
-
-      const prd = dataStore.find((o) => o.id === products.id);
-
-      if (prd) {
-        dataStore.forEach((data) => {
-          if (data.id === prd.id) {
-            data.quantity += quantity;
-          }
-        });
-
-        localStorage.removeItem("cartProduct");
-        localStorage.setItem("cartProduct", JSON.stringify(dataStore));
-      } else {
-        localStorage.setItem(
-          "cartProduct",
-          JSON.stringify([...dataStore, item])
+  useEffect(
+    () => {
+      fetch(`http://localhost:9999/products`)
+        .then(res => res.json())
+        .then(json => {
+          const result = json.slice(0, 4); //get just 4 products
+          setRelatedProduct(result);
+        }
         );
+      if (JSON.parse(sessionStorage.getItem("data"))) {
+        const user = JSON.parse(sessionStorage.getItem("data"));
+        fetch(`http://localhost:9999/wishLists/?userId=` + user.email)
+          .then(res => res.json())
+          .then(json => {
+            setWishList(json)
+          }
+          );
       }
-    } else {
-      localStorage.setItem("cartProduct", JSON.stringify([item]));
+    }, []
+  );
+
+  //wish list:
+  const addToWishList = () => {
+    if (JSON.parse(sessionStorage.getItem("data"))) { //if user is logged in
+      if (wishlist.some(w => w.productId == id)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed',
+          text: 'You have already added this item to wishlist',
+        })
+      } else {
+        fetch('http://localhost:9999/wishLists', { //add new item to json
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            userId: JSON.parse(sessionStorage.getItem("data")).email,
+            productId: id
+          })
+        })
+        wishlist.push({ //update the useState wishlist to prevent duplication
+          productId: id
+        })
+        Swal.fire({
+          icon: 'success',
+          title: 'Added',
+          text: 'Added item to wishlist',
+        })
+      }
+    } else { //not logged in
+      Swal.fire({
+        icon: 'error',
+        title: 'Not logged in',
+        text: 'Log in to save this product along with your account',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancel",
+        confirmButtonText: 'Login'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "/login";
+        }
+      })
     }
+  }
+  //session cart :
+  const [cart, setCart] = useState([]);
 
-    alert("add to cart success");
-  };
+  //when cart changes, update session cart
+  useEffect(
+    () => {
+      if (sessionStorage.getItem("cart")) { //if cart exist
+        var index = JSON.parse(sessionStorage.getItem("cart")).length;
+        var sessionCart = [
+          ...JSON.parse(sessionStorage.getItem("cart"))
+        ]
+        sessionCart.map((s) => s.id = index--)
+        if (sessionCart.some(item => item.productId == id && item.color == recentColor)) { //if product is duplicate
+          Swal.fire({
+            icon: 'error',
+            title: 'Failed',
+            text: 'You have already added this item to cart',
+          })
+        }
+        else {
+          if (Object.keys(cart).length != 0) { //if cart(state) is not empty 
+            sessionCart = [
+              cart, // new item on the top
+              ...sessionCart
+            ]
+            Swal.fire({
+              icon: 'success',
+              title: 'Added',
+              text: 'Added item to cart',
+            })
+          }
+        }
+        sessionStorage.setItem("cart", JSON.stringify(sessionCart));
+      }
+      else sessionStorage.setItem("cart", JSON.stringify(cart));
+      console.log(JSON.parse(sessionStorage.getItem("cart")));
+    }, [cart]
+  )
 
-  const closeModal = () => {};
+  const addToCart = () => { //cart fearture
+    if (JSON.parse(sessionStorage.getItem("data"))) { //logged in
+      setCart(
+        // cart,
+        {
+          productId: Number(id),
+          color: recentColor,
+          quantity: quantity,
+        }
+      )
+    }
+    else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Not logged in',
+        text: 'Log in to save this product in your cart',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancel",
+        confirmButtonText: 'Login'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "/login";
+        }
+      })
+    }
+    //sessionStorage.setItem("cart", JSON.stringify(cart));
+  }
   return (
     <>
       <Meta title={"Product Name"} />
@@ -112,16 +194,15 @@ const SingleProduct = () => {
       <Container class1="main-product-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-7 row">
+
             <div className="d-flex flex-column col-2">
-              {images &&
-                images.length > 0 &&
-                images.map((img) => (
-                  <div key={img} className="mb-2">
-                    <button className="btn" onClick={() => setMainImage(img)}>
-                      <img src={img} alt="product" style={{ width: "95%" }} />
-                    </button>
-                  </div>
-                ))}
+              {images && images.length > 0 && images.map((img) =>
+                <div key={img} className="mb-2" >
+                  <button className="btn" onClick={() => setMainImage(img)}>
+                    <img src={img} alt="product" style={{ width: "95%" }} />
+                  </button>
+                </div>
+              )}
             </div>
             <div className="mb-5 col-10">
               {images && images.length > 0 && (
@@ -133,16 +214,21 @@ const SingleProduct = () => {
                 <div className="col-12">
                   <h4>Product information</h4>
                   <div className="bg-white p-3">
-                    <p>{products.describe}</p>
+                    <p>
+                    <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
+                    </p>
                   </div>
                 </div>
               </div>
             </Container>
+
           </div>
           <div className="col-5">
             <div className="main-product-details">
               <div className="border-bottom">
-                <h2 className="title">{products.name}</h2>
+                <h2 className="title">
+                  {products.name}
+                </h2>
               </div>
               <div className="border-bottom py-3">
                 <p className="price">$ {products.price}</p>
@@ -159,45 +245,24 @@ const SingleProduct = () => {
               </div>
               <div className=" py-3">
                 <h3 className="product-heading pb-2">Color :</h3>
-                <div
-                  className="btn-group"
-                  role="group"
-                  aria-label="Basic radio toggle button group"
-                >
-                  {colors &&
-                    colors.length > 0 &&
-                    colors.map((cl, index) => (
-                      <div key={cl} onClick={() => setColor(cl)}>
-                        <input
-                          onChange={(e) => {
-                            setMainImage(images[e.target.value]);
-                          }}
-                          value={index}
-                          type="radio"
-                          className="btn-check"
-                          name="btnradio"
-                          id={"btnradio" + index}
-                          autoComplete="off"
-                        />
-                        <label
-                          className="btn btn-outline-primary"
-                          htmlFor={"btnradio" + index}
-                        >
-                          {cl}
-                        </label>
-                      </div>
-                    ))}
+                <div className="btn-group flex-wrap" role="group" aria-label="Basic radio toggle button group">
+                  {color && color.length > 0 && color.map((cl, index) =>
+                    <div key={cl}>
+                      <input onChange={(e) => { setMainImage(images[e.target.value]); setRecentColor(color[index]) }} value={index} type="radio" className="btn-check" name="btnradio-color" id={"btnradio" + index} autoComplete="off" />
+                      <label className="btn btn-outline-primary" htmlFor={"btnradio" + index}>{cl}</label>
+                    </div>
+                  )}
                 </div>
 
                 <div className="d-flex align-items-center gap-15 flex-row mt-5 mb-5">
                   <h3 className="product-heading">Quantity :</h3>
                   <div className="">
                     <input
+                      onChange={(e) => setQuantity(e.target.value)}
                       type="number"
                       min={1}
+                      placeholder="1"
                       max={10}
-                      value={quantity}
-                      onChange={(e) => setQuantity(Number(e.target.value))}
                       className="form-control"
                       style={{ width: "70px" }}
                     />
@@ -207,9 +272,8 @@ const SingleProduct = () => {
                 <div className="d-flex align-items-center gap-30 mt-5 mb-5">
                   <button
                     className="button border-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
                     type="button"
+                    onClick={() => addToCart()}
                   >
                     Add to Cart
                   </button>
@@ -217,9 +281,7 @@ const SingleProduct = () => {
                 </div>
                 <div className="d-flex align-items-center gap-15">
                   <div>
-                    <a href="/">
-                      <AiOutlineHeart className="fs-5 me-2" /> Add to Wishlist
-                    </a>
+                    <button onClick={() => addToWishList()} type="button" class="button" style={{ backgroundColor: "pink", border: 0 }}> <AiOutlineHeart className="m-0" size={25} /> Add to Wishlist</button>
                   </div>
                 </div>
                 <div className="d-flex gap-10 flex-column  my-3">
@@ -235,18 +297,18 @@ const SingleProduct = () => {
 
             <div className="bg-white p-3">
               <h4 className="pb-3">Configuration of {products.name}</h4>
-              <table className="table">
+              {/* <table className="table">
                 <tbody>
-                  {detail &&
-                    detail.length > 0 &&
-                    detail.map((dtl) => (
-                      <tr key={dtl} className="mb-2">
-                        {formatConfiguration(dtl)}
-                      </tr>
-                    ))}
+                  {detail && detail.length > 0 && detail.map((dtl) =>
+                    <tr key={dtl} className="mb-2" >
+                      {formatConfiguration(dtl)}
+                    </tr>
+                  )}
                 </tbody>
-              </table>
+              </table> */}
+              <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.detail }} />
             </div>
+
           </div>
         </div>
       </Container>
@@ -301,82 +363,20 @@ const SingleProduct = () => {
           <div className="col-12">
             <h3 className="section-heading">Related Products</h3>
             <div className="row">
-              {relatedProducts.map((p) => (
-                <div className="col-3" key={p.id}>
-                  <ProductItem {...p}></ProductItem>
-                </div>
-              ))}
+              {
+                relatedProducts.map((p) => (
+                  <div className="col-3" key={p.id}>
+                    <ProductItem {...p}></ProductItem>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
-        <div className="row"></div>
-      </Container>
+        <div className="row">
 
-      <div
-        className="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered ">
-          <div className="modal-content">
-            <div className="modal-header py-0 border-0">
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body py-0">
-              <div className="d-flex align-items-center">
-                <div className="flex-grow-1 w-50">
-                  {images && images.length > 0 && (
-                    <img
-                      src={mainImage}
-                      alt="product"
-                      style={{ width: "95%" }}
-                    />
-                  )}
-                </div>
-                <div className="d-flex flex-column flex-grow-1 w-50">
-                  <h6 className="mb-3">{products.name}</h6>
-                  <p className="mb-1">quantity: {quantity}</p>
-                  <p className="mb-1">
-                    Color: {colors?.find((c) => c === color)}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="modal-footer border-0 py-0 justify-content-center gap-30">
-              <button type="button" className="button" data-bs-dismiss="modal">
-                View My Cart
-              </button>
-              <button
-                type="button"
-                className="button signup"
-                onClick={handleAddToCart}
-              >
-                Checkout
-              </button>
-            </div>
-            <div className="d-flex justify-content-center py-3">
-              <Link
-                className="text-dark"
-                to="/product"
-                onClick={() => {
-                  closeModal();
-                }}
-              >
-                Continue To Shopping
-              </Link>
-            </div>
-          </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };
