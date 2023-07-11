@@ -264,9 +264,9 @@ const OurStore = () => {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  products.map(p => (p.status ?
+                  products.map((p) => (p.status ?
                     <div className="col-3" key={p.id}>
-                      <ProductItem {...p}></ProductItem>
+                      <ProductItem product={p} brand={brands.map(b => b.id == p.brand ? b.name : '')}></ProductItem>
                     </div> : ''
                   ))
                 )}

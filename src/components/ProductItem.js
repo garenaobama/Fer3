@@ -5,24 +5,25 @@ import prodcompare from "../images/prodcompare.svg";
 import wish from "../images/wish.svg";
 import addcart from "../images/add-cart.svg";
 import view from "../images/view.svg";
-const ProductItem = (products) => {
+const ProductItem = (props) => {
+  const { product, brand } = props;
   return (
     <>
-        <Link className="product-card position-relative" to={"/product/"+ products.id}>
+        <Link className="product-card position-relative" to={"/product/"+ product.id}>
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />
             </button>
           </div>
           <div style={{ height: "250px" }}>
-            {products.images && products.images.length > 0 && (
-              <img src={products.images[0]} alt="" style={{ width: "95%" }} />
+            {product.images && product.images.length > 0 && (
+              <img src={product.images[0]} alt="" style={{ width: "95%" }} />
             )}
           </div>
           <div className="product-details">
-            <h6 className="brand">{products.brandName}</h6>
+            <h6 className="brand">{brand}</h6>
             <h5 className="product-title">
-              {products.name}
+              {product.name}
             </h5>
             <ReactStars
               count={5}
@@ -31,7 +32,7 @@ const ProductItem = (products) => {
               edit={false}
               activeColor="#ffd700"
             />
-            <p className="price">${products.price}</p>
+            <p className="price">${product.price}</p>
           </div>
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column gap-15">

@@ -7,6 +7,19 @@ export default function Dashboard() {
 
   const [fromDate, setfromDate] = useState('')
   const [toDate, settoDate] = useState('')
+  const Currentdate = new Date(); //current date
+
+
+  function getStatisticNumberOfNMonthAgo(num) {
+    //
+    let nMonthAgo = new Date();
+    nMonthAgo.setMonth(nMonthAgo.getMonth() - num);
+    nMonthAgo.setDate(1);
+    let nMonthAgoMaxDate = new Date(nMonthAgo.getFullYear(), nMonthAgo.getMonth(), 0);
+    //
+    console.log(nMonthAgo + ';;;' + nMonthAgoMaxDate);
+    return getStatisticNumber(nMonthAgo, nMonthAgoMaxDate)
+  }
 
   const [orders, setOrders] = useState([]); //fetched orders
 
@@ -123,7 +136,7 @@ export default function Dashboard() {
             <InputGroup.Text>
               From
             </InputGroup.Text>
-            <Form.Control type="date" onChange={(e) => { setfromDate(e.target.value); getStatisticNumber(fromDate, toDate) }}>
+            <Form.Control type="date" onChange={(e) => { getStatisticNumberOfNMonthAgo(1); setfromDate(e.target.value); getStatisticNumber(fromDate, toDate) }}>
 
             </Form.Control>
           </InputGroup>
@@ -143,6 +156,9 @@ export default function Dashboard() {
       <div className="d-flex justify-content-between align-items-center gap-3">
         <div className="d-flex justify-content-between align-items-end flex-grow-1 bg-white p-3 roudned-3">
           <div>
+            {
+              //getStatisticNumber((Currentdate.getFullYear() + "-" + Currentdate.getMonth() + "-01" ), (Currentdate.getFullYear() + "-" + Currentdate.getMonth() + "-01" ))
+            }
             <p className="desc">Total</p>
             <h4 className="mb-0 sub-title">$1100</h4>
           </div>
