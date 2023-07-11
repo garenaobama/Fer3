@@ -25,6 +25,12 @@ const productSchema = yup.object({
     .typeError('Must be a number')
     .required('This field is required')
     .positive('Must be a positive value'),
+  year: yup.number()
+    .typeError('Must be a number')
+    .required('This field is required')
+    .positive('Must be a positive value')
+    .integer()
+    .min(1900),
   categoryId: yup.number()
     .typeError('Must be a number')
     .required('This field is required')
@@ -57,6 +63,7 @@ const initialValues = {
   originalPrice: '',
   categoryId: '',
   brand: '',
+  year: '',
   featured: false,
   status: true,
   detail: '',
@@ -151,7 +158,7 @@ const AddProduct = () => {
     };
 
     const saveProduct = (values, product) => {
-      const { name, price, originalPrice, categoryId, brand, featured, status, detail, describe } = values
+      const { name, price, originalPrice, categoryId, brand, featured, status, detail, describe, year } = values
       const { color, images } = product
 
       fetch(`http://localhost:9999/products`, {
@@ -162,6 +169,7 @@ const AddProduct = () => {
             originalPrice: Number(originalPrice),
             categoryId,
             brand,
+            year: Number(year),
             featured,
             status,
             detail,
@@ -369,7 +377,22 @@ const AddProduct = () => {
                         )}
                         </FieldArray>
                       </Col>
-                      <Col xs={6} className='my-3'>
+                      <Col xs={12} lg={6} className='my-3'>
+                        <label>Year</label>
+                        <CustomInput
+                            type="text"
+                            name="year"
+                            placeholder="Year"
+                            onChange={formik.handleChange('year')}
+                            onBlur={formik.handleBlur('year')}
+                            value={formik.values?.year}
+                            errMes={
+                              formik.touched.year &&
+                              formik.errors.year
+                            }
+                        />
+                      </Col>
+                      <Col xs={6} lg={3} className='my-3'>
                         <label className='d-block'>Status</label>
                         <Checkbox 
                           name='status'
@@ -379,7 +402,7 @@ const AddProduct = () => {
                           Is active?
                         </Checkbox>
                       </Col>
-                      <Col xs={6} className='my-3'>
+                      <Col xs={6} lg={3} className='my-3'>
                         <label className='d-block'>Featured</label>
                         <Checkbox 
                           name='featured'
