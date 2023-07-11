@@ -909,3 +909,7 @@ footer .input-group-text {
 .editor-table tr td {
   padding: .5rem .5rem;
 }
+
+.editor-table figure {
+  max-width: 100%;
+}

@@ -48,8 +48,8 @@ const Header = () => {
             <div className="col-6">
               <p className="text-end text-white mb-0">
                 Hotline:
-                <a className="text-white" href="tel:+91 8264954234">
-                  +91 8264954234
+                <a className="text-white" href="tel:+84 363840808">
+                  +84 363840808
                 </a>
               </p>
             </div>
@@ -59,12 +59,12 @@ const Header = () => {
       <header className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
-            <div className="col-2">
+            <div className="col-12 col-lg-2">
               <h2>
                 <Link className="text-white">Dev Corner</Link>
               </h2>
             </div>
-            <div className="col-5">
+            <div className="col-12 col-lg-5">
               <div className="input-group">
                 <input
                   type="text"
@@ -78,9 +78,9 @@ const Header = () => {
                 </span>
               </div>
             </div>
-            <div className="col-5">
-              <div className="header-upper-links d-flex align-items-center justify-content-around">
-                <div>
+            <div className="col-12 col-lg-5">
+              <div className="header-upper-links d-flex align-items-center justify-content-around row">
+                <div className="col-6 col-lg-3">
                   <Link
                     to="/compare-product"
                     className="d-flex align-items-center gap-10 text-white"
@@ -92,7 +92,7 @@ const Header = () => {
                   </Link>
                 </div>
                 {isLogged && (
-                  <div>
+                  <div className="col-6 col-lg-3">
                     <Link
                       to="/wishlist"
                       className="d-flex align-items-center gap-10 text-white"
@@ -105,7 +105,7 @@ const Header = () => {
                   </div>
                 )}
                 {!isLogged && (
-                  <div>
+                  <div className="col-6 col-lg-3">
                     <Link
                       to="/login"
                       className="d-flex align-items-center gap-10 text-white"
@@ -118,7 +118,7 @@ const Header = () => {
                   </div>
                 )}
                 {isLogged && (
-                  <div id="user-button-header">
+                  <div id="user-button-header" className="col-6 col-lg-3">
                     <Link to={"/"} className="d-flex align-items-center gap-10 text-white">
                       <img src={user} alt="user" />
                       <p style={{
@@ -154,7 +154,7 @@ const Header = () => {
                   </div>
                 )}
                 {isLogged && (
-                  <div>
+                  <div className="col-6 col-lg-3">
                     <Link
                       to="/cart"
                       className="d-flex align-items-center gap-10 text-white"
@@ -176,8 +176,8 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="menu-bottom d-flex align-items-center gap-30">
-                <div>
+              <div className="menu-bottom d-flex align-items-center row">
+                <div className="col-12 col-lg-6">
                   <div className="dropdown">
                     <button
                       className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
@@ -213,8 +213,8 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="menu-links">
-                  <div className="d-flex align-items-center gap-15">
+                <div className="menu-links col-12 col-lg-6">
+                  <div className="d-flex align-items-center justify-content-center gap-15">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/product">Our Store</NavLink>
                     <NavLink to="/blogs">Blogs</NavLink>

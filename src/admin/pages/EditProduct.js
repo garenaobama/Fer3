@@ -188,8 +188,8 @@ const EditProduct = () => {
           method: 'PATCH',
           body: JSON.stringify({
             name,
-            price,
-            originalPrice,
+            price: Number(price),
+            originalPrice: Number(originalPrice),
             categoryId,
             brand,
             featured,
@@ -510,7 +510,7 @@ const EditProduct = () => {
                           value={formik.values?.describe}
                         /> */}
                         <MySunEditor  
-                          id='editor2'
+                          id='editor1'
                           name='detail'
                           onInit
                           onChange={(content) => {
