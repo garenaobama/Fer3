@@ -158,8 +158,8 @@ const AddProduct = () => {
           method: 'POST',
           body: JSON.stringify({
             name,
-            price,
-            originalPrice,
+            price: Number(price),
+            originalPrice: Number(originalPrice),
             categoryId,
             brand,
             featured,
@@ -392,7 +392,7 @@ const AddProduct = () => {
                       <Col xs={12} className='my-3'>
                         <label>Product configuration</label>
                         <MySunEditor  
-                          id='editor2'
+                          id='editor1'
                           name='detail'
                           onInit
                           onChange={(content) => {
@@ -408,6 +408,7 @@ const AddProduct = () => {
                       <Col xs={12} className='mb-3'>
                         <label>Product detailed description</label>
                         <MySunEditor  
+                          id='editor2'
                           name='describe'
                           onChange={(content) => {
                             formik.setFieldValue('describe', content); 

@@ -97,7 +97,7 @@ const ProductDetail = () => {
             </div>
 
             <h3>Product detailed description</h3>
-            <div style={{ background: "white" }}>
+            <div className="py-4 px-2" style={{ background: "white" }}>
               <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
             </div>
 
