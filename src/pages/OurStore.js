@@ -79,11 +79,11 @@ const OurStore = () => {
         url += ('&year=' + b)
       )
     }
-    if(min_f !== ''){
-      url += ('price_gte=' + min_f)
+    if(min_f != ''){
+      url += ('&price_gte=' + min_f)
     }
-    if(max_f !== ''){
-      url += ('price_lte=' + max_f)
+    if(max_f != ''){
+      url += ('&price_lte=' + max_f)
     }
     fetch(url)
       .then((res) => {
@@ -98,7 +98,7 @@ const OurStore = () => {
   useEffect(
     () => {
       handleFilter(currentPage);
-    }, [currentPage, year_f, category_f, brand_f]
+    }, [currentPage, year_f, category_f, brand_f,max_f, min_f]
   )
 
   const SortProduct = (index) => {
@@ -208,7 +208,7 @@ const OurStore = () => {
                 <div className="d-flex align-items-center gap-10">
                   <div className="form-floating">
                     <input
-                      onChange={(e) => setMin_f(e.target.value, "min")}
+                      onChange={(e) => setMin_f(e.target.value)}
                       type="email"
                       className="form-control"
                       id="floatingInput"
@@ -218,7 +218,7 @@ const OurStore = () => {
                   </div>
                   <div className="form-floating">
                     <input
-                      onChange={(e) => setMax_f(e.target.value, "max")}
+                      onChange={(e) => setMax_f(e.target.value)}
                       type="email"
                       className="form-control"
                       id="floatingInput1"

@@ -1,35 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsArrowDownRight, BsArrowUpRight } from "react-icons/bs";
 import { Column } from "@ant-design/plots";
-import { Table } from "antd";
-const columns = [
-  {
-    title: "SNo",
-    dataIndex: "key",
-  },
-  {
-    title: "Name",
-    dataIndex: "name",
-  },
-  {
-    title: "Product",
-    dataIndex: "product",
-  },
-  {
-    title: "Status",
-    dataIndex: "staus",
-  },
-];
-const data1 = [];
-for (let i = 0; i < 46; i++) {
-  data1.push({
-    key: i,
-    name: `Edward King ${i}`,
-    product: 32,
-    staus: `London, Park Lane no. ${i}`,
-  });
-}
-const Dashboard = () => {
+import InputGroup from 'react-bootstrap/InputGroup';
+import { Col, Form, Row } from 'react-bootstrap';
+export default function Dashboard() {
+
+  const [fromDate, setfromDate] = useState('')
+  const [toDate, settoDate] = useState('')
+
+  const [orders, setOrders] = useState([]); //fetched orders
+
+  useEffect(() => {
+    fetch(`http://localhost:9999/order?statusId=4`)
+      .then(res => res.json())
+      .then(json => setOrders(json));
+  }, []
+  )
+
+  function getStatisticNumber(from, to) {
+    let temp = [...orders];
+    temp = temp.filter((o) => (new Date(o.date)) >= (new Date(from)));
+    temp = temp.filter((o) => (new Date(o.date)) <= (new Date(to)));
+    let data = {
+      revenue: 0,
+      profit: 0,
+      order: temp.length
+    }
+
+    temp.map(t => [
+      data.revenue += t.totalAmount,
+      data.profit += t.productList.map(tp => tp.unitPrice - tp.originalPrice).reduce((a, b) => a + b)
+    ]
+    )
+    return data
+  }
+
   const data = [
     {
       type: "Jan",
@@ -112,6 +117,29 @@ const Dashboard = () => {
   return (
     <div>
       <h3 className="mt-2">Dashboard</h3>
+      <Row>
+        <Col xs={6} md={3}>
+          <InputGroup className="mb-3">
+            <InputGroup.Text>
+              From
+            </InputGroup.Text>
+            <Form.Control type="date" onChange={(e) => { setfromDate(e.target.value); getStatisticNumber(fromDate, toDate) }}>
+
+            </Form.Control>
+          </InputGroup>
+        </Col>
+        <Col xs={12} md={3}>
+          <InputGroup className="mb-3">
+            <InputGroup.Text>
+              to
+            </InputGroup.Text>
+            <Form.Control type="date" onChange={(e) => { settoDate(e.target.value); getStatisticNumber(fromDate, toDate) }}>
+
+            </Form.Control>
+          </InputGroup>
+        </Col>
+      </Row>
+      <h4>Report on {Date()}</h4>
       <div className="d-flex justify-content-between align-items-center gap-3">
         <div className="d-flex justify-content-between align-items-end flex-grow-1 bg-white p-3 roudned-3">
           <div>
@@ -156,14 +184,8 @@ const Dashboard = () => {
           <Column {...config} />
         </div>
       </div>
-      <div className="mt-4">
-        <h3 className="mb-5 title">Recent Orders</h3>
-        <div>
-          <Table columns={columns} dataSource={data1} />
-        </div>
-      </div>
     </div>
   );
-};
+}
 
-export default Dashboard;
+

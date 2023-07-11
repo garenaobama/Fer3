@@ -91,12 +91,12 @@ const Checkout = () => {
           productName: p.name,
           quantity: cart[index].quantity,
           color: cart[index].color,
-          unitPrice: p.price,
-          originalPrice: p.originalPrice
+          unitPrice: Number(p.price),
+          originalPrice: Number(p.originalPrice)
         })),
-      totalAmount: subTotal,
+      totalAmount: Number(subTotal),
       date: new Date(),
-      statusId: 1
+      statusId: Number(1)
     })
   }, [user, products, subTotal]
   )

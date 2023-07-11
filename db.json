@@ -1246,9 +1246,9 @@
           "originalPrice": 900.25
         }
       ],
-      "totalAmount": "3499.97",
+      "totalAmount": 3499.97,
       "date": "2023-07-05T11:25:23.378Z",
-      "statusId": "4",
+      "statusId": 4,
       "id": 1
     },
     {
@@ -1287,9 +1287,9 @@
           "originalPrice": 900.25
         }
       ],
-      "totalAmount": "3499.97",
+      "totalAmount": 3499.97,
       "date": "2023-07-05T11:25:23.378Z",
-      "statusId": "4",
+      "statusId": 4,
       "id": 2
     },
     {
@@ -1312,9 +1312,9 @@
           "originalPrice": 1100.25
         }
       ],
-      "totalAmount": "1199.99",
+      "totalAmount": 1199.99,
       "date": "2023-07-05T14:51:20.493Z",
-      "statusId": "4",
+      "statusId": 4,
       "id": 3
     },
     {
@@ -1337,10 +1337,80 @@
           "originalPrice": 1100.25
         }
       ],
-      "totalAmount": "1199.99",
+      "totalAmount": 1199.99,
       "date": "2023-07-05T15:06:59.515Z",
-      "statusId": "2",
+      "statusId": 4,
       "id": 4
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "07980255341",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 1,
+          "productName": "iPhone 13 Pro Max",
+          "quantity": 1,
+          "color": "Lumious White",
+          "unitPrice": 1099.99,
+          "originalPrice": 900.25
+        }
+      ],
+      "totalAmount": 1099.99,
+      "date": "2023-07-10T16:06:22.020Z",
+      "statusId": 4,
+      "id": 5
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Loren Sporme",
+      "phone": "098765241",
+      "address": {
+        "country": "US",
+        "state": "California",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 13,
+          "productName": "Samsung Galaxy Watch 5",
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 259.99,
+          "originalPrice": 250
+        },
+        {
+          "productId": 13,
+          "productName": "Samsung Galaxy Watch 5",
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 259.99,
+          "originalPrice": 250
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        }
+      ],
+      "totalAmount": 1000.97,
+      "date": "2023-07-10T16:20:07.761Z",
+      "statusId": 1,
+      "id": 6
     }
   ],
   "status": [

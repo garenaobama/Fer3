@@ -131,7 +131,7 @@ export default function Orders() {
       method: 'PUT',
       body: JSON.stringify({
         ...orders[index],
-        statusId: value
+        statusId: Number(value)
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
