@@ -216,7 +216,7 @@ export default function Orders() {
                   <Badge bg={effectBadge[o.statusId - 1]}>{status[o.statusId - 1]?.name}</Badge>
                 </div>
                 <div className="col-3">
-                  <p style={{ color: "white" }}>Create date: {Date(o.date).toLocaleString()}</p>
+                  <p style={{ color: "white" }}>Create date: {new Date(o.date).toLocaleString()}</p>
                 </div>
                 <div className="col-4">
 

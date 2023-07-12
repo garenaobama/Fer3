@@ -89,7 +89,9 @@ const Checkout = () => {
         products.map((p, index) => ({
           productId: p.id,
           productName: p.name,
-          quantity: cart[index].quantity,
+          categoryId : p.categoryId,
+          brandId : p.brand,
+          quantity: Number(cart[index].quantity),
           color: cart[index].color,
           unitPrice: Number(p.price),
           originalPrice: Number(p.originalPrice)

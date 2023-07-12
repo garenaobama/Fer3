@@ -17,7 +17,7 @@ const SingleProduct = () => {
   const { color } = products;
   const [recentColor, setRecentColor] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  const { detail } = products;
+  const [brands, setBrands] = useState([]); //brands
   const { images } = products;
   const [wishlist, setWishList] = useState([]);
 
@@ -28,8 +28,20 @@ const SingleProduct = () => {
         .then(
           json => {
             setProducts(json);
+            fetch(`http://localhost:9999/products?categoryId=${json.categoryId}&_sort=id&_order=desc&_page=1&_limit=4`)
+              .then(res => res.json())
+              .then(json => {
+                const result = json.slice(0, 4); //get just 4 products for relative products
+                setRelatedProduct(result);
+              }
+              );
           }
         );
+
+      fetch(`http://localhost:9999/brands`)
+        .then(res => res.json())
+        .then(json => setBrands(json));
+
     }, [id]
   );
 
@@ -42,25 +54,8 @@ const SingleProduct = () => {
     }, [images]
   );
 
-  // const formatConfiguration = (input) => { //format configuration text
-  //   const [label, value] = input.split(': ');
-  //   return (
-  //     <>
-  //       <td style={{ fontWeight: "bold" }}>{label}</td>
-  //       <td>{value}</td>
-  //     </>
-  //   );
-  // }
-
   useEffect(
     () => {
-      fetch(`http://localhost:9999/products`)
-        .then(res => res.json())
-        .then(json => {
-          const result = json.slice(0, 4); //get just 4 products
-          setRelatedProduct(result);
-        }
-        );
       if (JSON.parse(sessionStorage.getItem("data"))) {
         const user = JSON.parse(sessionStorage.getItem("data"));
         fetch(`http://localhost:9999/wishLists/?userId=` + user.email)
@@ -215,7 +210,7 @@ const SingleProduct = () => {
                   <h4>Product information</h4>
                   <div className="bg-white p-3">
                     <p>
-                    <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
+                      <div className="table editor-table" dangerouslySetInnerHTML={{ __html: products.describe }} />
                     </p>
                   </div>
                 </div>
@@ -366,7 +361,7 @@ const SingleProduct = () => {
               {
                 relatedProducts.map((p) => (
                   <div className="col-3" key={p.id}>
-                    <ProductItem {...p}></ProductItem>
+                    <ProductItem product={p} brand={brands.map(b => b.id == p.brand ? b.name : '')}></ProductItem>
                   </div>
                 ))
               }

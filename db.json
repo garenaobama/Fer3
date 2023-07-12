@@ -1223,32 +1223,18 @@
       },
       "productList": [
         {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic Black",
-          "unitPrice": 1199.99,
-          "originalPrice": 1100.25
-        },
-        {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic White",
-          "unitPrice": 1199.99,
-          "originalPrice": 1100.25
-        },
-        {
           "productId": 1,
           "productName": "iPhone 13 Pro Max",
+          "categoryId": 1,
+          "brandId": 1,
           "quantity": 1,
           "color": "Lumious White",
           "unitPrice": 1099.99,
           "originalPrice": 900.25
         }
       ],
-      "totalAmount": 3499.97,
-      "date": "2023-07-05T11:25:23.378Z",
+      "totalAmount": 1099.99,
+      "date": "2023-01-05T11:25:23.378Z",
       "statusId": 4,
       "id": 1
     },
@@ -1264,32 +1250,18 @@
       },
       "productList": [
         {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic Black",
-          "unitPrice": 1199.99,
-          "originalPrice": 1100.25
-        },
-        {
-          "productId": 3,
-          "productName": "Xiaomi Mi 11 Ultra",
-          "quantity": 1,
-          "color": "Ceramic White",
-          "unitPrice": 1199.99,
-          "originalPrice": 1100.25
-        },
-        {
           "productId": 1,
           "productName": "iPhone 13 Pro Max",
+          "categoryId": 1,
+          "brandId": 1,
           "quantity": 1,
           "color": "Lumious White",
           "unitPrice": 1099.99,
           "originalPrice": 900.25
         }
       ],
-      "totalAmount": 3499.97,
-      "date": "2023-07-05T11:25:23.378Z",
+      "totalAmount": 1099.99,
+      "date": "2023-02-05T11:25:23.378Z",
       "statusId": 4,
       "id": 2
     },
@@ -1307,6 +1279,8 @@
         {
           "productId": 3,
           "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
           "quantity": 1,
           "color": "Ceramic White",
           "unitPrice": 1199.99,
@@ -1314,7 +1288,7 @@
         }
       ],
       "totalAmount": 1199.99,
-      "date": "2023-07-05T14:51:20.493Z",
+      "date": "2023-03-05T14:51:20.493Z",
       "statusId": 4,
       "id": 3
     },
@@ -1332,6 +1306,8 @@
         {
           "productId": 3,
           "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
           "quantity": 1,
           "color": "Ceramic White",
           "unitPrice": 1199.99,
@@ -1339,7 +1315,7 @@
         }
       ],
       "totalAmount": 1199.99,
-      "date": "2023-07-05T15:06:59.515Z",
+      "date": "2023-03-05T15:06:59.515Z",
       "statusId": 4,
       "id": 4
     },
@@ -1360,13 +1336,15 @@
           "productId": 1,
           "productName": "iPhone 13 Pro Max",
           "quantity": 1,
+          "categoryId": 1,
+          "brandId": 1,
           "color": "Lumious White",
           "unitPrice": 1099.99,
           "originalPrice": 900.25
         }
       ],
       "totalAmount": 1099.99,
-      "date": "2023-07-10T16:06:22.020Z",
+      "date": "2023-04-10T16:06:22.020Z",
       "statusId": 4,
       "id": 5
     },
@@ -1386,32 +1364,592 @@
         {
           "productId": 13,
           "productName": "Samsung Galaxy Watch 5",
+          "categoryId": 4,
+          "brandId": 3,
           "quantity": 1,
           "color": "Silver",
           "unitPrice": 259.99,
           "originalPrice": 250
+        }
+      ],
+      "totalAmount": 259.99,
+      "date": "2023-04-10T16:20:07.761Z",
+      "statusId": 4,
+      "id": 6
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        }
+      ],
+      "totalAmount": 1599.99,
+      "date": "2023-05-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 7
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        }
+      ],
+      "totalAmount": 1599.99,
+      "date": "2023-05-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 8
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        }
+      ],
+      "totalAmount": 1599.99,
+      "date": "2023-05-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 9
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
         },
+        {
+          "productId": 8,
+          "productName": "iPad Air (2022)",
+          "categoryId": 2,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 449.99,
+          "originalPrice": 420.25
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        }
+      ],
+      "totalAmount": 3129.97,
+      "date": "2023-06-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 10
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 8,
+          "productName": "iPad Air (2022)",
+          "categoryId": 2,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 449.99,
+          "originalPrice": 420.25
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        }
+      ],
+      "totalAmount": 1829.98,
+      "date": "2023-06-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 11
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 8,
+          "productName": "iPad Air (2022)",
+          "categoryId": 2,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 449.99,
+          "originalPrice": 420.25
+        }
+      ],
+      "totalAmount": 449.99,
+      "date": "2023-06-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 12
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "098753326",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 8,
+          "productName": "iPad Air (2022)",
+          "categoryId": 2,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 449.99,
+          "originalPrice": 420.25
+        }
+      ],
+      "totalAmount": 449.99,
+      "date": "2023-06-11T10:45:52.190Z",
+      "statusId": 4,
+      "id": 13
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell ",
+      "phone": "032553468",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 1299.99,
+      "date": "2023-06-11T12:53:22.934Z",
+      "statusId": 4,
+      "id": 14
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "0251768349",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 1299.99,
+      "date": "2023-07-11T14:50:34.967Z",
+      "statusId": 4,
+      "id": 15
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell",
+      "phone": "0251768349",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 1299.99,
+      "date": "2023-07-11T14:50:34.967Z",
+      "statusId": 4,
+      "id": 16
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 7,
+          "productName": "Galaxy Tab S7+",
+          "categoryId": 2,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Mystic Black",
+          "unitPrice": 900.99,
+          "originalPrice": 850
+        },
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 1,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 2200.98,
+      "date": "2023-07-11T14:51:22.957Z",
+      "statusId": 4,
+      "id": 17
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "43254543",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 7,
+          "productName": "Galaxy Tab S7+",
+          "categoryId": 2,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Mystic Black",
+          "unitPrice": 900.99,
+          "originalPrice": 850
+        },
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 2,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 3500.97,
+      "date": "2023-07-11T14:51:46.918Z",
+      "statusId": 4,
+      "id": 18
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "43254543",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 7,
+          "productName": "Galaxy Tab S7+",
+          "categoryId": 2,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Mystic Black",
+          "unitPrice": 900.99,
+          "originalPrice": 850
+        },
+        {
+          "productId": 11,
+          "productName": "MacBook Pro M1",
+          "categoryId": 3,
+          "brandId": 1,
+          "quantity": 2,
+          "color": "Silver",
+          "unitPrice": 1299.99,
+          "originalPrice": 1250.25
+        }
+      ],
+      "totalAmount": 3500.97,
+      "date": "2023-07-11T14:52:34.083Z",
+      "statusId": 4,
+      "id": 19
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "3212132",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 7,
+          "productName": "Galaxy Tab S7+",
+          "categoryId": 2,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Mystic Black",
+          "unitPrice": 900.99,
+          "originalPrice": 850
+        }
+      ],
+      "totalAmount": 3231.96,
+      "date": "2023-07-11T14:57:02.465Z",
+      "statusId": 4,
+      "id": 20
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell ",
+      "phone": "4321432",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
         {
           "productId": 13,
           "productName": "Samsung Galaxy Watch 5",
+          "categoryId": 4,
+          "brandId": 3,
           "quantity": 1,
           "color": "Black",
           "unitPrice": 259.99,
           "originalPrice": 250
         },
         {
-          "productId": 6,
-          "productName": "Mi Pad 5",
-          "quantity": 1,
-          "color": "Cosmic Gray",
-          "unitPrice": 480.99,
-          "originalPrice": 450
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 4,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
         }
       ],
-      "totalAmount": 1000.97,
-      "date": "2023-07-10T16:20:07.761Z",
-      "statusId": 1,
-      "id": 6
+      "totalAmount": 5779.95,
+      "date": "2023-07-12T11:03:32.026Z",
+      "statusId": 4,
+      "id": 21
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell ",
+      "phone": "4321432",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 13,
+          "productName": "Samsung Galaxy Watch 5",
+          "categoryId": 4,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 259.99,
+          "originalPrice": 250
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 4,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        }
+      ],
+      "totalAmount": 5779.95,
+      "date": "2023-07-12T11:03:32.026Z",
+      "statusId": 4,
+      "id": 22
     }
   ],
   "status": [
