@@ -17,9 +17,12 @@ export default function Dashboard() {
 
   //for yealy report
   const [yearlySelected, setYearlySelected] = useState(Currentdate.getFullYear())
+  const [categorySpec, setCategorySpec] = useState('revenue')
+  const [brandSpec, setBrandSpec] = useState('revenue')
   // 
 
   //for selected month report
+  const [isCategory, setIsCategory] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState(Currentdate.getMonth())
   const [selectedYear, setSelectedYear] = useState(Currentdate.getFullYear())
   const [selectedDate, setSelectedDate] = useState(new Date(Currentdate.getFullYear() + '-' + (Currentdate.getMonth() + 1) + '-01'))
@@ -40,6 +43,8 @@ export default function Dashboard() {
     fetch(`http://localhost:9999/categories`)
       .then((res) => res.json())
       .then((json) => setCategories(json));
+    document.getElementById("btnradiocate1").checked = true;
+    document.getElementById("btnradiozcate1").checked = true;
   }, []
   )
 
@@ -54,7 +59,7 @@ export default function Dashboard() {
       to: to,
       revenue: 0,
       profit: 0,
-      totalQuantity: ok.length >0 && ok?.reduce((a, b) => a + b),
+      totalQuantity: ok.length > 0 && ok?.reduce((a, b) => a + b),
       order: temp.length,
       category: categories.map(c => ({ name: c.name, id: c.id, quantity: 0, profit: 0, revenue: 0 })),
       brand: brands.map(b => ({ name: b.name, id: b.id, quantity: 0, profit: 0, revenue: 0 }))
@@ -79,7 +84,7 @@ export default function Dashboard() {
 
   const currentMonthReport = () => getStatisticNumber(dateArrayByYear(selectedYear)[selectedMonth][0], dateArrayByYear(selectedYear)[selectedMonth][1]);
   const pre_currentMonthReport = () => getStatisticNumber(new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, 1), new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 0));
-  
+
   useEffect(() => {
     setSelectedDate(new Date(selectedYear + '-' + (Number(selectedMonth) + 1) + '-01'))
   }, [selectedMonth, selectedYear]
@@ -101,7 +106,7 @@ export default function Dashboard() {
   //
 
   //brand yearly
-  const getTotalYearlyBrand= (year) => { //get total of a year for pie chart
+  const getTotalYearlyBrand = (year) => { //get total of a year for pie chart
     let arr = dateArrayByYear(year);
     return getStatisticNumber(arr[0][0], arr[11][1]).brand
   }
@@ -117,7 +122,7 @@ export default function Dashboard() {
     setDataForYearly(dateArrayByYear(yearlySelected).map(a => getStatisticNumber(a[0], a[1])));
   }, [yearlySelected, orders, brands, categories]
   )
-  console.log(dataForYearly)
+  console.log(getDataYearlyCategory())
   //
   return (
     <div>
@@ -189,10 +194,17 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+      <div className="btn-group mt-2" role="group" aria-label="Basic radio toggle button group">
+        <input onClick={() => setIsCategory(true)} value={"category"} type="radio" className="btn-check" name="btnradioxyz" id="btnradiocate1" autoComplete="off"></input>
+        <label className="btn btn-outline-primary" htmlFor="btnradiocate1">Category</label>
+
+        <input onClick={() => setIsCategory(false)} value={"brand"} type="radio" className="btn-check" name="btnradioxyz" id="btnradiobrand2" autoComplete="off"></input>
+        <label className="btn btn-outline-primary" htmlFor="btnradiobrand2">Brand</label>
+      </div>
       <div className="row">
-        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={currentMonthReport().category} spec="revenue"></DemoPie></div>
-        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={currentMonthReport().category} spec="profit"></DemoPie></div>
-        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={currentMonthReport().category} spec="quantity"></DemoPie></div>
+        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={isCategory ? currentMonthReport().category : currentMonthReport().brand} spec="revenue"></DemoPie></div>
+        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={isCategory ? currentMonthReport().category : currentMonthReport().brand} spec="profit"></DemoPie></div>
+        <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={isCategory ? currentMonthReport().category : currentMonthReport().brand} spec="quantity"></DemoPie></div>
       </div>
 
       <div className="mt-5">
@@ -209,7 +221,7 @@ export default function Dashboard() {
             </InputGroup>
           </Col>
           <Col xs={12} md={3}>
-            <Button variant="primary">Jump to current year</Button>
+            <Button onClick={() => setYearlySelected(Currentdate.getFullYear())} variant="primary">Jump to current year</Button>
           </Col>
         </Row>
         <div className="row m-5">
@@ -219,16 +231,36 @@ export default function Dashboard() {
       </div>
       <div className="mt-5">
         <div className="row m-5">
-        <h4>Category </h4>
-          <div className="col-12 col-lg-6 col-xl-8"><DemoLine data={getDataYearlyCategory()} ></DemoLine></div>
-          <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={getTotalYearlyCategory(yearlySelected)} spec="revenue"></DemoPie></div>
+          <h4>Category-based yearly report on {yearlySelected} </h4>
+          <div className="btn-group mt-2" role="group" aria-label="Basic radio toggle button group">
+            <input onClick={() => setCategorySpec('revenue')} value={"category"} type="radio" className="btn-check" name="btnradiocate" id="btnradiozcate1" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozcate1">Revenue</label>
+
+            <input onClick={() => setCategorySpec('profit')} value={"category"} type="radio" className="btn-check" name="btnradiocate" id="btnradiozcate2" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozcate2">Profit</label>
+
+            <input onClick={() => setCategorySpec('quantity')} value={"category"} type="radio" className="btn-check" name="btnradiocate" id="btnradiozcate3" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozcate3">Products sold</label>
+          </div>
+          <div className="col-12 col-lg-6 col-xl-8"><DemoLine data={getDataYearlyCategory()} spec={categorySpec}></DemoLine></div>
+          <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={getTotalYearlyCategory(yearlySelected)} spec={categorySpec}></DemoPie></div>
         </div>
       </div >
       <div className="mt-5">
         <div className="row m-5">
-        <h4>Brand </h4>
-          <div className="col-12 col-lg-6 col-xl-8"><DemoLine data={getDataYearlyBrand()}></DemoLine></div>
-          <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={getTotalYearlyBrand(yearlySelected)} spec="revenue"></DemoPie></div>
+          <h4>Brand-based yearly report on {yearlySelected}</h4>
+          <div className="btn-group mt-2" role="group" aria-label="Basic radio toggle button group">
+            <input onClick={() => setBrandSpec('revenue')} value={"category"} type="radio" className="btn-check" name="btnradiobrando" id="btnradiozbrand1" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozbrand1">Revenue</label>
+
+            <input onClick={() => setBrandSpec('profit')} value={"category"} type="radio" className="btn-check" name="btnradiobrando" id="btnradiozbrand2" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozbrand2">Profit</label>
+
+            <input onClick={() => setBrandSpec('quantity')} value={"category"} type="radio" className="btn-check" name="btnradiobrando" id="btnradiozbrand3" autoComplete="off"></input>
+            <label className="btn btn-outline-primary" htmlFor="btnradiozbrand3">Products sold</label>
+          </div>
+          <div className="col-12 col-lg-6 col-xl-8"><DemoLine data={getDataYearlyBrand()} spec={brandSpec}></DemoLine></div>
+          <div className="col-12 col-lg-6 col-xl-4"><DemoPie data={getTotalYearlyBrand(yearlySelected)} spec={brandSpec}></DemoPie></div>
         </div>
       </div>
     </div >
@@ -291,12 +323,12 @@ const DemoPie = (props) => {
   return <Pie {...config} />;
 };
 const DemoLine = (props) => {
-  const { data } = props
+  const { data ,spec} = props
   const config = {
     data,
     autoFit: false,
     xField: 'to',
-    yField: 'revenue',
+    yField: spec,
     seriesField: 'name',
     point: {
       size: 5,
