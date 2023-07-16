@@ -25,23 +25,23 @@ export default function adminRoutes() {
         ),
         children: [
             { index: true, element: <Home /> },
-            { path: '/admin/customer', element: <Customer /> },
-            { path: '/admin/feedback', element: <Feedback /> },
-            { path: '/admin/dashboard', element: <Dashboard /> },
-            { path: '/admin/contact', element: <Contact /> },
-            { path: '/admin/order', element: <Orders /> },
+            // { path: '/admin/customer', element: <Customer /> },
+            // { path: '/admin/feedback', element: <Feedback /> },
+            // { path: '/admin/dashboard', element: <Dashboard /> },
+            // { path: '/admin/contact', element: <Contact /> },
+            // { path: '/admin/order', element: <Orders /> },
 
-            //product
-            { path: '/admin/product', element: <Productlist /> },
-            { path: '/admin/product/:id', element: <ProductDetail /> },
-            { path: '/admin/product/edit/:id', element: <EditProduct /> },
-            { path: '/admin/product/add-brand', element: <Addbrand /> },
-            { path: '/admin/product/add-product', element: <AddProduct /> },
-            { path: '/admin/product/category-list', element: <Categorylist /> },
+            // //product
+            // { path: '/admin/product', element: <Productlist /> },
+            // { path: '/admin/product/:id', element: <ProductDetail /> },
+            // { path: '/admin/product/edit/:id', element: <EditProduct /> },
+            // { path: '/admin/product/add-brand', element: <Addbrand /> },
+            // { path: '/admin/product/add-product', element: <AddProduct /> },
+            // { path: '/admin/product/category-list', element: <Categorylist /> },
 
-            //blog
-            { path: '/admin/blog', element: <Bloglist /> },
-            { path: '/admin/blog/add-blog', element: <Addblog /> },
+            // //blog
+            // { path: '/admin/blog', element: <Bloglist /> },
+            // { path: '/admin/blog/add-blog', element: <Addblog /> },
         ]
     };
 }
