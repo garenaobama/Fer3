@@ -13,12 +13,12 @@ const Cart = () => {
   // const user = JSON.parse(sessionStorage.getItem("data"));
   // console.log(user.name);
   const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem("cart")));
-  const [quantity, setQuantity] = useState(cart.map(c => c.quantity))
+  const [quantity, setQuantity] = useState(cart?.map(c => c.quantity))
   const [products, setProducts] = useState([]);
   const [subTotal, setSubTotal] = useState(0);
   useEffect(() => {
     Promise.all(  //wait for all of the fetch requests to complete before updating the state with the fetched data.
-      cart.map((c) => {
+      cart?.map((c) => {
         return fetch(`http://localhost:9999/products/` + c.productId)
           .then((res) => res.json())
           .then((json) => {
