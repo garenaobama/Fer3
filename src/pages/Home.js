@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
 import axios from "axios";
+import ProductItem from "../components/ProductItem";
 //import { services } from "../utils/Data";
 
 const Home = () => {
@@ -152,12 +153,12 @@ const Home = () => {
         </div>
       </Container>
       <Container class1="featured-wrapper py-5 home-wrapper-2">
+        <h3 className="section-heading">Featured Collection</h3>
         <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Featured Collection</h3>
-          </div>
-          {last8Product.map((p) => (
-            <ProductCard product={p} />
+          {last8Product.map((p,index) => (
+            <div key={index} className="col-3">
+              <ProductItem product={p} />
+            </div>
           ))}
         </div>
       </Container>

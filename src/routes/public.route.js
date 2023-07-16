@@ -6,6 +6,7 @@ import Contact from '../pages/Contact';
 import Forgotpassword from '../pages/Forgotpassword';
 import Home from '../pages/Home';
 import OurStore from '../pages/OurStore';
+import MyOrder from '../pages/MyOrder';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Resetpassword from '../pages/Resetpassword';
 import ShippingPolicy from '../pages/ShippingPolicy';
@@ -28,9 +29,12 @@ export function publicRoutes() {
             { path: '/about', element: <About /> },
             { path: '/contact', element: <Contact /> },
             { path: '/product', element: <OurStore /> },
+            { path: '/myOrder', element: <MyOrder /> },
+            { path: '/ourStore/:key', element: <OurStore /> },
             { path: '/product/:id', element: <SingleProduct /> },
             { path: '/blogs', element: <Blog /> },
             { path: '/blog/:id', element: <SingleBlog /> },
+            { path: '/blog/:id', element: <myOrder /> },
             { path: '/forgot-password', element: <Forgotpassword /> },
             { path: '/signup', element: <Signup /> },
             { path: '/compare-product', element: <CompareProduct /> },

@@ -79,6 +79,7 @@ export default function Dashboard() {
       )
     ]
     )
+    console.log(data)
     return data
   }
 
@@ -122,7 +123,7 @@ export default function Dashboard() {
     setDataForYearly(dateArrayByYear(yearlySelected).map(a => getStatisticNumber(a[0], a[1])));
   }, [yearlySelected, orders, brands, categories]
   )
-  console.log(getDataYearlyCategory())
+  // console.log(getDataYearlyCategory())
   //
   return (
     <div>

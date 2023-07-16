@@ -606,25 +606,6 @@
         "https://res.cloudinary.com/dck2nnfja/image/upload/v1688447316/products/16/3_sxilri.webp",
         "https://res.cloudinary.com/dck2nnfja/image/upload/v1688447317/products/16/4_o69pxv.webp"
       ]
-    },
-    {
-      "name": "Than Quang phuong",
-      "price": 6666666,
-      "originalPrice": 4321432,
-      "categoryId": 2,
-      "brand": 2,
-      "featured": true,
-      "status": true,
-      "detail": "<p>configure 33333333333333333333</p>",
-      "describe": "<p>detail description21</p>",
-      "color": [
-        "green"
-      ],
-      "images": [
-        "http://res.cloudinary.com/dck2nnfja/image/upload/v1688998631/bi1xlygxu47y88l5qzjh.jpg"
-      ],
-      "id": 17,
-      "year": 1999
     }
   ],
   "brands": [
@@ -1211,6 +1192,614 @@
     }
   ],
   "order": [
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "09843782",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        },
+        {
+          "productId": 10,
+          "productName": "HP Spectre x360 16",
+          "categoryId": 3,
+          "brandId": 6,
+          "quantity": 1,
+          "color": "Nightfall Black with Copper Luxe Accents",
+          "unitPrice": 1499.99,
+          "originalPrice": 1450.25
+        }
+      ],
+      "totalAmount": 2579.96,
+      "date": "2022-01-16T13:15:42.980Z",
+      "statusId": 1,
+      "id": 24
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "09843782",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        }
+      ],
+      "totalAmount": 2779.96,
+      "date": "2022-02-16T13:15:42.980Z",
+      "statusId": 1,
+      "id": 24
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "09843782",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 10,
+          "productName": "HP Spectre x360 16",
+          "categoryId": 3,
+          "brandId": 6,
+          "quantity": 1,
+          "color": "Nightfall Black with Copper Luxe Accents",
+          "unitPrice": 1499.99,
+          "originalPrice": 1450.25
+        }
+      ],
+      "totalAmount": 4479.96,
+      "date": "2022-03-16T13:15:42.980Z",
+      "statusId": 1,
+      "id": 24
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "09843782",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        }
+      ],
+      "totalAmount": 5679.96,
+      "date": "2022-04-16T13:15:42.980Z",
+      "statusId": 1,
+      "id": 24
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 6410.94,
+      "date": "2022-05-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 6310.94,
+      "date": "2022-06-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 4510.94,
+      "date": "2022-07-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        }
+      ],
+      "totalAmount": 2510.94,
+      "date": "2022-08-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 4310.94,
+      "date": "2022-09-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 5410.94,
+      "date": "2022-10-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        }
+      ],
+      "totalAmount": 7810.94,
+      "date": "2022-11-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 6910.94,
+      "date": "2022-12-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
+    },
     {
       "userId": "minhlqhe161101@fpt.edu.vn",
       "name": "Ervin Howell",
@@ -1815,7 +2404,7 @@
       "id": 19
     },
     {
-      "userId": "minhlqhe161101@fpt.edu.vn",
+      "userId": "kokoma@fpt.edu.vn",
       "name": "Ervin Howell fffffffffffffff33333333333",
       "phone": "3212132",
       "address": {
@@ -1950,6 +2539,153 @@
       "date": "2023-07-12T11:03:32.026Z",
       "statusId": 4,
       "id": 22
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        }
+      ],
+      "totalAmount": 1379.99,
+      "date": "2023-07-15T17:55:40.086Z",
+      "statusId": 1,
+      "id": 23
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "09843782",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        },
+        {
+          "productId": 2,
+          "productName": "Galaxy S21 Ultra 5G",
+          "categoryId": 1,
+          "brandId": 3,
+          "quantity": 1,
+          "color": "Phantom Silver",
+          "unitPrice": 1379.99,
+          "originalPrice": 1275.25
+        },
+        {
+          "productId": 10,
+          "productName": "HP Spectre x360 16",
+          "categoryId": 3,
+          "brandId": 6,
+          "quantity": 1,
+          "color": "Nightfall Black with Copper Luxe Accents",
+          "unitPrice": 1499.99,
+          "originalPrice": 1450.25
+        }
+      ],
+      "totalAmount": 5679.96,
+      "date": "2023-07-16T13:15:42.980Z",
+      "statusId": 1,
+      "id": 24
+    },
+    {
+      "userId": "minhlqhe161101@fpt.edu.vn",
+      "name": "Ervin Howell fffffffffffffff33333333333",
+      "phone": "321321321",
+      "address": {
+        "country": "US",
+        "state": "Alabama",
+        "city": "Wisokyburgh",
+        "detailAddress": "Victor Plains",
+        "zipcode": "90566-7771",
+        "address": "Victor Plains"
+      },
+      "productList": [
+        {
+          "productId": 15,
+          "productName": "Garmin Venu Sq 2",
+          "categoryId": 4,
+          "brandId": 9,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 249.99,
+          "originalPrice": 230
+        },
+        {
+          "productId": 6,
+          "productName": "Mi Pad 5",
+          "categoryId": 2,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Cosmic Gray",
+          "unitPrice": 480.99,
+          "originalPrice": 450
+        },
+        {
+          "productId": 12,
+          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
+          "categoryId": 3,
+          "brandId": 7,
+          "quantity": 1,
+          "color": "Black",
+          "unitPrice": 1599.99,
+          "originalPrice": 1540.25
+        },
+        {
+          "productId": 3,
+          "productName": "Xiaomi Mi 11 Ultra",
+          "categoryId": 1,
+          "brandId": 4,
+          "quantity": 1,
+          "color": "Ceramic White",
+          "unitPrice": 1199.99,
+          "originalPrice": 1100.25
+        }
+      ],
+      "totalAmount": 6410.94,
+      "date": "2023-07-16T13:30:58.876Z",
+      "statusId": 1,
+      "id": 25
     }
   ],
   "status": [

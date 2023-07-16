@@ -5,14 +5,19 @@ import Container from "../components/Container";
 import ProductItem from "../components/ProductItem";
 import Paginate from '../admin/components/Paginate';
 import { toast } from 'react-toastify';
+import { Col, Form, InputGroup } from "react-bootstrap";
+import { BsSearch} from "react-icons/bs";
+import { useParams } from "react-router-dom";
 
 const OurStore = () => {
+  const {key} = useParams(); //search key from header
   const [products, setProducts] = useState([]); //productlist that use for display
   const [categories, setCategories] = useState([]); //category
   const [brands, setBrands] = useState([]); //brands
   const [isLoading, setIsLoading] = useState(false); //loading effect
 
   // filtering 
+  const [nameSearch, setNameSearch] = useState(key? key : '');
   const [brand_f, setBrand_f] = useState([]);
   const [year_f, setYear_f] = useState([]);
   const [category_f, setCategory_f] = useState([]);
@@ -64,25 +69,30 @@ const OurStore = () => {
 
   const handleFilter = (page) => {
     var url = `http://localhost:9999/products/?_page=${page}&_limit=12`;
+
+    if (nameSearch) {
+      url += `&name_like=${nameSearch}`;
+    }
+
     if (brand_f.length != 0) {
-      brand_f?.map(b => 
+      brand_f?.map(b =>
         url += ('&brand=' + b)
       )
     }
     if (category_f.length != 0) {
-      category_f?.map(b => 
+      category_f?.map(b =>
         url += ('&categoryId=' + b)
       )
     }
     if (year_f.length != 0) {
-      year_f?.map(b => 
+      year_f?.map(b =>
         url += ('&year=' + b)
       )
     }
-    if(min_f != ''){
+    if (min_f != '') {
       url += ('&price_gte=' + min_f)
     }
-    if(max_f != ''){
+    if (max_f != '') {
       url += ('&price_lte=' + max_f)
     }
     fetch(url)
@@ -98,7 +108,7 @@ const OurStore = () => {
   useEffect(
     () => {
       handleFilter(currentPage);
-    }, [currentPage, year_f, category_f, brand_f,max_f, min_f]
+    }, [currentPage, year_f, category_f, brand_f, max_f, min_f, nameSearch]
   )
 
   const SortProduct = (index) => {
@@ -114,32 +124,32 @@ const OurStore = () => {
   }
 
   const handleFilterValue = (attr) => {
-    if(attr === "brand"){
+    if (attr === "brand") {
       let box = document.getElementsByName("brand-Filter-Box");
-      let temp =[]
-      for(let i=0 ;i< box.length ;i++){
-        if(box[i].checked == true){
-          temp =[...temp, box[i].value]
+      let temp = []
+      for (let i = 0; i < box.length; i++) {
+        if (box[i].checked == true) {
+          temp = [...temp, box[i].value]
         }
       }
       setBrand_f(temp)
     }
-    if(attr=== "category"){
+    if (attr === "category") {
       let box = document.getElementsByName("cate-Filter-Box");
-      let temp =[]
-      for(let i=0 ;i< box.length ;i++){
-        if(box[i].checked == true){
-          temp =[...temp, box[i].value]
+      let temp = []
+      for (let i = 0; i < box.length; i++) {
+        if (box[i].checked == true) {
+          temp = [...temp, box[i].value]
         }
       }
       setCategory_f(temp)
     }
-    if(attr === "year"){
+    if (attr === "year") {
       let box = document.getElementsByName("year-Filter-Box");
-      let temp =[]
-      for(let i=0 ;i< box.length ;i++){
-        if(box[i].checked == true){
-          temp =[...temp, box[i].value]
+      let temp = []
+      for (let i = 0; i < box.length; i++) {
+        if (box[i].checked == true) {
+          temp = [...temp, box[i].value]
         }
       }
       setYear_f(temp)
@@ -178,7 +188,7 @@ const OurStore = () => {
                 {
                   categories.map((c) =>
                     <div key={c.id}>
-                      <input onChange={ () => handleFilterValue("category")
+                      <input onChange={() => handleFilterValue("category")
                       } name="cate-Filter-Box" type="checkbox" className="btn-check" id={"btncheck" + c.id} autoComplete="off" value={c.id} />
                       <label style={{ width: "150px" }} className="btn btn-outline-primary" htmlFor={"btncheck" + c.id}>{c.name}</label>
                     </div>
@@ -254,6 +264,17 @@ const OurStore = () => {
                     <option value="6">Date, new to old</option>
                   </select>
                 </div>
+                <Col xs={12} md={4}>
+                  <InputGroup className="mb-3">
+                    <InputGroup.Text>
+                      Search <BsSearch size={20} style={{paddingLeft:"5px"}} className="m-0" />
+                    </InputGroup.Text>
+                    <Form.Control
+                      type="name" placeholder="Search by name..."
+                      value={nameSearch} onChange={(e) => setNameSearch(e.target.value)}
+                    />
+                  </InputGroup>
+                </Col>
               </div>
             </div>
 

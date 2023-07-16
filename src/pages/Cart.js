@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
@@ -6,7 +6,10 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Swal from "sweetalert2";
+import { CartContext } from '../components/CartContext'
+
 const Cart = () => {
+  const {cartQuantity ,setCartQuantity} = useContext(CartContext); //update cart globaly
   // const user = JSON.parse(sessionStorage.getItem("data"));
   // console.log(user.name);
   const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem("cart")));
@@ -63,6 +66,7 @@ const Cart = () => {
           'Your item has been deleted.',
           'success'
         )
+        setCartQuantity(cartQuantity-1)
       }
     })
   }

@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import compare from "../images/compare.svg";
 import wishlist from "../images/wishlist.svg";
 import user from "../images/user.svg";
-import { useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import cart from "../images/cart.svg";
 import menu from "../images/menu.svg";
 import { useAuthentication } from "../util/use-authentication";
@@ -12,11 +12,15 @@ import { toast } from "react-toastify";
 import { BiLogOut } from "react-icons/bi";
 import { BiUser } from "react-icons/bi";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
+import logo from '../images/logo_home.png';
+import { CartContext } from '../components/CartContext'
 
 const Header = () => {
   const { isLogged } = useAuthentication();
   const navigate = useNavigate();
   const [thisUser, setThisUser] = useState();
+  const [searchKey, setSearchKey] = useState();
+  const { cartQuantity, setCartQuantity } = useContext(CartContext)
 
   useEffect(() => {
     if (isLogged) {
@@ -37,46 +41,31 @@ const Header = () => {
 
   return (
     <>
-      <header className="header-top-strip py-3">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-6">
-              <p className="text-white mb-0">
-                Free Shipping Over $100 & Free Returns
-              </p>
-            </div>
-            <div className="col-6">
-              <p className="text-end text-white mb-0">
-                Hotline:
-                <a className="text-white" href="tel:+84 363840808">
-                  +84 363840808
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
       <header className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
             <div className="col-12 col-lg-2">
               <h2>
-                <Link className="text-white">Dev Corner</Link>
+                <Link className="text-white"><img className='p-2' style={{ width: "70%" }} src={logo} alt='logo'></img></Link>
               </h2>
             </div>
             <div className="col-12 col-lg-5">
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control py-2"
-                  placeholder="Search Product Here..."
-                  aria-label="Search Product Here..."
-                  aria-describedby="basic-addon2"
-                />
-                <span className="input-group-text p-3" id="basic-addon2">
-                  <BsSearch className="fs-6" />
-                </span>
-              </div>
+              <form action={"/ourStore/" + searchKey}>
+                <div className="input-group">
+                  <input
+                    style={{ height: "50px" }}
+                    onChange={(e) => setSearchKey(e.target.value)}
+                    type="text"
+                    className="form-control py-2"
+                    placeholder="Search Product Here..."
+                    aria-label="Search Product Here..."
+                    aria-describedby="basic-addon2"
+                  />
+                  <span style={{ height: "50px" }} className="input-group-text p-3" id="basic-addon2">
+                    <BsSearch className="fs-6 m-0" />
+                  </span>
+                </div>
+              </form>
             </div>
             <div className="col-12 col-lg-5">
               <div className="header-upper-links d-flex align-items-center justify-content-around row">
@@ -112,7 +101,7 @@ const Header = () => {
                     >
                       <img src={user} alt="user" />
                       <p className="mb-0">
-                        Log in <br /> My Account
+                        Log in
                       </p>
                     </Link>
                   </div>
@@ -157,13 +146,15 @@ const Header = () => {
                   <div className="col-6 col-lg-3">
                     <Link
                       to="/cart"
-                      className="d-flex align-items-center gap-10 text-white"
+
                     >
-                      <img src={cart} alt="cart" />
-                      <div className="d-flex flex-column gap-10">
-                        <span className="badge bg-white text-dark">0</span>
-                        <p className="mb-0">$ 500</p>
-                      </div>
+                      <button type="button" class="btn position-relative">
+                        <img src={cart} alt="cart" />
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          {cartQuantity}
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </button>
                     </Link>
                   </div>
                 )}

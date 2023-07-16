@@ -9,7 +9,7 @@ const DefaultAdminLayout = () => {
     <>
       <Row style={{ background: "#e5f3ff" , margin: 0}}>
         <Col lg={2} style={{paddingLeft:0}}>
-          <AdminSideNav className={"p-5 flex-column"} />
+          <AdminSideNav className={"p-2 flex-column row"} />
         </Col>
         <Col lg={10}>
           <AdminTopNav/>

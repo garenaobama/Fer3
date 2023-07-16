@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ReactStars from "react-rating-stars-component";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
@@ -8,8 +8,10 @@ import Container from "../components/Container";
 import { useParams } from "react-router-dom";
 import ProductItem from "../components/ProductItem";
 import Swal from "sweetalert2";
+import { CartContext } from '../components/CartContext'
 
 const SingleProduct = () => {
+  const {cartQuantity ,setCartQuantity} = useContext(CartContext)
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [relatedProducts, setRelatedProduct] = useState([]);
@@ -144,6 +146,7 @@ const SingleProduct = () => {
               title: 'Added',
               text: 'Added item to cart',
             })
+            setCartQuantity(cartQuantity+1)
           }
         }
         sessionStorage.setItem("cart", JSON.stringify(sessionCart));

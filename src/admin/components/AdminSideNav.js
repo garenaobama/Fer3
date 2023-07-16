@@ -23,7 +23,9 @@ export default function AdminSideNav(props) {
             minHeight: "100vh",
         }} className={props.className}>
             <Link className={location.pathname === '/' ? 'active' : ''} to={"/"}>
-                <img style={{ width: "70%" }} src={logo} alt='logo'></img>
+                <div className='d-flex justify-content-center'>
+                    <img className='p-2' style={{ width: "70%" }} src={logo} alt='logo'></img>
+                </div>
             </Link>
             <div className='mt-3 mb-3' style={{ width: "100%", height: "2px", background: "#00000038" }}></div>
 
