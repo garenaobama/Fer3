@@ -15,6 +15,8 @@ import SingleBlog from '../pages/SingleBlog';
 import SingleProduct from '../pages/SingleProduct';
 import TermAndContions from '../pages/TermAndContions';
 import CompareProduct from '../pages/CompareProduct';
+import Profile from '../pages/Profile';
+import ChangePassword from '../pages/ChangePassword';
 
 export function publicRoutes() {
     return {
@@ -42,6 +44,8 @@ export function publicRoutes() {
             { path: '/privacy-policy', element: <PrivacyPolicy /> },
             { path: '/shipping-policy', element: <ShippingPolicy /> },
             { path: '/term-conditions', element: <TermAndContions /> },
+            { path: '/profile/:id', element: <Profile /> },
+            { path: '/changePassword/:id', element: <ChangePassword /> },
         ],
     };
 }

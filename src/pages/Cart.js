@@ -144,9 +144,11 @@ const Cart = () => {
               <div className="d-flex flex-column align-items-end">
                 <h4>SubTotal: $ {subTotal.toFixed(2)}</h4>
                 <p>Taxes and shipping calculated at checkout</p>
-                <Link to="/checkout" className="button">
+                {
+                  cartQuantity > 0 ? <Link to="/checkout" className="button disable">
                   Checkout
-                </Link>
+                </Link> : ''
+                }
               </div>
             </div>
           </div>

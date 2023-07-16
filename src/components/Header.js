@@ -19,6 +19,7 @@ const Header = () => {
   const { isLogged } = useAuthentication();
   const navigate = useNavigate();
   const [thisUser, setThisUser] = useState();
+  const { currentUser } = useAuthentication();
   const [searchKey, setSearchKey] = useState();
   const { cartQuantity, setCartQuantity } = useContext(CartContext)
 
@@ -122,7 +123,7 @@ const Header = () => {
                     </Link>
                     <div id="function-box-header">
                       <Link
-                        to={"/myProfile"}
+                         to={`/profile/${currentUser.email}`}
                         className="d-flex align-items-center gap-10 text-white link-user-header-function"
                       >
                         <BiUser className="m-0" />My profile
