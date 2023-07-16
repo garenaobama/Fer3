@@ -707,8 +707,8 @@
     },
     {
       "userId": "minhlqhe161101@fpt.edu.vn",
-      "productId": "2",
-      "id": 6
+      "productId": "3",
+      "id": 7
     }
   ],
   "contacts": [
@@ -2402,65 +2402,6 @@
       "date": "2023-07-11T14:52:34.083Z",
       "statusId": 4,
       "id": 19
-    },
-    {
-      "userId": "kokoma@fpt.edu.vn",
-      "name": "Ervin Howell fffffffffffffff33333333333",
-      "phone": "3212132",
-      "address": {
-        "country": "US",
-        "state": "Alabama",
-        "city": "Wisokyburgh",
-        "detailAddress": "Victor Plains",
-        "zipcode": "90566-7771",
-        "address": "Victor Plains"
-      },
-      "productList": [
-        {
-          "productId": 12,
-          "productName": "Lenovo ThinkPad X1 Carbon Gen 9",
-          "categoryId": 3,
-          "brandId": 7,
-          "quantity": 1,
-          "color": "Black",
-          "unitPrice": 1599.99,
-          "originalPrice": 1540.25
-        },
-        {
-          "productId": 15,
-          "productName": "Garmin Venu Sq 2",
-          "categoryId": 4,
-          "brandId": 9,
-          "quantity": 1,
-          "color": "Black",
-          "unitPrice": 249.99,
-          "originalPrice": 230
-        },
-        {
-          "productId": 6,
-          "productName": "Mi Pad 5",
-          "categoryId": 2,
-          "brandId": 4,
-          "quantity": 1,
-          "color": "Cosmic Gray",
-          "unitPrice": 480.99,
-          "originalPrice": 450
-        },
-        {
-          "productId": 7,
-          "productName": "Galaxy Tab S7+",
-          "categoryId": 2,
-          "brandId": 3,
-          "quantity": 1,
-          "color": "Mystic Black",
-          "unitPrice": 900.99,
-          "originalPrice": 850
-        }
-      ],
-      "totalAmount": 3231.96,
-      "date": "2023-07-11T14:57:02.465Z",
-      "statusId": 4,
-      "id": 20
     },
     {
       "userId": "minhlqhe161101@fpt.edu.vn",

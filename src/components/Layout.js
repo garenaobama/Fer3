@@ -6,7 +6,8 @@ import { CartContext } from '../components/CartContext'
 
 // Create provider tat use in intier page
 function LayoutProvider({ children }) {
-  const [cartQuantity, setCartQuantity] = useState(JSON.parse(sessionStorage.getItem("cart"))?.length ?? 0);
+  if(!sessionStorage.getItem("cart")) sessionStorage.setItem("cart", JSON.stringify([]));
+  const [cartQuantity, setCartQuantity] = useState(JSON.parse(sessionStorage.getItem("cart")).length);
 
 
   return (
