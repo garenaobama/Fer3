@@ -147,7 +147,7 @@ export default function Dashboard() {
             <InputGroup.Text>
               Year
             </InputGroup.Text>
-            <Form.Control type="year" value={selectedYear} onChange={(e) => { setSelectedYear(e.target.value) }}>
+            <Form.Control type="number" value={selectedYear} onChange={(e) => { setSelectedYear(e.target.value) }}>
 
             </Form.Control>
           </InputGroup>
@@ -216,7 +216,7 @@ export default function Dashboard() {
               <InputGroup.Text>
                 Year
               </InputGroup.Text>
-              <Form.Control type="year" value={yearlySelected} onChange={(e) => { setYearlySelected(e.target.value) }}>
+              <Form.Control type="number" value={yearlySelected} onChange={(e) => { setYearlySelected(e.target.value) }}>
 
               </Form.Control>
             </InputGroup>

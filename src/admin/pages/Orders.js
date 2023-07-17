@@ -226,7 +226,7 @@ export default function Orders() {
                     <InputGroup.Text>
                       Change status
                     </InputGroup.Text>
-                    <Form.Select defaultValue={o.statusId} onChange={(e) => updateStatus(e.target.value, index, o.id)}>
+                    <Form.Select value={o.statusId} onChange={(e) => updateStatus(e.target.value, index, o.id)}>
                       {status?.map((s) =>
                         <option key={s.id} value={s.id}>
                           {s.name}

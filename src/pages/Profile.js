@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuthentication } from "../util/use-authentication";
+import Meta from "../components/Meta";
+import BreadCrumb from "../components/BreadCrumb";
+import { Container } from "react-bootstrap";
 
 const Profile = () => {
   const { id } = useParams();
@@ -48,52 +51,58 @@ const Profile = () => {
   };
 
   return (
-    <div className="profile-container">
-      <h1>User Profile</h1>
-      {!isEditing ? (
-        <>
-          <p>
-            <strong>Name:</strong> {userData.name}
-          </p>
-          <p>
-            <strong>Email:</strong> {userData.email}
-          </p>
-          <p>
-            <strong>Role:</strong> {currentUser.role}
-          </p>
-          <button onClick={handleEdit}>Edit</button>
-          <Link style={{ marginLeft: "70px" }} to={`/changePassword/${userData.email}`}>
-        Change Password
-      </Link>
-        </>
-      ) : (
-        <>
-          <label>
-            <strong>Name:</strong>
-            <input
-              type="text"
-              name="name"
-              value={editedData.name}
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <label>
-            <strong>Email:</strong>
-            <input
-              type="text"
-              name="email"
-              value={editedData.email}
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <br />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={handleCancel}>Cancel</button>
-        </>
-      )}
-    </div>
+    <>
+      <Meta title={"Profile"} />
+      <BreadCrumb title="Profile" />
+      <Container class1="login-wrapper py-5 home-wrapper-2">
+        <div className="profile-container">
+          <h1>User Profile</h1>
+          {!isEditing ? (
+            <>
+              <p>
+                <strong>Name:</strong> {userData.name}
+              </p>
+              <p>
+                <strong>Email:</strong> {userData.email}
+              </p>
+              <p>
+                <strong>Role:</strong> {currentUser.role}
+              </p>
+              <button onClick={handleEdit}>Edit</button>
+              <Link style={{ marginLeft: "70px" }} to={`/changePassword/${userData.email}`}>
+                Change Password
+              </Link>
+            </>
+          ) : (
+            <>
+              <label>
+                <strong>Name:</strong>
+                <input
+                  type="text"
+                  name="name"
+                  value={editedData.name}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <label>
+                <strong>Email:</strong>
+                <input
+                  type="text"
+                  name="email"
+                  value={editedData.email}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <br />
+              <button onClick={handleSave}>Save</button>
+              <button onClick={handleCancel}>Cancel</button>
+            </>
+          )}
+        </div>
+      </Container>
+    </>
   );
 };
 
