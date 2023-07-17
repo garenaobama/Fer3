@@ -23,6 +23,7 @@ import AddProduct from '../admin/pages/Addproduct';
 import Categorylist from '../admin/pages/Categorylist';
 import Bloglist from '../admin/pages/Bloglist';
 import Addblog from '../admin/pages/Addblog';
+import BlogDetails from '../admin/pages/BlogDetail';
 const allRoutes = createBrowserRouter([
   {
     path: '/admin',
@@ -51,9 +52,10 @@ const allRoutes = createBrowserRouter([
       { path: '/admin/product/add-brand', element: <Addbrand /> },
       { path: '/admin/product/add-product', element: <AddProduct /> },
       { path: '/admin/product/category-list', element: <Categorylist /> },
-
+    
       //blog
       { path: '/admin/blog', element: <Bloglist /> },
+      { path: '/admin/blogdetails/:id', element: <BlogDetails /> },
       { path: '/admin/blog/add-blog', element: <Addblog /> },
     ],
   },

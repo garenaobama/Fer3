@@ -4,17 +4,22 @@ import Meta from "../components/Meta";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../components/Container";
 import CustomInput from "../components/CustomInput";
+import * as bcrypt from "bcryptjs";
 
 const Signup = () => {
-  const navigate = useNavigate()
-  const handleSignUp = async (event) => {
+  const navigate = useNavigate();
 
+  const handleSignUp = async (event) => {
     event.preventDefault();
+
     const id = event.target.email.value;
     const name = event.target.name.value;
     const email = event.target.email.value;
     const mobile = event.target.mobile.value;
     const password = event.target.password.value;
+
+    // Mã hóa mật khẩu
+    const hashedPassword = hash(password);
 
     // Tạo đối tượng user mới
     const newUser = {
@@ -22,8 +27,8 @@ const Signup = () => {
       name,
       email,
       phone: mobile,
-      password,
-      role:"Customer"
+      password: hashedPassword,
+      role: "Customer",
     };
 
     try {
@@ -52,6 +57,10 @@ const Signup = () => {
     }
   };
 
+  const hash = (password) => {
+    return bcrypt.hashSync(password, 10);
+  };
+
   return (
     <>
       <Meta title={"Sign Up"} />
@@ -76,7 +85,9 @@ const Signup = () => {
                 />
                 <div>
                   <div className="mt-3 d-flex justify-content-center gap-15 align-items-center">
-                    <button type="submit" className="button border-0">Sign Up</button>
+                    <button type="submit" className="button border-0">
+                      Sign Up
+                    </button>
                   </div>
                 </div>
               </form>
